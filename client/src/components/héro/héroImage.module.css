@@ -1,0 +1,40 @@
+.img {
+  width: 100vw;
+  height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.header {
+  background-color: black;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 60em;
+  color: yellow;
+  margin-left: 4em;
+  font-family: var(--mainTitle-family);
+}
+.description {
+  position: relative;
+  bottom: 22em;
+  left: 50vw;
+  width: 40vw;
+  background-color: black;
+  opacity: 70%;
+  color: white;
+  padding: 1em;
+  font-size: 1.2em;
+  font-family: var(--text-family);
+}
+.titlePage {
+  font-size: 6em;
+}
+.subtitle {
+  font-size: 3em;
+  margin-left: 4em;
+  margin-top: 0.5em;
+}
