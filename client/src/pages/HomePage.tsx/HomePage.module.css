@@ -1,0 +1,12 @@
+.backgroundPage {
+  background-image: url(https://image.freepik.com/free-photo/natural-dark-oak-texture-macro-extremely-high-resolution-photo_463999-970.jpg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  box-shadow: inset #241715 0 0 40vh 40vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
