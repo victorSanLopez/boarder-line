@@ -1,10 +1,18 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/footer/Footer";
+import HeroHeader from "./components/heroHeader/HeroHeader";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <>
       <Navbar />
+      <HeroHeader />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
     </>
   );
 }

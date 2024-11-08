@@ -16,7 +16,7 @@
 /* image logo */
 
 .imgLogo {
-  width: 6%;
+  width: 8%;
 }
 
 /* section droite de la navbar */
@@ -49,7 +49,7 @@
   border-bottom-left-radius: 0.8em;
   border: 1px solid black;
   width: 22em;
-  height: 2em;
+  height: 2.5em;
   padding: 0.5em;
 }
 
@@ -57,7 +57,7 @@
   border-top-right-radius: 0.8em;
   border-bottom-right-radius: 0.8em;
   border: 1px solid black;
-  height: 2em;
+  height: 2.5em;
   width: 3em;
   background-color: rgb(240, 229, 184);
 }
@@ -88,7 +88,7 @@
     gap: 0.5em;
   }
   .inputSearch {
-    width: 7em;
+    width: 7.5em;
     height: 1.5em;
   }
   .inputButton {
