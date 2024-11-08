@@ -2,9 +2,9 @@ import logoBoarderLine from "../../assets/images/logo-boarder-line-big-transpare
 import logoInstagram from "../../assets/images/logo-instagram.png";
 import logoLinkedIn from "../../assets/images/logo-linkedin.png";
 import logoYouTube from "../../assets/images/logo-youtube.png";
-import style from "./tempfooter.module.css";
+import style from "./footer.module.css";
 
-export default function Footertemp() {
+export default function Footer() {
   return (
     <footer className={style.footerMain}>
       <section className={style.section}>
