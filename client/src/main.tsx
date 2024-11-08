@@ -9,7 +9,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 
 // Import additional components for new routes
-import HomePage from "../src/pages/HomePage.tsx/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 // Try creating these components in the "pages" folder
 
 // import About from "./pages/About";
