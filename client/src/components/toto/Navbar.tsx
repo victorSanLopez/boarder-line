@@ -1,7 +1,6 @@
 import profil from "../../assets/images/login-icon.png";
 import logo from "../../assets/images/logo-boarder-line-big-transparent.png";
 import loupe from "../../assets/images/search-loupe.png";
-
 import style from "./navbar.module.css";
 
 function Navbar() {
