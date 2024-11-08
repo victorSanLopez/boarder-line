@@ -6,12 +6,20 @@ import style from "./navbar.module.css";
 function Navbar() {
   return (
     <nav className={style.navbar}>
-      <img src={logo} alt="Logo Boarder Line" className={style.imgLogo} />
+      <img
+        src={logo}
+        alt="Logo du site Boarder Line"
+        className={style.imgLogo}
+      />
       <div className={style.rightNavbar}>
         <form className={style.searchBar}>
           <input type="search" className={style.inputSearch} />
           <button type="submit" className={style.inputButton}>
-            <img src={loupe} alt="loupe de recherche" width="20px" />
+            <img
+              src={loupe}
+              alt="bouton de la barre de recherche"
+              width="20px"
+            />
           </button>
         </form>
         <a href="https://bgg-json.azurewebsites.net/collection/edwalter">
