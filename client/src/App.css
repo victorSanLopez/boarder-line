@@ -1,8 +1,8 @@
 @font-face {
   font-family: "alegreya";
-  src: url("./assets/font/Alegreya-Regular.ttf");
+  src: url("./assets/fonts/alegreya-regular.ttf");
 }
 
 :root {
-  --title-family: "alegreya";
+  --title-font: "alegreya";
 }

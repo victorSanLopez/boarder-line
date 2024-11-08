@@ -1,7 +1,7 @@
-import logo from "../../assets/images/Logo-Boarder-Line-big-transparent.png";
 import profil from "../../assets/images/login-icon.png";
-import style from "./navbar.module.css";
+import logo from "../../assets/images/logo-boarder-line-big-transparent.png";
 import loupe from "../../assets/images/search-loupe.png";
+import style from "./navbar.module.css";
 
 function Navbar() {
   return (
