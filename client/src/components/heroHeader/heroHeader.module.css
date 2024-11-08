@@ -1,0 +1,49 @@
+/*Image de fond*/
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/images/banniere.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 768px) {
+    height: 100vw;
+  }
+}
+/*Style des titres*/
+.title {
+  margin-left: 6em;
+  padding-top: 3em;
+  font-family: var(--main-title-font);
+  color: var(--title-color);
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
+}
+.titlePage {
+  font-size: 7vw;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+.subtitle {
+  font-size: 3.5vw;
+  margin-left: 1em;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+/*Style du texte, paragraphe*/
+.description {
+  width: 50vw;
+  background-color: black;
+  opacity: 70%;
+  color: white;
+  padding: 1em;
+  font-family: var(--text-font);
+  font-size: 1.4vw;
+  margin-top: 40vh;
+  margin-left: 45vw;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
