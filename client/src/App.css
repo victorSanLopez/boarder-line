@@ -1,18 +1,28 @@
 @font-face {
+  font-family: "alegreya";
+  src: url("./assets/fonts/alegreya-regular.ttf");
+}
+
+@font-face {
   font-family: "jejuhallasan";
   src: url("./assets/fonts/jejuHallasan-regular.ttf");
 }
 
 @font-face {
-  font-family: "hindsiliguri";
-  src: url("./assets/fonts/hindSiliguri-regular.ttf");
+  font-family: "hindisiliguri";
+  src: url("./assets/fonts/hindsiliguri-regular.ttf");
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 :root {
+  --light: #f0e5b8;
+  --dark: #241715;
+  --title-font: "alegreya";
   --main-title-font: "jejuhallasan";
-  --text-font: "hindsiliguri";
+  --text-font: "hindisiliguri";
   --title-color: yellow;
 }
