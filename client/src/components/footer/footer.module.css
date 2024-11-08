@@ -1,5 +1,5 @@
 .footerMain {
-  background: linear-gradient(to bottom, #f0e5b8 2px, #241715 7px);
+  background: linear-gradient(to bottom, var(--light) 2px, var(--dark) 7px);
   color: #f0e5b8;
   display: flex;
   flex-direction: column;
@@ -104,7 +104,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: solid #f0e5b8 1px;
+  border-top: solid var(--light) 1px;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 2vw;
