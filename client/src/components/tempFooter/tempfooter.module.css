@@ -1,10 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .footerMain {
-  background-color: #241715;
+  background: linear-gradient(to bottom, #f0e5b8 2px, #241715 7px);
   color: #f0e5b8;
   display: flex;
   flex-direction: column;
@@ -17,7 +12,6 @@
   width: 100%;
   flex-direction: row-reverse;
   align-items: end;
-  border-top: solid #f0e5b8 4px;
   padding-top: 5vw;
 
   @media screen and (max-width: 768px) {
@@ -79,14 +73,28 @@
   }
 }
 
-.socialIcons {
-  list-style-type: none;
+.miniLogoAnimation {
+  width: 25px;
+  transition: all 0.1s ease-out;
+}
+
+.miniLogoAnimation:hover {
+  transform: scale(1.5);
+}
+
+.miniLogoAnimation:active {
+  transform: rotate(180deg);
 }
 
 .logoClass {
   width: 200px;
   margin-top: 1vw;
   margin-bottom: 3vw;
+  transition: all 0.5s ease-out;
+}
+
+.logoClass:hover {
+  transform: rotate(360deg);
 }
 
 .footerBottom {

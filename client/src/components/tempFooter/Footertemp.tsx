@@ -1,10 +1,10 @@
-import style from "./Footer.module.css";
 import logoBoarderLine from "../../assets/images/logo-boarder-line-big-transparent.png";
-import logoLinkedIn from "../../assets/images/logo-linkedin.png";
 import logoInstagram from "../../assets/images/logo-instagram.png";
+import logoLinkedIn from "../../assets/images/logo-linkedin.png";
 import logoYouTube from "../../assets/images/logo-youtube.png";
+import style from "./tempfooter.module.css";
 
-export default function Footer() {
+export default function Footertemp() {
   return (
     <footer className={style.footerMain}>
       <section className={style.section}>
@@ -24,9 +24,21 @@ export default function Footer() {
         <div className={style.footerLeft}>
           <p>FOLLOW US</p>
           <div className={style.social}>
-            <img src={logoLinkedIn} alt="Logo LinkedIn" width="25px" />
-            <img src={logoInstagram} alt="Logo Instagram" width="25px" />
-            <img src={logoYouTube} alt="Logo YouTube" width="25px" />
+            <img
+              className={style.miniLogoAnimation}
+              src={logoLinkedIn}
+              alt="Logo LinkedIn"
+            />
+            <img
+              className={style.miniLogoAnimation}
+              src={logoInstagram}
+              alt="Logo Instagram"
+            />
+            <img
+              className={style.miniLogoAnimation}
+              src={logoYouTube}
+              alt="Logo YouTube"
+            />
           </div>
         </div>
       </section>

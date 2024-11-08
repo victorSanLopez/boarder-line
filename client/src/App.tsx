@@ -1,10 +1,10 @@
 import "./App.css";
-import Footer from "./components/Footer/Footer";
+import Footertemp from "./components/tempFooter/Footertemp";
 
 function App() {
   return (
     <>
-      <Footer />
+      <Footertemp />
     </>
   );
 }
