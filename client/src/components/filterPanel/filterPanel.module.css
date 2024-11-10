@@ -5,6 +5,12 @@
   margin: auto;
   gap: 1.5vw;
   padding: 2vh 0;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-left: 3vw;
+  }
 }
 .button_filter {
   display: flex;
@@ -16,9 +22,13 @@
   width: 10vw;
   height: 5vh;
   background-color: var(--filter-color);
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: -1px 2px 5px 1px;
   border-color: var(--light);
+  @media screen and (max-width: 768px) {
+    font-size: 1.9vw;
+    font-weight: bold;
+  }
 }
 .button:active {
   transform: translate(0, 2px);
@@ -26,10 +36,13 @@
 .fieldset {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 10px;
   border-color: var(--light);
   position: absolute;
   width: 10vw;
+  @media screen and (max-width: 768px) {
+    position: relative;
+  }
 }
 
 .label {
@@ -39,4 +52,7 @@
   gap: 1em;
   font-family: var(--text-font);
   color: var(--light);
+  @media screen and (max-width: 768px) {
+    font-size: 2vw;
+  }
 }
