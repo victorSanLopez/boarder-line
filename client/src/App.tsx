@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 
 import "./App.css";
+import FilterPanel from "./components/filterPanel/FilterPanel";
 import Footer from "./components/footer/Footer";
 import HeroHeader from "./components/heroHeader/HeroHeader";
-import FilterPanel from "./components/filterPanel/FilterPanel";
 
 function App() {
   return (
