@@ -2,10 +2,10 @@ import style from "./gameDetails.module.css";
 
 export default function GameDetails() {
   return (
-    <section className="style.detailsBigCard">
+    <section className={style.detailsBigCard}>
       <h2>Titre du jeu</h2>
       <figure>
-        <img src="_" alt="Visuel du jeu" />
+        <img src="http://lorempicsum/300" alt="Visuel du jeu" />
       </figure>
       <figcaption>
         <ul>
