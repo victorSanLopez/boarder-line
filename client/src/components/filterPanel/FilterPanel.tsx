@@ -3,11 +3,10 @@ import type { filterPanelProps } from "../../assets/lib/definition";
 import style from "./filterPanel.module.css";
 
 function FilterPanel({ filter, setFilter }: filterPanelProps) {
-  const [displayPlayers, setDisplayPlayers] = useState(false);
   const [displayTime, setDisplayTime] = useState(false);
   const [displayRating, setDisplayRating] = useState(false);
   const [displayType, setDisplayType] = useState(false);
-
+  const [displayPlayers, setDisplayPlayers] = useState(false);
   const handleClickPlayers = () =>
     displayPlayers ? setDisplayPlayers(false) : setDisplayPlayers(true);
   const handleClickTime = () =>

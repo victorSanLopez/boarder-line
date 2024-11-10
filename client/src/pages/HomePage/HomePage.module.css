@@ -17,3 +17,16 @@
     box-shadow: inset #241715 0 0 34vh 34vh;
   }
 }
+.div {
+  width: 20vh;
+  height: 40vh;
+  color: white;
+}
+.img {
+  width: 10vh;
+  height: 20vh;
+}
+.myDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
