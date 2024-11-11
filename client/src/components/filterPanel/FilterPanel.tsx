@@ -2,11 +2,13 @@ import { useState } from "react";
 import type { filterPanelProps } from "../../assets/lib/definition";
 import style from "./filterPanel.module.css";
 
-function FilterPanel({ setFilter }: filterPanelProps) {
+function FilterPanel({ filter, setFilter }: filterPanelProps) {
+  //state button (true or false)
   const [displayTime, setDisplayTime] = useState(false);
   const [displayRating, setDisplayRating] = useState(false);
   const [displayType, setDisplayType] = useState(false);
   const [displayPlayers, setDisplayPlayers] = useState(false);
+  // function on change with state
   const handleClickPlayers = () =>
     displayPlayers ? setDisplayPlayers(false) : setDisplayPlayers(true);
   const handleClickTime = () =>
@@ -15,17 +17,15 @@ function FilterPanel({ setFilter }: filterPanelProps) {
     displayRating ? setDisplayRating(false) : setDisplayRating(true);
   const handleClickType = () =>
     displayType ? setDisplayType(false) : setDisplayType(true);
-
+  //function stoke value of checkbox checked
   const handleChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.checked) {
-      setFilter(e.target.value);
-    } else setFilter("");
+    e.target.checked ? setFilter(e.target.value) : setFilter("");
   };
 
   return (
     <>
       <section className={style.filter}>
-        {/*button max players & filter*/}
+        {/*button min players & filter*/}
         <div className={style.button_filter}>
           <button
             className={style.button}
@@ -43,6 +43,7 @@ function FilterPanel({ setFilter }: filterPanelProps) {
                     id="minPlayer1"
                     name="minPlayers"
                     value="1"
+                    checked={filter === "1"}
                     onChange={handleChangeFilter}
                   />
                   1 player
@@ -54,6 +55,7 @@ function FilterPanel({ setFilter }: filterPanelProps) {
                     id="minPlayer2"
                     name="minPlayers"
                     value="2"
+                    checked={filter === "2"}
                     onChange={handleChangeFilter}
                   />
                   2 players
@@ -64,6 +66,7 @@ function FilterPanel({ setFilter }: filterPanelProps) {
                     id="minPlayer3"
                     name="minPlayers"
                     value="3"
+                    checked={filter === "3"}
                     onChange={handleChangeFilter}
                   />
                   3 players
@@ -74,6 +77,7 @@ function FilterPanel({ setFilter }: filterPanelProps) {
                     id="minPlayer4"
                     name="minPlayers"
                     value="4"
+                    checked={filter === "4"}
                     onChange={handleChangeFilter}
                   />
                   4 players
@@ -112,7 +116,7 @@ function FilterPanel({ setFilter }: filterPanelProps) {
                     value="60"
                     onChange={handleChangeFilter}
                   />
-                  60 min{" "}
+                  60 min
                 </label>
                 <label className={style.label} htmlFor="time3">
                   <input
@@ -188,7 +192,7 @@ function FilterPanel({ setFilter }: filterPanelProps) {
                     value="8.0"
                     onChange={handleChangeFilter}
                   />
-                  8{" "}
+                  8
                 </label>
                 <label className={style.label} htmlFor="rating9">
                   <input

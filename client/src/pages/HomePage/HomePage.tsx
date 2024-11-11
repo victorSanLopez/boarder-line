@@ -5,13 +5,14 @@ import style from "./HomePage.module.css";
 
 export default function HomePage() {
   const [filter, setFilter] = useState("");
-  const fullGame = gameData;
+
+  const [{ name, minPlayers, playingTime, rating, mechanics }] = gameData;
 
   const userFilterPlayers = fullGame.filter(
-    (f) => f.minPlayers === Number.parseInt(filter),
+    (f) => f.minPlayers >= Number.parseInt(filter),
   );
   const userFilterTime = fullGame.filter(
-    (f) => f.playingTime === Number.parseInt(filter),
+    (f) => f.playingTime >= Number.parseInt(filter),
   );
   const userFilterRating = fullGame.filter(
     (f) => f.rating === Number.parseFloat(filter),
@@ -20,7 +21,12 @@ export default function HomePage() {
 
   return (
     <section className={style.backgroundPage}>
-      <FilterPanel filter={filter} setFilter={setFilter} />
+      <FilterPanel
+        filter={filter}
+        setFilter={setFilter}
+        name={name}
+        minPlayers={minPlayers}
+      />
       <div className={style.myDiv}>
         {Number.parseInt(filter) < 5 &&
           userFilterPlayers.map((g) => (
