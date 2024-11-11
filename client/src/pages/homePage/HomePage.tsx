@@ -1,5 +1,5 @@
 import GameDetails from "../../components/gameDetails/GameDetails";
-import style from "./temphomePage.module.css";
+import style from "./homePage.module.css";
 
 export default function HomePage() {
   return (
