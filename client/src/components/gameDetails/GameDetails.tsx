@@ -1,10 +1,6 @@
 import style from "./gameDetails.module.css";
 
 export default function GameDetails() {
-  const sampleGame = {
-    name: "",
-  };
-
   return (
     <div className={style.componentSpace}>
       <section className={style.detailsBigCard}>
