@@ -22,7 +22,18 @@
     "wantToPlay": false,
     "wantToBuy": false,
     "wishList": false,
-    "userComment": ""
+    "userComment": "",
+    "mechanics": [
+      "Automatic Resource Growth",
+      "Closed Drafting",
+      "Enclosure",
+      "Hand Management",
+      "Increase Value of Unchosen Resources",
+      "Solo / Solitaire Game",
+      "Turn Order: Claim Action",
+      "Variable Player Powers",
+      "Worker Placement"
+    ]
   },
   {
     "gameId": 5867,
@@ -47,7 +58,18 @@
     "wantToPlay": false,
     "wantToBuy": false,
     "wishList": false,
-    "userComment": ""
+    "userComment": "",
+    "mechanics": [
+      "Automatic Resource Growth",
+      "Closed Drafting",
+      "Enclosure",
+      "Hand Management",
+      "Increase Value of Unchosen Resources",
+      "Solo / Solitaire Game",
+      "Turn Order: Claim Action",
+      "Variable Player Powers",
+      "Worker Placement"
+    ]
   },
   {
     "gameId": 64956,
@@ -72,7 +94,18 @@
     "wantToPlay": false,
     "wantToBuy": false,
     "wishList": false,
-    "userComment": ""
+    "userComment": "",
+    "mechanics": [
+      "Automatic Resource Growth",
+      "Closed Drafting",
+      "Enclosure",
+      "Hand Management",
+      "Cooperative Game",
+      "Solo / Solitaire Game",
+      "Turn Order: Claim Action",
+      "Variable Player Powers",
+      "Worker Placement"
+    ]
   },
   {
     "gameId": 68606,
@@ -97,7 +130,18 @@
     "wantToPlay": false,
     "wantToBuy": false,
     "wishList": false,
-    "userComment": ""
+    "userComment": "",
+    "mechanics": [
+      "Automatic Resource Growth",
+      "Closed Drafting",
+      "Enclosure",
+      "Hand Management",
+      "Cooperative Game",
+      "Solo / Solitaire Game",
+      "Turn Order: Claim Action",
+      "Variable Player Powers",
+      "Worker Placement"
+    ]
   },
   {
     "gameId": 154310,
@@ -122,7 +166,18 @@
     "wantToPlay": false,
     "wantToBuy": false,
     "wishList": false,
-    "userComment": ""
+    "userComment": "",
+    "mechanics": [
+      "Automatic Resource Growth",
+      "Closed Drafting",
+      "Dice Rolling",
+      "Hand Management",
+      "Increase Value of Unchosen Resources",
+      "Solo / Solitaire Game",
+      "Turn Order: Claim Action",
+      "Variable Player Powers",
+      "Multi-Use Cards"
+    ]
   },
   {
     "gameId": 95105,
