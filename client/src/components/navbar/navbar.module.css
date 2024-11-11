@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(36, 23, 21);
+  padding: 0.5em 2em;
+}
+
+/* image logo */
+
+.imgLogo {
+  width: 8%;
+}
+
+/* section droite de la navbar */
+
+.rightNavbar {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-items: center;
+}
+
+/* bouton games */
+
+.buttonGames {
+  background-color: rgb(36, 23, 21);
+  border-color: rgb(240, 229, 184);
+  border-radius: 1.5em;
+  color: rgb(240, 229, 184);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 6em;
+  height: 2.5em;
+  font-family: var(--title-font);
+  font-size: 1.5em;
+}
+
+/* input de la navbar avec son bouton associé */
+
+.inputSearch {
+  border-top-left-radius: 0.8em;
+  border-bottom-left-radius: 0.8em;
+  border: 1px solid black;
+  width: 22em;
+  height: 2.5em;
+  padding: 0.5em;
+}
+
+.inputButton {
+  border-top-right-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
+  border: 1px solid black;
+  height: 2.5em;
+  width: 3em;
+  background-color: rgb(240, 229, 184);
+}
+
+.searchBar {
+  padding: 0.5em;
+  display: flex;
+}
+
+/* image du profil */
+
+.imgProfil {
+  width: 3em;
+  display: flex;
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5em;
+  }
+  .imgLogo {
+    width: 15%;
+  }
+
+  .rightNavbar {
+    gap: 0.5em;
+  }
+  .inputSearch {
+    width: 7.5em;
+    height: 1.5em;
+  }
+  .inputButton {
+    width: 2em;
+    height: 1.5em;
+  }
+  .buttonGames {
+    border-radius: 1.5em;
+    color: rgb(240, 229, 184);
+    padding: 0.5em;
+    width: 5em;
+    height: 2.5em;
+    font-size: 1em;
+  }
+  .imgProfil {
+    width: 2em;
+  }
+}
