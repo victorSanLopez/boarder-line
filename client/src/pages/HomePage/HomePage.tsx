@@ -1,7 +1,7 @@
-import FilterPanel from "../../components/filterPanel/FilterPanel";
-import gameData from "../../assets/data/gameDate.json";
-import style from "./HomePage.module.css";
 import { useState } from "react";
+import gameData from "../../assets/data/gameDate.json";
+import FilterPanel from "../../components/filterPanel/FilterPanel";
+import style from "./HomePage.module.css";
 
 export default function HomePage() {
   const [filter, setFilter] = useState("");
@@ -22,7 +22,7 @@ export default function HomePage() {
     <section className={style.backgroundPage}>
       <FilterPanel filter={filter} setFilter={setFilter} />
       <div className={style.myDiv}>
-        {Number.parseInt(filter) < 10 &&
+        {Number.parseInt(filter) < 5 &&
           userFilterPlayers.map((g) => (
             <div key={g.gameId} className={style.div}>
               <h1>{g.name}</h1>

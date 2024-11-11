@@ -32,7 +32,7 @@ function FilterPanel({ setFilter }: filterPanelProps) {
             type="button"
             onClick={handleClickPlayers}
           >
-            Players
+            Min. players
           </button>
           <div>
             {displayPlayers && (
