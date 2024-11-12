@@ -1,7 +1,8 @@
 import { useState } from "react";
 import gameData from "../../assets/data/gameDate.json";
 import FilterPanel from "../../components/filterPanel/FilterPanel";
-import style from "./HomePage.module.css";
+
+import style from "./homePage.module.css";
 
 export default function HomePage() {
   const [filterGame, setFilterGame] = useState("");
