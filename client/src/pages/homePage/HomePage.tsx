@@ -37,40 +37,13 @@ const cardList = [
     wishList: false,
     userComment: "",
   },
-  {
-    gameId: 31260,
-    name: "Agricola",
-    image:
-      "https://cf.geekdo-images.com/dDDo2Hexl80ucK1IlqTk-g__original/img/toobKoejPiHpfpHk4SYd1UAJafw=/0x0/filters:format(jpeg)/pic831744.jpg",
-    thumbnail:
-      "https://cf.geekdo-images.com/dDDo2Hexl80ucK1IlqTk-g__thumb/img/GHGdnCfeysoP_34gLnofJcNivW8=/fit-in/200x150/filters:strip_icc()/pic831744.jpg",
-    minPlayers: 1,
-    maxPlayers: 5,
-    playingTime: 150,
-    isExpansion: false,
-    yearPublished: 2007,
-    bggRating: 0.0,
-    averageRating: 7.87156,
-    rank: 54,
-    numPlays: 13,
-    rating: 7.0,
-    owned: true,
-    preOrdered: false,
-    forTrade: false,
-    previousOwned: false,
-    want: false,
-    wantToPlay: false,
-    wantToBuy: false,
-    wishList: false,
-    userComment: "",
-  },
 ];
 
 export default function HomePage() {
   return (
     <section className={style.backgroundPage}>
       <CardGame card={cardList[0]} />
-      <CardGame card={cardList[2]} />
+      <CardGame card={cardList[1]} />
     </section>
   );
 }

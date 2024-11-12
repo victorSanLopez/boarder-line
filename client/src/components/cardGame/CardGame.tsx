@@ -1,5 +1,5 @@
+import type { cardProps } from "../../assets/lib/definition";
 import style from "./cardGame.module.css";
-import { cardProps } from "../../assets/lib";
 
 function CardGame({ card }: { card: cardProps }) {
   return (
