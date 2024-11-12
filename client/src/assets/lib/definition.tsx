@@ -4,6 +4,6 @@ export type headerInfoProps = {
   description: string;
 };
 export type filterPanelProps = {
-  filter: string;
-  setFilter: (f: string) => void;
+  filterGame: string;
+  setFilterGame: (f: string) => void;
 };

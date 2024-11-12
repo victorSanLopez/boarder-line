@@ -4,31 +4,28 @@ import FilterPanel from "../../components/filterPanel/FilterPanel";
 import style from "./HomePage.module.css";
 
 export default function HomePage() {
-  const [filter, setFilter] = useState("");
+  const [filterGame, setFilterGame] = useState("");
 
-  const [{ name, minPlayers, playingTime, rating, mechanics }] = gameData;
+  const fullGame = gameData;
 
   const userFilterPlayers = fullGame.filter(
-    (f) => f.minPlayers >= Number.parseInt(filter),
+    (f) => f.minPlayers >= Number.parseInt(filterGame),
   );
   const userFilterTime = fullGame.filter(
-    (f) => f.playingTime >= Number.parseInt(filter),
+    (f) => f.playingTime === Number.parseInt(filterGame),
   );
   const userFilterRating = fullGame.filter(
-    (f) => f.rating === Number.parseFloat(filter),
+    (f) => f.rating === Number.parseFloat(filterGame),
   );
-  const userFilterType = fullGame.filter((f) => f.mechanics?.includes(filter));
+  const userFilterType = fullGame.filter((f) =>
+    f.mechanics?.includes(filterGame),
+  );
 
   return (
     <section className={style.backgroundPage}>
-      <FilterPanel
-        filter={filter}
-        setFilter={setFilter}
-        name={name}
-        minPlayers={minPlayers}
-      />
+      <FilterPanel filterGame={filterGame} setFilterGame={setFilterGame} />
       <div className={style.myDiv}>
-        {Number.parseInt(filter) < 5 &&
+        {Number.parseInt(filterGame) < 5 &&
           userFilterPlayers.map((g) => (
             <div key={g.gameId} className={style.div}>
               <h1>{g.name}</h1>
@@ -37,7 +34,7 @@ export default function HomePage() {
               <p>{g.playingTime}</p> <p>{g.rating}</p>
             </div>
           ))}
-        {Number.parseInt(filter) > 10 &&
+        {Number.parseInt(filterGame) > 10 &&
           userFilterTime.map((g) => (
             <div key={g.gameId} className={style.div}>
               <h1>{g.name}</h1>
@@ -46,7 +43,7 @@ export default function HomePage() {
               <p>{g.playingTime}</p> <p>{g.rating}</p>
             </div>
           ))}
-        {Number.parseFloat(filter) >= 5.0 &&
+        {Number.parseFloat(filterGame) >= 5.0 &&
           userFilterRating.map((g) => (
             <div key={g.gameId} className={style.div}>
               <h1>{g.name}</h1>
@@ -55,10 +52,10 @@ export default function HomePage() {
               <p>{g.playingTime}</p> <p>{g.rating}</p>
             </div>
           ))}
-        {(filter === "Dice Rolling" ||
-          filter === "Automatic Resource Growth" ||
-          filter === "Cooperative Game" ||
-          filter === "Multi-Use Cards") &&
+        {(filterGame === "Dice Rolling" ||
+          filterGame === "Automatic Resource Growth" ||
+          filterGame === "Cooperative Game" ||
+          filterGame === "Multi-Use Cards") &&
           userFilterType.map((g) => (
             <div key={g.gameId} className={style.div}>
               <h1>{g.name}</h1>
@@ -67,7 +64,7 @@ export default function HomePage() {
               <p>{g.playingTime}</p> <p>{g.rating}</p>
             </div>
           ))}
-        {filter === "" &&
+        {filterGame === "" &&
           fullGame.map((g) => (
             <div key={g.gameId} className={style.div}>
               <h1>{g.name}</h1>
