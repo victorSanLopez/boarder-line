@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import FilterPanel from "../../components/filterPanel/FilterPanel";
 import dataGame from "../../assets/data/gameDate.json";
-import style from "./libraryPage.module.css";
 import CardGame from "../../components/cardGame/CardGame";
+import FilterPanel from "../../components/filterPanel/FilterPanel";
+import style from "./libraryPage.module.css";
 
 // page library pour lister les jeux et les filtrer
 
