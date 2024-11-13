@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import profil from "../../assets/images/login-icon.png";
 import logo from "../../assets/images/logo-boarder-line-big-transparent.png";
 import loupe from "../../assets/images/search-loupe.png";
@@ -6,11 +7,13 @@ import style from "./navbar.module.css";
 function Navbar() {
   return (
     <nav className={style.navbar}>
-      <img
-        src={logo}
-        alt="Logo du site Boarder Line"
-        className={style.imgLogo}
-      />
+      <NavLink to={"/"}>
+        <img
+          src={logo}
+          alt="Logo du site Boarder Line"
+          className={style.imgLogo}
+        />
+      </NavLink>
       <div className={style.rightNavbar}>
         <form className={style.searchBar}>
           <input type="search" className={style.inputSearch} />
@@ -22,11 +25,11 @@ function Navbar() {
             />
           </button>
         </form>
-        <a href="https://bgg-json.azurewebsites.net/collection/edwalter">
+        <NavLink to={"/library"}>
           <button type="button" className={style.buttonGames}>
             GAMES
           </button>
-        </a>
+        </NavLink>
         <a href="https://bgg-json.azurewebsites.net/collection/edwalter">
           <img
             src={profil}
