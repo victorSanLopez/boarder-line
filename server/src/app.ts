@@ -72,7 +72,7 @@ app.get("/api/games", (req, res) => {
   res.send(games);
 });
 
-function oneGame(id) {
+function oneGame(id: string) {
   return games.find((p) => p.gameId === +id);
 }
 
