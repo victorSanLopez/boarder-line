@@ -16,7 +16,7 @@ type gameDetailsType = {
 };
 
 export default function GameDetails() {
-  const id = 666;
+  const id = 1346;
 
   const [gameDetails, setGameDetails] = useState<gameDetailsType | null>(null);
 
