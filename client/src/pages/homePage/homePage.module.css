@@ -6,9 +6,9 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
+  padding: 5vh 0;
+  width: auto;
+  height: 100%;
 
   @media screen and (min-width: 500px) {
     box-shadow: inset #241715 0 0 20vh 20vh;

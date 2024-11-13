@@ -37,7 +37,7 @@
 .img {
   width: 300px;
   margin-bottom: 1vw;
-  box-shadow: -5px 5px 25px 0px var(--dark);
+  box-shadow: -5px 5px 7px 0px #241715b1;
 }
 
 .ul {
@@ -82,4 +82,50 @@
   margin: 1vw;
   text-align: center;
   color: grey;
+}
+
+.loadingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+  font-family: var(--text-font);
+  height: 50vw;
+  gap: 5vw;
+  background-color: var(--light);
+}
+
+.loadingAnimation {
+  width: 200px;
+  animation: rotation 5s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  display: flex;
+  gap: 2px;
+}
+
+.loadingText span {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
