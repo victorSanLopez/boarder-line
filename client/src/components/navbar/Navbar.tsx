@@ -25,7 +25,7 @@ function Navbar() {
             />
           </button>
         </form>
-        <NavLink to={"/libraryPage"}>
+        <NavLink to={"/library"}>
           <button type="button" className={style.buttonGames}>
             GAMES
           </button>
