@@ -17,10 +17,3 @@
     box-shadow: inset #241715 0 0 34vh 34vh;
   }
 }
-
-.myDiv {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 15vh;
-  justify-content: center;
-}

@@ -4,10 +4,6 @@ import loupe from "../../assets/images/search-loupe.png";
 import style from "./navbar.module.css";
 
 function Navbar() {
-  const [searchBar, setSearchBar] = searchBar(null);
-  const handleClickSearch = (e) => {
-    setSearchBar(e.target.value);
-  };
   return (
     <nav className={style.navbar}>
       <img
@@ -17,14 +13,7 @@ function Navbar() {
       />
       <div className={style.rightNavbar}>
         <form className={style.searchBar}>
-          <input
-            type="search"
-            name="searchBar"
-            id="searchBar"
-            placeholder="Rechercher"
-            onClick={handleClickSearch}
-            className={style.inputSearch}
-          />
+          <input type="search" className={style.inputSearch} />
           <button type="submit" className={style.inputButton}>
             <img
               src={loupe}
