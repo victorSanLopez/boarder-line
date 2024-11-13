@@ -1,8 +1,8 @@
+import { NavLink } from "react-router-dom";
 import profil from "../../assets/images/login-icon.png";
 import logo from "../../assets/images/logo-boarder-line-big-transparent.png";
 import loupe from "../../assets/images/search-loupe.png";
 import style from "./navbar.module.css";
-import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
