@@ -141,7 +141,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     checked={filterGame === "120"}
                     onChange={handleChangeFilter}
                   />
-                  120 min+
+                  120 min
                 </label>
               </fieldset>
             )}
@@ -159,52 +159,57 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
           <div>
             {displayRating && (
               <fieldset className={style.fieldset}>
-                <label className={style.label} htmlFor="rating5">
-                  <input
-                    type="checkbox"
-                    id="rating5"
-                    name="rating"
-                    value="5.0"
-                    onChange={handleChangeFilter}
-                  />
-                  6
-                </label>
                 <label className={style.label} htmlFor="rating6">
                   <input
                     type="checkbox"
                     id="rating6"
                     name="rating"
-                    value="6.0"
+                    value="6"
+                    checked={filterGame === "6"}
                     onChange={handleChangeFilter}
                   />
-                  7
+                  6
                 </label>
                 <label className={style.label} htmlFor="rating7">
                   <input
                     type="checkbox"
                     id="rating7"
                     name="rating"
-                    value="7.0"
+                    value="7"
+                    checked={filterGame === "7"}
                     onChange={handleChangeFilter}
                   />
-                  8
+                  7
                 </label>
                 <label className={style.label} htmlFor="rating8">
                   <input
                     type="checkbox"
-                    id="rating8"
+                    id="rating7"
                     name="rating"
-                    value="8.0"
+                    value="8"
+                    checked={filterGame === "8"}
                     onChange={handleChangeFilter}
                   />
-                  9
+                  8
                 </label>
                 <label className={style.label} htmlFor="rating9">
                   <input
                     type="checkbox"
                     id="rating9"
                     name="rating"
-                    value="9.0"
+                    value="9"
+                    checked={filterGame === "9"}
+                    onChange={handleChangeFilter}
+                  />
+                  9
+                </label>
+                <label className={style.label} htmlFor="rating10">
+                  <input
+                    type="checkbox"
+                    id="rating10"
+                    name="rating"
+                    value="10"
+                    checked={filterGame === "10"}
                     onChange={handleChangeFilter}
                   />
                   10
@@ -231,6 +236,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     id="type1"
                     name="type"
                     value="Multi-Use Cards"
+                    checked={filterGame === "Multi-Use Cards"}
                     onChange={handleChangeFilter}
                   />
                   Deck builder
@@ -241,9 +247,10 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     id="type2"
                     name="type"
                     value="Dice Rolling"
+                    checked={filterGame === "Dice Rolling"}
                     onChange={handleChangeFilter}
                   />
-                  Dice
+                  Dice Rolling
                 </label>
                 <label className={style.label} htmlFor="type3">
                   <input
@@ -251,6 +258,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     id="type3"
                     name="type"
                     value="Cooperative Game"
+                    checked={filterGame === "Cooperative Game"}
                     onChange={handleChangeFilter}
                   />
                   Cooperative
@@ -261,6 +269,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     id="type4"
                     name="type"
                     value="Automatic Resource Growth"
+                    checked={filterGame === "Automatic Resource Growth"}
                     onChange={handleChangeFilter}
                   />
                   Ressource management
