@@ -17,7 +17,8 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
     displayRating ? setDisplayRating(false) : setDisplayRating(true);
   const handleClickType = () =>
     displayType ? setDisplayType(false) : setDisplayType(true);
-  //function stoke value of checkbox checked
+  //function store value of checkbox checked
+
   const handleChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.target.checked ? setFilterGame(e.target.value) : setFilterGame("");
   };
@@ -166,7 +167,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     value="5.0"
                     onChange={handleChangeFilter}
                   />
-                  1
+                  6
                 </label>
                 <label className={style.label} htmlFor="rating6">
                   <input
@@ -176,7 +177,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     value="6.0"
                     onChange={handleChangeFilter}
                   />
-                  2
+                  7
                 </label>
                 <label className={style.label} htmlFor="rating7">
                   <input
@@ -186,7 +187,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     value="7.0"
                     onChange={handleChangeFilter}
                   />
-                  3
+                  8
                 </label>
                 <label className={style.label} htmlFor="rating8">
                   <input
@@ -196,7 +197,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     value="8.0"
                     onChange={handleChangeFilter}
                   />
-                  4
+                  9
                 </label>
                 <label className={style.label} htmlFor="rating9">
                   <input
@@ -206,7 +207,7 @@ function FilterPanel({ filterGame, setFilterGame }: filterPanelProps) {
                     value="9.0"
                     onChange={handleChangeFilter}
                   />
-                  5
+                  10
                 </label>
               </fieldset>
             )}
