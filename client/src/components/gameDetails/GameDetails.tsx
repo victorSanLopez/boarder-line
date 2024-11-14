@@ -1,22 +1,11 @@
 import { useEffect, useState } from "react";
 import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
+import type { gameDetailsType } from "../../assets/lib/definition";
 import style from "./gameDetails.module.css";
 
-type gameDetailsType = {
-  name: string;
-  image?: string;
-  minPlayers?: number;
-  maxPlayers?: number;
-  playingTime?: number;
-  publishers?: string[];
-  designers?: string[];
-  averageRating?: number;
-  description?: string;
-};
-
 export default function GameDetails() {
-  const id = 1346;
+  const id = 124742;
 
   const [gameDetails, setGameDetails] = useState<gameDetailsType | null>(null);
 
@@ -28,6 +17,7 @@ export default function GameDetails() {
   }, []);
 
   if (!gameDetails) {
+    // Animation en cas de perte de l'API
     return (
       <section className={style.loadingSection}>
         <img
@@ -40,24 +30,22 @@ export default function GameDetails() {
     );
   }
 
-  const listFormatter = (list: string[] | undefined): string => {
-    if (!list || list.length === 0) return "Unknown";
+  const arrayToListFormatter = (list: string[] | undefined) => {
+    if (!list) return "Unknown";
     if (list.length === 1) return list[0];
     const lastItem = list.pop();
     return `${list.join(", ")} and ${lastItem}`;
   };
 
-  const averageRating = gameDetails.averageRating
-    ? gameDetails.averageRating.toFixed(0)
-    : "No rating available";
-
-  const designers = listFormatter(gameDetails.designers);
-  const publishers = listFormatter(gameDetails.publishers);
+  const publishers = arrayToListFormatter(gameDetails.publishers);
+  const designers = arrayToListFormatter(gameDetails.designers);
 
   return (
     <div className={style.componentSpace}>
       <section className={style.detailsBigCard}>
-        <h2 className={style.h2}>{gameDetails.name}</h2>
+        <h2 className={style.h2}>
+          {gameDetails.name || "Title not available"}
+        </h2>
         <figure className={style.figure}>
           <img
             className={style.img}
@@ -66,17 +54,19 @@ export default function GameDetails() {
           />
           <figcaption>
             <ul className={style.ul}>
-              <li className={style.h3}>Type : </li>
+              <li className={style.h3}>Type : Unknown</li>
               <li className={style.h3}>
-                Number of players : {gameDetails.minPlayers}-
-                {gameDetails.maxPlayers}
+                Number of players : {gameDetails.minPlayers || "?"}-
+                {gameDetails.maxPlayers || "?"} players
               </li>
               <li className={style.h3}>
-                Playing time : {gameDetails.playingTime} minutes
+                Playing time : {gameDetails.playingTime || "???"} minutes
               </li>
               <li className={style.h3}>Editor : {publishers}</li>
               <li className={style.h3}>Author : {designers}</li>
-              <li className={style.h3}>Rating : {averageRating}</li>
+              <li className={style.h3}>
+                Rating : {gameDetails.averageRating?.toFixed(0)}/10
+              </li>
             </ul>
           </figcaption>
         </figure>
