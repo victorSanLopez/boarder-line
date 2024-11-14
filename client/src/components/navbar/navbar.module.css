@@ -16,7 +16,7 @@
 /* image logo */
 
 .imgLogo {
-  width: 8%;
+  width: 10em;
 }
 
 /* section droite de la navbar */
@@ -80,7 +80,7 @@
     padding: 0.5em;
   }
   .imgLogo {
-    width: 15%;
+    width: 3em;
   }
 
   .rightNavbar {
