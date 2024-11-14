@@ -1,0 +1,173 @@
+/* contenaire des cartes */
+
+.sliderFolder {
+  position: relative;
+  background-image: url(../../assets/images/parchment-background.png);
+  box-shadow: inset #daae5d 0 0 5vw 5vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  width: 95%;
+  height: 17rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
+  transition-duration: 0.3s;
+  @media screen and (min-width: 500px) {
+    height: 30rem;
+  }
+  @media screen and (min-width: 992px) {
+    box-shadow: inset #daae5d 0 0 3vw 3vw;
+  }
+}
+
+/* animation de la carte centrale */
+
+@keyframes card-slide-middle {
+  0% {
+    display: none;
+    transform: scale(1.2);
+  }
+  1% {
+    display: block;
+    transform: scale(1.2);
+  }
+  100% {
+    display: block;
+    transform: scale(1.5);
+  }
+}
+
+/* animations cartes adjacentes */
+
+@keyframes card-slide-side {
+  0% {
+    display: none;
+    transform: scale(0.8);
+  }
+
+  1% {
+    display: block;
+    transform: scale(0.8);
+  }
+
+  100% {
+    display: block;
+    transform: scale(1);
+  }
+}
+
+/* animations cartes adjacentes */
+
+@keyframes card-slide-center-big {
+  0% {
+    display: none;
+    transform: scale(1.5);
+  }
+
+  1% {
+    display: block;
+    transform: scale(1.5);
+  }
+
+  100% {
+    display: block;
+    transform: scale(1.8);
+  }
+}
+
+/* carte centrale */
+
+.cardSlider {
+  animation-name: card-slide-side;
+  position: absolute;
+  animation-duration: 0.5s;
+  width: 5rem;
+  height: 80%;
+  transition-duration: 0.5s;
+  @media screen and (min-width: 500px) {
+    transform: scale(1.5);
+    height: 50%;
+    animation-name: card-slide-middle;
+  }
+  @media screen and (min-width: 1000px) {
+    animation-name: card-slide-center-big;
+    height: 45%;
+    transform: scale(1.8);
+  }
+}
+
+/* carte de gauche */
+
+.cardSliderLeft {
+  opacity: 80%;
+  position: absolute;
+  width: 9rem;
+  height: 55%;
+  transition-duration: 0.5s;
+  left: 18vw;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+  @media screen and (min-width: 500px) {
+    animation-name: card-slide-side;
+    animation-duration: 0.5s;
+  }
+}
+
+/* carte de droite */
+
+.cardSliderRight {
+  opacity: 80%;
+  position: absolute;
+  width: 9rem;
+  height: 55%;
+  transition-duration: 0.5s;
+  right: 18vw;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+  @media screen and (min-width: 500px) {
+    animation-name: card-slide-side;
+    animation-duration: 0.5s;
+  }
+}
+
+/* cartes non affiché a l'écran */
+
+.cardSliderHidden {
+  display: none;
+}
+
+/* bouttons */
+
+.buttonSlider {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.buttonSlider:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.buttonLeft {
+  border: unset;
+  border-radius: 25rem;
+  left: 2vw;
+  background-image: url(https://cdn.pixabay.com/photo/2012/04/28/18/59/left-44038_1280.png);
+  background-size: cover;
+  background-position: center;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.buttonRight {
+  border: unset;
+  border-radius: 25rem;
+  right: 2vw;
+  background-image: url(https://cdn.pixabay.com/photo/2012/04/28/19/04/right-44059_1280.png);
+  background-size: cover;
+  background-position: center;
+  height: 2.5rem;
+  width: 2.5rem;
+}
