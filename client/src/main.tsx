@@ -31,6 +31,8 @@ const router = createBrowserRouter([
       {
         path: "/library",
         element: <LibraryPage />,
+        loader: () =>
+          fetch("https://bgg-json.azurewebsites.net/collection/edwalter"),
       },
     ],
   },

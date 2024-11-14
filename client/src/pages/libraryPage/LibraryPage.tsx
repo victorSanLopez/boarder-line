@@ -1,27 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import dataGame from "../../assets/data/gameDate.json";
 import CardGame from "../../components/cardGame/CardGame";
 import FilterPanel from "../../components/filterPanel/FilterPanel";
 import style from "./libraryPage.module.css";
+import { useLoaderData } from "react-router-dom";
+import type { dataGamesProps } from "../../assets/lib/definition";
 
 // page library pour lister les jeux et les filtrer
 
 export default function libraryPage() {
   const [filterGame, setFilterGame] = useState("");
+  const [data, setData] = useState([]);
 
-  const fullgame = dataGame;
+  const fullGame: dataGamesProps[] = data;
 
-  const userFilterPlayers = fullgame.filter(
+  useEffect(() => {
+    fetch("https://bgg-json.azurewebsites.net/collection/edwalter")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, []);
+
+  const userFilterPlayers = fullGame.filter(
     (f) => f.minPlayers >= Number.parseInt(filterGame),
   );
-  const userFilterTime = fullgame.filter(
+  const userFilterTime = fullGame.filter(
     (f) => f.playingTime === Number.parseInt(filterGame),
   );
-  const userFilterRating = fullgame.filter(
+  const userFilterRating = fullGame.filter(
     (f) => Math.trunc(f.averageRating) === Number.parseInt(filterGame),
   );
-  const userFilterType = fullgame.filter((f) =>
+  const userFilterType = fullGame.filter((f) =>
     f.mechanics?.includes(filterGame),
   );
   const userRating =
@@ -47,7 +55,7 @@ export default function libraryPage() {
         {userType &&
           userFilterType.map((g) => <CardGame key={g.gameId} card={g} />)}
         {filterGame === "" &&
-          fullgame.map((g) => <CardGame key={g.gameId} card={g} />)}
+          fullGame.map((g) => <CardGame key={g.gameId} card={g} />)}
       </div>
     </section>
   );
