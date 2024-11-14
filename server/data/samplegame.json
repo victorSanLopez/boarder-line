@@ -1482,12 +1482,16 @@
     "gameId": 521,
     "name": "Crokinole",
     "image": "https://cf.geekdo-images.com/x4BbdwSDkjTnbQR_PfQHfg__original/img/gvQd6yVjZIBoT5aE74o2BJIDxDo=/0x0/filters:format(jpeg)/pic8207389.jpg",
+    "description": "*Crokinole* is a classic dexterity game that dates back to 1876, often considered one of the greatest traditional tabletop games. Played on a circular board, the objective is to flick wooden discs into the highest-scoring regions at the center of the board while avoiding the outer edges. Players take turns attempting to land their discs in scoring zones while trying to knock opponents' discs out of the way.\n\nThe game is a combination of skill, precision, and strategy, as players must judge distances, angles, and timing to outmaneuver their opponents. *Crokinole* is typically played by two or four players, with each player trying to accumulate points by landing their discs in the central area or knocking opposing discs out of scoring positions.\n\nWith its simple yet engaging mechanics, *Crokinole* has endured for over a century as a fun and competitive game that is easy to learn but challenging to master. The tactile enjoyment of flicking the discs and the strategic decisions involved make *Crokinole* a beloved classic for players of all ages.",
+    "type": ["Action", "Dexterity"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 30,
     "isExpansion": false,
     "yearPublished": 1876,
-    "averageRating": 8.03977
+    "averageRating": 8.03977,
+    "publishers": ["Public domain"],
+    "artists": ["Allison Litchfield", "Orlando Ramirez"]
   },
   {
     "gameId": 192457,
@@ -1625,12 +1629,55 @@
     "gameId": 104162,
     "name": "Descent: Journeys in the Dark (Second Edition)",
     "image": "https://cf.geekdo-images.com/ZN2rpiJ19lg5DZk_iYMMkQ__original/img/E7OjZXGfe2Vfj2qis30aXetbQJQ=/0x0/filters:format(jpeg)/pic1180640.jpg",
+    "description": "*Descent: Journeys in the Dark (Second Edition)* is a cooperative, dungeon-crawling board game where one player acts as the Overlord, controlling the monsters and challenges, while the other players take on the roles of heroes working together to complete quests and defeat the Overlord's forces. Set in the fantasy world of Terrinoth, the game combines tactical combat, exploration, and character progression.\n\nPlayers choose from a variety of hero classes, each with unique abilities, and can improve their characters with new skills, equipment, and powers over the course of a campaign. The Overlord, in turn, deploys monsters, lays traps, and attempts to hinder the heroes’ progress, adding a layer of strategy and tension to each encounter.\n\n*Descent: Journeys in the Dark* offers a richly thematic experience, with varied quests and scenarios that make each playthrough unique. The game’s blend of cooperative strategy, adventure, and character development has made it a favorite among fans of fantasy and dungeon-crawling games.",
+    "type": ["Thematic"],
     "minPlayers": 1,
     "maxPlayers": 5,
     "playingTime": 120,
     "isExpansion": false,
     "yearPublished": 2012,
-    "averageRating": 7.61279
+    "averageRating": 7.61279,
+    "designers": [
+      "Daniel Clark",
+      "Corey Konieczka",
+      "Adam Sadler",
+      "Kevin Wilson"
+    ],
+    "publishers": ["Fantasy Flight Games"],
+    "artists": [
+      "Alex Aparin",
+      "Devon Caddy-Lee",
+      "Sylvain Decaux",
+      "Tod Gelle",
+      "Charlène le Scanff",
+      "Thomas Lishman",
+      "Henning Ludvigsen",
+      "Dallas Mehlhoff",
+      "Sandara Tang",
+      "Allison Theus"
+    ],
+    "expansions": [
+      {
+        "name": "Descent: Journeys in the Dark (Second Edition) – Dark Elements",
+        "gameId": 176443
+      },
+      {
+        "name": "Descent: Journeys in the Dark (Second Edition) – Forgotten Souls",
+        "gameId": 153235
+      },
+      {
+        "name": "Descent: Journeys in the Dark (Second Edition) – Labyrinth of Ruin",
+        "gameId": 137842
+      },
+      {
+        "name": "Descent: Journeys in the Dark (Second Edition) – Lair of the Wyrm",
+        "gameId": 129423
+      },
+      {
+        "name": "Descent: Journeys in the Dark (Second Edition) – Nature's Ire",
+        "gameId": 170959
+      }
+    ]
   },
   {
     "gameId": 176443,
@@ -1658,12 +1705,17 @@
     "gameId": 137842,
     "name": "Descent: Journeys in the Dark (Second Edition) – Labyrinth of Ruin",
     "image": "https://cf.geekdo-images.com/inBhHDF8HY-01CBDawDEjA__original/img/lC5y1396BugvpqiWvTcq52YTxuo=/0x0/filters:format(jpeg)/pic1639612.jpg",
+    "description": "*Descent: Labyrinth of Ruin* is an expansion for *Descent: Journeys in the Dark (Second Edition)*, introducing a new campaign set in the ruins of a forgotten city. This expansion offers a fresh narrative with new quests, monsters, and challenges for players to overcome. Heroes venture into an ancient labyrinth filled with traps, powerful adversaries, and hidden treasures, all while unraveling a dark mystery.\n\nIn addition to a new story-driven campaign, *Labyrinth of Ruin* introduces four new heroes, each with unique abilities, and new classes that add variety to the heroes’ skills and strategies. The Overlord also gains new powers and tools, including new monsters and traps, increasing the tactical options for opposing the heroes.\n\n*Labyrinth of Ruin* enriches the *Descent* experience by providing a thrilling and challenging adventure, perfect for players looking to expand the scope and depth of their *Descent* campaigns.",
+    "type": ["Thematic"],
     "minPlayers": 2,
     "maxPlayers": 5,
     "playingTime": 180,
     "isExpansion": true,
     "yearPublished": 2013,
-    "averageRating": 8.11515
+    "averageRating": 8.11515,
+    "designers": ["Adam Sadler"],
+    "publishers": ["Fantasy Flight Games"],
+    "artists": ["Henning Ludvigsen", "Dallas Mehlhoff", "WiL Springer"]
   },
   {
     "gameId": 129423,
@@ -1773,23 +1825,69 @@
     "gameId": 36218,
     "name": "Dominion",
     "image": "https://cf.geekdo-images.com/j6iQpZ4XkemZP07HNCODBA__original/img/96COuakNiLRrjDLc1sM4Zxsw4WE=/0x0/filters:format(jpeg)/pic394356.jpg",
+    "description": "*Dominion* is a deck-building card game where players compete to build the most prosperous kingdom by acquiring cards that add wealth, actions, and victory points to their decks. Starting with a small deck of basic cards, players expand their options by purchasing new cards each turn, aiming to create powerful combinations that maximize their resources and abilities.\n\nEach turn, players can perform actions, buy new cards, and organize their decks to build an efficient engine that drives their strategy. The game offers multiple paths to victory, allowing players to focus on accumulating wealth, enhancing their action potential, or gaining victory points directly.\n\nWith a variety of card types and endless possible combinations, *Dominion* is highly replayable and strategic, appealing to fans of resource management and engine-building. Its straightforward mechanics make it easy to learn, while its depth ensures an engaging experience for players who enjoy optimizing their strategies.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 30,
     "isExpansion": false,
     "yearPublished": 2008,
-    "averageRating": 7.598
+    "averageRating": 7.598,
+    "designers": ["Donald X. Vaccarino"],
+    "publishers": ["Rio Grande Games"],
+    "artists": [
+      "Matthias Catrein",
+      "Julien Delval",
+      "Tomasz Jedruszek",
+      "Ryan Laukat",
+      "Harald Lieske",
+      "Michael Menzel",
+      "Marcel-André Casasola Merkle",
+      "Claus Stephan",
+      "Christof Tisch"
+    ]
   },
   {
     "gameId": 66690,
     "name": "Dominion: Prosperity",
     "image": "https://cf.geekdo-images.com/fEawLvevkxPv9AQ3mSiwVQ__original/img/NhQI64z4i8MpZZyHPKiHVvbcKaA=/0x0/filters:format(jpeg)/pic1747320.jpg",
+    "description": "*Dominion: Prosperity* is an expansion for the deck-building game *Dominion*, adding a wealth-focused theme that introduces higher-value treasure and victory cards, as well as powerful new actions. In this expansion, players have access to Platinum and Colony cards, which allow for bigger turns and higher point totals, emphasizing long-term strategy and resource management.\n\n*Prosperity* also includes new Kingdom cards that provide advanced ways to gain wealth and victory points, encouraging players to build grander, more efficient decks. The expansion’s focus on luxury and wealth changes the pacing of the game, rewarding players who can accumulate large amounts of treasure and capitalize on high-cost cards.\n\nWith its introduction of new mechanics and a focus on riches, *Dominion: Prosperity* adds depth and variety, making it a favorite among fans looking to enhance their *Dominion* experience with greater rewards and strategic options.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 30,
     "isExpansion": true,
     "yearPublished": 2010,
-    "averageRating": 8.22865
+    "averageRating": 8.22865,
+    "designers": ["Donald X. Vaccarino"],
+    "publishers": ["Rio Grande Games"],
+    "artists": [
+      "Joshua Gerald Balvin",
+      "Brian Brinlee",
+      "Eric J. Carter",
+      "Matthias Catrein",
+      "Julien Delval",
+      "Alex Drummond",
+      "Kim Feigenbaum",
+      "Rick Hershey",
+      "Martin Hoffmann",
+      "Simon Jannerland",
+      "Tomasz Jedruszek",
+      "Ryan Laukat",
+      "Harald Lieske",
+      "Dennis Lohausen",
+      "Marcel-André Casasola Merkle",
+      "Kieron O'Gorman",
+      "Tu Peishu",
+      "Marco Primo",
+      "Rom",
+      "Jason Slavin",
+      "Lee Smith",
+      "Jason Snair",
+      "Claus Stephan",
+      "Colin Thorm",
+      "R. C. Torres"
+    ]
   },
   {
     "gameId": 156714,
@@ -2059,23 +2157,43 @@
     "gameId": 72125,
     "name": "Eclipse: New Dawn for the Galaxy",
     "image": "https://cf.geekdo-images.com/cnFppsVNOSTJ-W3APQFuTg__original/img/AbcjscBi-x3tVrsJsBhXq2RxLbc=/0x0/filters:format(jpeg)/pic1974056.jpg",
+    "description": "*Eclipse: New Dawn for the Galaxy* is a strategic, space exploration board game where players lead an interstellar civilization, competing for dominance in a vast galaxy. Each player controls a unique species with special abilities, guiding them through exploration, resource management, scientific research, and military expansion. The game combines elements of 4X (eXplore, eXpand, eXploit, eXterminate) with deep tactical choices.\n\nPlayers can build fleets, upgrade their ships, colonize new sectors, and establish alliances, all while balancing their economy and defending their territories. The game’s modular board and variety of technological advancements create a dynamic and ever-changing universe where players must adapt their strategies to the evolving board state and their opponents’ actions.\n\nWith its rich strategic depth and high replayability, *Eclipse* offers an engaging and challenging experience, ideal for fans of space-themed games that enjoy intricate planning, diplomacy, and epic battles.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 6,
     "playingTime": 180,
     "isExpansion": false,
     "yearPublished": 2011,
-    "averageRating": 7.82963
+    "averageRating": 7.82963,
+    "designers": ["Touko Tahkokallio"],
+    "publishers": ["Lautapelit.fi"],
+    "artists": ["Ossi Hiekkala", "Sampo Sikiö"],
+    "expansions": [
+      {
+        "name": "Eclipse: Rise of the Ancients",
+        "gameId": 125898
+      },
+      {
+        "name": "Eclipse: Supernova",
+        "gameId": 104746
+      }
+    ]
   },
   {
     "gameId": 125898,
     "name": "Eclipse: Rise of the Ancients",
     "image": "https://cf.geekdo-images.com/ddT2F5CvTVlOs3WwhavuNA__original/img/mIwW5dlS1B5FlCkCWesNG6KREzE=/0x0/filters:format(jpeg)/pic1340277.jpg",
+    "description": "*Eclipse: Rise of the Ancients* is an expansion for *Eclipse: New Dawn for the Galaxy*, introducing new factions, technologies, and gameplay mechanics that enhance the strategic depth and variety of the base game. This expansion adds ancient alien artifacts, new ship parts, and powerful new discoveries that players can use to strengthen their fleets and develop unique strategies.\n\n*Rise of the Ancients* also introduces new alien species with distinct abilities, as well as additional objectives, creating more paths to victory and encouraging diverse gameplay styles. The expansion’s new mechanics, like rare technologies and ancient enemies, add further challenges, rewarding players who adapt to the ever-evolving galaxy.\n\nWith its added complexity and variety, *Eclipse: Rise of the Ancients* is a must-have for fans looking to expand their interstellar experience and explore new facets of galactic conquest.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 9,
     "playingTime": 120,
     "isExpansion": true,
     "yearPublished": 2012,
-    "averageRating": 8.39697
+    "averageRating": 8.39697,
+    "designers": ["Touko Tahkokallio"],
+    "publishers": ["Lautapelit.fi"],
+    "artists": ["Ossi Hiekkala", "Jukka Rajaniemi", "Sampo Sikiö"]
   },
   {
     "gameId": 104746,
@@ -2147,23 +2265,48 @@
     "gameId": 146021,
     "name": "Eldritch Horror",
     "image": "https://cf.geekdo-images.com/oxdsZKIX5_3ovDo38EIaeg__original/img/vxK08kQAEn5qPbejK2CUTyWOsig=/0x0/filters:format(jpeg)/pic1872452.jpg",
+    "description": "*Eldritch Horror* is a cooperative, horror-themed board game where players take on the roles of investigators working to prevent the awakening of ancient, world-ending entities. Inspired by the works of H.P. Lovecraft, the game transports players across the globe as they uncover mysteries, battle monstrous creatures, and face unimaginable horrors.\n\nEach investigator has unique abilities and resources that help the team face encounters, gain allies, and collect artifacts in a race against time. Players must work together to close gates to other dimensions, gather clues, and prevent doom from spreading, all while managing their sanity and health.\n\nWith its immersive storytelling, challenging gameplay, and rich theme, *Eldritch Horror* offers a thrilling, unpredictable adventure for fans of horror and cooperative strategy games. The game’s many scenarios and ancient beings ensure a fresh and intense experience with every playthrough.",
+    "type": ["Thematic"],
     "minPlayers": 1,
     "maxPlayers": 8,
     "playingTime": 240,
     "isExpansion": false,
     "yearPublished": 2013,
-    "averageRating": 7.74986
+    "averageRating": 7.74986,
+    "designers": ["Corey Konieczka", "Nikki Valens"],
+    "publishers": ["Fantasy Flight Games"],
+    "artists": [
+      "Anders Finér",
+      "David Griffith",
+      "Ed Mattinian",
+      "Patrick McEvoy",
+      "Dallas Mehlhoff",
+      "Emilio Rodriguez",
+      "Magali Villeneuve",
+      "Drew Whitmore"
+    ],
+    "expansions": [
+      {
+        "name": "Eldritch Horror: Forsaken Lore",
+        "gameId": 154842
+      }
+    ]
   },
   {
     "gameId": 154842,
     "name": "Eldritch Horror: Forsaken Lore",
     "image": "https://cf.geekdo-images.com/dXHSa3QgAHIFmMYyWwMAaA__original/img/0Us7CxPOaU4Mw2T0IdHZYQzSmwk=/0x0/filters:format(jpeg)/pic1940723.jpg",
+    "description": "*Eldritch Horror: Forsaken Lore* is an expansion for *Eldritch Horror*, adding new mysteries, encounters, and the ancient serpent-like creature, Yig, for players to confront. This expansion introduces additional Mythos cards, location encounters, and artifacts, expanding the base game’s variety and increasing the challenges investigators will face as they race to stop the end of the world.\n\n*Forsaken Lore* enriches the game’s narrative depth and brings new threats, with more complex conditions and curses that add twists to the gameplay. It provides an even darker and more immersive experience, making each investigation feel fresh and more perilous.\n\nThis expansion is perfect for *Eldritch Horror* fans looking to enhance their adventures and uncover even more secrets within the Lovecraftian universe.",
+    "type": ["Thematic"],
     "minPlayers": 1,
     "maxPlayers": 8,
     "playingTime": 180,
     "isExpansion": true,
     "yearPublished": 2014,
-    "averageRating": 8.30081
+    "averageRating": 8.30081,
+    "designers": ["Nikki Valens"],
+    "publishers": ["Fantasy Flight Games"],
+    "artists": ["Anders Finér", "Magali Villeneuve"]
   },
   {
     "gameId": 163968,
@@ -2312,23 +2455,33 @@
     "gameId": 177736,
     "name": "A Feast for Odin",
     "image": "https://cf.geekdo-images.com/s9oGMCo1fcfV4Dk3EnqLZw__original/img/N1X-0JB1GapFVhl98nP4tNFXMcM=/0x0/filters:format(png)/pic3146943.png",
+    "description": "*A Feast for Odin* is a strategy board game that immerses players in the life of Viking settlers, where they manage resources, explore new territories, and develop their society. Each player oversees a small Viking community, using worker placement to perform various actions such as hunting, trading, crafting, and pillaging, with the ultimate goal of growing their wealth and prosperity.\n\nThroughout the game, players gather and arrange goods on a personal board, filling spaces to avoid penalties and strategically placing items to increase their points. The game offers a wealth of action choices, allowing players to customize their strategies, expand their settlements, and overcome seasonal challenges.\n\nWith its rich theme, intricate mechanics, and open-ended strategy, *A Feast for Odin* is a deep and rewarding experience that appeals to fans of resource management and historical games.",
+    "type": ["Strategy"],
     "minPlayers": 1,
     "maxPlayers": 4,
     "playingTime": 120,
     "isExpansion": false,
     "yearPublished": 2016,
-    "averageRating": 8.16888
+    "averageRating": 8.16888,
+    "designers": ["Uwe Rosenberg"],
+    "publishers": ["Feuerland Spiele"],
+    "artists": ["Dennis Lohausen"]
   },
   {
     "gameId": 159675,
     "name": "Fields of Arle",
     "image": "https://cf.geekdo-images.com/0w8go6cfvlpgJKydHUkDtA__original/img/322N77t8F7uTev-U_WCqX5uqmEE=/0x0/filters:format(png)/pic2225968.png",
+    "description": "*Fields of Arle* is a farming and resource management board game set in the rural landscape of East Frisia, where players develop their own farmland over the course of nine half-year seasons. Each player manages land, raises livestock, and produces goods, with actions that vary depending on the season. The game’s detailed mechanics allow for activities such as plowing fields, constructing buildings, and acquiring vehicles to optimize production and transport.\n\nWith numerous strategic options and a focus on planning, *Fields of Arle* offers a thoughtful, immersive experience, especially designed for solo or two-player gameplay. The game’s deep historical theme and intricate economic system make it a favorite for fans of simulation and farming strategy games.",
+    "type": ["Strategy"],
     "minPlayers": 1,
     "maxPlayers": 2,
     "playingTime": 120,
     "isExpansion": false,
     "yearPublished": 2014,
-    "averageRating": 8.02951
+    "averageRating": 8.02951,
+    "designers": ["Uwe Rosenberg"],
+    "publishers": ["Feuerland Spiele"],
+    "artists": ["Dennis Lohausen"]
   },
   {
     "gameId": 200954,
@@ -2345,23 +2498,39 @@
     "gameId": 176677,
     "name": "Five Tribes: The Artisans of Naqala",
     "image": "https://cf.geekdo-images.com/QuRGlBr7xR38ihils0sakg__original/img/d7nvhbSByZ4ApS_WD-AnGa7BUUM=/0x0/filters:format(jpeg)/pic2496396.jpg",
+    "description": "*Five Tribes: The Artisans of Naqala* is an expansion for *Five Tribes*, adding new mechanics and options for players to explore. This expansion introduces the Artisans, a new tribe that can craft powerful items to influence the game, adding a new layer of strategy. It also includes new tiles, new tribes, and additional victory point opportunities, further enriching the already dynamic gameplay.\n\nThe Artisans can create valuable goods that provide players with bonuses, as well as more ways to gain points and control territories. This expansion deepens the strategic choices available, making the game even more engaging and varied for players looking for more depth in their *Five Tribes* experience.\n\nWith new twists and additional strategies, *The Artisans of Naqala* enhances the replayability and complexity of *Five Tribes*, offering new challenges for both new and experienced players.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 80,
     "isExpansion": true,
     "yearPublished": 2015,
-    "averageRating": 8.12057
+    "averageRating": 8.12057,
+    "designers": ["Bruno Cathala"],
+    "publishers": ["Days of Wonder"],
+    "artists": ["Cyrille Daujean", "Clément Masson"]
   },
   {
     "gameId": 157354,
     "name": "Five Tribes: The Djinns of Naqala",
     "image": "https://cf.geekdo-images.com/dmo-WD6HZHVUPrbVHunaTw__original/img/PS9HXrThM8Pepbd-cuA1tX8KCYU=/0x0/filters:format(jpeg)/pic2055255.jpg",
+    "description": "*Five Tribes* is a strategic board game set in the mythical land of Naqala, where players control one of five different tribes, each with unique abilities, in a battle for power and influence. The game combines elements of worker placement, area control, and resource management as players use the tribes' influence to manipulate the market, gather resources, and influence the various regions of the board.\n\nPlayers take turns moving tribes of different colors around the board, activating their powers and gaining valuable resources. The goal is to collect the most victory points by the end of the game, earned through a combination of strategic placement, clever use of tribe abilities, and purchasing valuable tiles.\n\nWith its rich, immersive theme and highly tactical gameplay, *Five Tribes* is a game that rewards careful planning, adaptability, and foresight.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 80,
     "isExpansion": false,
     "yearPublished": 2014,
-    "averageRating": 7.77328
+    "averageRating": 7.77328,
+    "designers": ["Bruno Cathala"],
+    "publishers": ["Days of Wonder"],
+    "artists": ["Clément Masson"],
+    "expansions": [
+      {
+        "name": "Five Tribes: The Artisans of Naqala",
+        "gameId": 176677
+      }
+    ]
   },
   {
     "gameId": 15511,
@@ -2820,39 +2989,6 @@
     "artists": ["Mathieu Leyssenne"]
   },
   {
-    "gameId": 122515,
-    "name": "Keyflower",
-    "image": "https://cf.geekdo-images.com/HbfgxDJZQnNEZQKvpmJxQg__original/img/HsrtfanhKfXX07zNEm-xZpSbxyY=/0x0/filters:format(jpeg)/pic2278942.jpg",
-    "minPlayers": 2,
-    "maxPlayers": 6,
-    "playingTime": 120,
-    "isExpansion": false,
-    "yearPublished": 2012,
-    "averageRating": 7.72246
-  },
-  {
-    "gameId": 144058,
-    "name": "Keyflower: The Farmers",
-    "image": "https://cf.geekdo-images.com/RcU-5AWK_jjK4xCRxT6y0w__original/img/iQO1bRlpZodOBWBIkIMsFFr8D9s=/0x0/filters:format(jpeg)/pic1743806.jpg",
-    "minPlayers": 2,
-    "maxPlayers": 6,
-    "playingTime": 120,
-    "isExpansion": true,
-    "yearPublished": 2013,
-    "averageRating": 7.8361
-  },
-  {
-    "gameId": 163572,
-    "name": "Keyflower: The Merchants",
-    "image": "https://cf.geekdo-images.com/gN-E3tBVTP82YrMlLUWz1A__original/img/Alk5HfTqOMkASMfiWjYnDvM9sYw=/0x0/filters:format(jpeg)/pic2191035.jpg",
-    "minPlayers": 2,
-    "maxPlayers": 6,
-    "playingTime": 90,
-    "isExpansion": true,
-    "yearPublished": 2014,
-    "averageRating": 8.06465
-  },
-  {
     "gameId": 160499,
     "name": "King of New York",
     "image": "https://cf.geekdo-images.com/FGekxht_r5xqt8oSmQ9HZg__original/img/b5zgGvja0Qpte-Jqb5baQNWuG3c=/0x0/filters:format(jpeg)/pic2407103.jpg",
@@ -3098,12 +3234,117 @@
     "gameId": 77423,
     "name": "The Lord of the Rings: The Card Game",
     "image": "https://cf.geekdo-images.com/ZmXi5BbtoWl58ZnKcUy1vw__original/img/nNHf1qRJCVQx_0p-1zM8QKxcywo=/0x0/filters:format(jpeg)/pic906495.jpg",
+    "description": "*The Lord of the Rings: The Card Game* is a cooperative living card game (LCG) set in the iconic world of J.R.R. Tolkien’s Middle-earth. Players take on the roles of heroes from the books, such as Aragorn, Frodo, and Gandalf, as they embark on quests to thwart the dark forces threatening the land. The game features a unique deck-building mechanic, where players build their own decks of heroes, allies, events, and attachments to face the challenges ahead.\n\nEach scenario presents a different challenge, from battling orcs to navigating dangerous wilderness, with players working together to complete quests while managing threats and overcoming obstacles. The game’s story-driven campaigns and evolving mechanics provide endless replayability and a rich, immersive experience for fans of the books and cooperative card games.\n\nWith its focus on strategy, teamwork, and narrative, *The Lord of the Rings: The Card Game* offers a compelling, dynamic experience in the beloved world of Middle-earth.",
+    "type": ["Customizable"],
     "minPlayers": 1,
     "maxPlayers": 2,
     "playingTime": 60,
     "isExpansion": false,
     "yearPublished": 2011,
-    "averageRating": 7.66249
+    "averageRating": 7.66249,
+    "designers": ["Nate French"],
+    "publishers": ["Fantasy Flight Games"],
+    "artists": [
+      "Even Mehl Amundsen",
+      "Erfian Asafat",
+      "Tiziano Baracchi",
+      "Ryan Barger",
+      "Sara Biddle",
+      "Yoann Boissonnet",
+      "Leonardo Borazio",
+      "Noah Bradley",
+      "Marco Caradonna",
+      "Kevin Childress",
+      "Anna Christenson",
+      "West Clendinning",
+      "Nicholas Cloister",
+      "Soul Core",
+      "Daarken",
+      "Katherine Dinger",
+      "Loren Fetterman",
+      "Tony Foti",
+      "Tom Garden",
+      "Kristina Gehrmann",
+      "Lucas Graciano",
+      "Margaret Hardy",
+      "Jeff Himmelman",
+      "David Horne",
+      "Christopher Hosch",
+      "Ijur",
+      "Dominik Kasprzycki",
+      "Kaya",
+      "Igor Kieryluk",
+      "Mathias Kollros",
+      "Lius Lasahido",
+      "David Lecossu",
+      "Henning Ludvigsen",
+      "Daryl Mandryk",
+      "David Auden Nash",
+      "Mike Nash",
+      "Winona Nelson",
+      "Andrew Olson",
+      "Gabrielle Portal",
+      "Rio Sabda",
+      "Alexandru Sabo",
+      "Amanda Sartor",
+      "Marc Scheff",
+      "Alexandr Shaldin",
+      "WiL Springer",
+      "John Stanko",
+      "Matthew Starbuck",
+      "Florian Stitz",
+      "Nikolay Stoyanov",
+      "Angela Sung",
+      "Sandara Tang",
+      "Fredrik Tyskerud",
+      "Santiago Villa",
+      "Magali Villeneuve",
+      "Frank Walls",
+      "Jason Ward",
+      "Drew Whitmore",
+      "John Wigley",
+      "Mark Winters",
+      "Jen Zee",
+      "Ben Zweifel"
+    ],
+    "expansions": [
+      {
+        "name": "The Lord of the Rings: The Card Game – Heirs of Númenor",
+        "gameId": 129480
+      },
+      {
+        "name": "The Lord of the Rings: The Card Game – Khazad-dûm",
+        "gameId": 107933
+      },
+      {
+        "name": "The Lord of the Rings: The Card Game – The Black Riders",
+        "gameId": 142875
+      },
+      {
+        "name": "The Lord of the Rings: The Card Game – The Hobbit: On the Doorstep",
+        "gameId": 130715
+      },
+      {
+        "name": "The Lord of the Rings: The Card Game – The Hobbit: Over Hill and Under Hill",
+        "gameId": 123695
+      },
+      {
+        "name": "The Lord of the Rings: The Card Game – The Lost Realm",
+        "gameId": 164313
+      },
+      {
+        "name": "The Lord of the Rings: The Card Game – The Road Darkens",
+        "gameId": 147723
+      },
+      {
+        "name": "The Lord of the Rings: The Card Game – The Treason of Saruman",
+        "gameId": 164665
+      },
+      {
+        "name": "The Lord of the Rings: The Card Game – The Voice of Isengard",
+        "gameId": 146574
+      }
+    ]
   },
   {
     "gameId": 129480,
@@ -3114,7 +3355,8 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2012,
-    "averageRating": 7.90685
+    "averageRating": 7.90685,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 107933,
@@ -3125,7 +3367,8 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2011,
-    "averageRating": 7.93762
+    "averageRating": 7.93762,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 142875,
@@ -3136,7 +3379,8 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2013,
-    "averageRating": 8.35461
+    "averageRating": 8.35461,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 130715,
@@ -3147,7 +3391,8 @@
     "playingTime": -1,
     "isExpansion": true,
     "yearPublished": 2013,
-    "averageRating": 8.01403
+    "averageRating": 8.01403,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 123695,
@@ -3158,7 +3403,8 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2012,
-    "averageRating": 7.85556
+    "averageRating": 7.85556,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 164313,
@@ -3169,7 +3415,8 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2015,
-    "averageRating": 8.26429
+    "averageRating": 8.26429,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 147723,
@@ -3180,7 +3427,8 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2014,
-    "averageRating": 8.40703
+    "averageRating": 8.40703,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 164665,
@@ -3191,7 +3439,8 @@
     "playingTime": 90,
     "isExpansion": true,
     "yearPublished": 2015,
-    "averageRating": 8.37777
+    "averageRating": 8.37777,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 146574,
@@ -3202,7 +3451,8 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2014,
-    "averageRating": 8.04288
+    "averageRating": 8.04288,
+    "publishers": ["Fantasy Flight Games"]
   },
   {
     "gameId": 18833,
@@ -3225,28 +3475,6 @@
     "isExpansion": false,
     "yearPublished": 2014,
     "averageRating": 7.03649
-  },
-  {
-    "gameId": 110327,
-    "name": "Lords of Waterdeep",
-    "image": "https://cf.geekdo-images.com/-hk8f8iGk_DyWyMrfiPBkg__original/img/GWNOhno3y7g0XE00VacKaRxoczk=/0x0/filters:format(jpeg)/pic1116080.jpg",
-    "minPlayers": 2,
-    "maxPlayers": 5,
-    "playingTime": 120,
-    "isExpansion": false,
-    "yearPublished": 2012,
-    "averageRating": 7.7329
-  },
-  {
-    "gameId": 134342,
-    "name": "Lords of Waterdeep: Scoundrels of Skullport",
-    "image": "https://cf.geekdo-images.com/ChZSk2MECGjo_WUjuKkfPw__original/img/66YlwLcR1HcfGjVBEKMPcjA7Ih4=/0x0/filters:format(jpeg)/pic1590236.jpg",
-    "minPlayers": 2,
-    "maxPlayers": 6,
-    "playingTime": 60,
-    "isExpansion": true,
-    "yearPublished": 2013,
-    "averageRating": 8.20925
   },
   {
     "gameId": 50,
@@ -3362,34 +3590,59 @@
     "gameId": 96848,
     "name": "Mage Knight Board Game",
     "image": "https://cf.geekdo-images.com/DUO2hz9AlLOH8p9ED-lCWg__original/img/PDDH38Vf9NEB_4ODURxcJKNBfVQ=/0x0/filters:format(jpeg)/pic1083380.jpg",
+    "description": "*Mage Knight Board Game* is a complex and strategic fantasy adventure game where players take on the roles of powerful Mage Knights, exploring and conquering a rich and dangerous world. The game combines elements of deck-building, role-playing, and exploration as players journey across an expansive map, battling enemies, completing quests, and gaining powerful abilities to improve their character.\n\nEach Mage Knight is equipped with a unique set of skills and abilities that allow for different playstyles, offering a high level of replayability. Players can either choose to ally with or fight against different factions, build their decks with spells, actions, and items, and fight formidable enemies in tactical combat. The game includes a solo mode, and the cooperative mode allows players to team up and face the world’s challenges together.\n\nWith deep strategy, intricate gameplay mechanics, and a rich fantasy theme, *Mage Knight Board Game* offers a challenging experience for fans of adventure and strategy games.",
+    "type": ["Strategy", "Thematic"],
     "minPlayers": 1,
     "maxPlayers": 4,
     "playingTime": 240,
     "isExpansion": false,
     "yearPublished": 2011,
-    "averageRating": 8.08507
+    "averageRating": 8.08507,
+    "designers": ["Vlaada Chvátil"],
+    "publishers": ["WizKids"],
+    "artists": ["J. Lonnee", "Chris Raimo", "Milan Vavroň"],
+    "expansions": [
+      {
+        "name": "Mage Knight Board Game: Krang Character Expansion",
+        "gameId": 144763
+      },
+      {
+        "name": "Mage Knight Board Game: The Lost Legion Expansion",
+        "gameId": 130704
+      }
+    ]
   },
   {
     "gameId": 144763,
     "name": "Mage Knight Board Game: Krang Character Expansion",
+    "description": "*Mage Knight Board Game: Krang Character Expansion* introduces a new character, Krang, a powerful and unique Mage Knight with special abilities and playstyle. Krang's deck offers new strategic options, providing players with more variety in their gameplay and additional challenges to face as they explore the world of *Mage Knight*.\n\nThis expansion allows players to incorporate Krang into their adventures, offering new interactions with the game’s core mechanics, such as enhanced combat abilities and the potential to form different strategies depending on Krang’s abilities. With Krang's addition, players can enjoy fresh, dynamic gameplay and a new level of depth to the base game.\n\nFor fans of *Mage Knight*, the Krang expansion provides more opportunities for customization, further expanding the already vast world and gameplay possibilities.",
+    "type": ["Strategy", "Thematic"],
     "image": "https://cf.geekdo-images.com/ngJyY137LjWF_bWuFOw4oA__original/img/o3QP9BOvTsWfEtrYZM80vVK7QUY=/0x0/filters:format(jpeg)/pic1883789.jpg",
     "minPlayers": 1,
     "maxPlayers": 5,
     "playingTime": 90,
     "isExpansion": true,
     "yearPublished": 2013,
-    "averageRating": 8.08843
+    "averageRating": 8.08843,
+    "designers": ["Vlaada Chvátil"],
+    "publishers": ["WizKids"],
+    "artists": ["J. Lonnee", "Chris Raimo", "Milan Vavroň"]
   },
   {
     "gameId": 130704,
     "name": "Mage Knight Board Game: The Lost Legion Expansion",
     "image": "https://cf.geekdo-images.com/LpHuqcVbci6WGJw0-zGk2Q__original/img/Rn_R9pJUlLI2VM550Fp9AVVAfiE=/0x0/filters:format(jpeg)/pic1421682.jpg",
+    "description": "*Mage Knight Board Game: The Lost Legion Expansion* adds a new set of challenges and opportunities to *Mage Knight*, introducing a new faction: The Lost Legion. This expansion brings new enemies, locations, and quests to explore, along with additional rule variations and mechanics that increase the game’s complexity.\n\nThe Lost Legion brings new units and enemy types to battle, adding more tactical depth and challenges. Players will need to adapt their strategies to face these new threats while continuing to explore the world and complete their quests. With additional components like new advanced rules and the introduction of the Lost Legion’s powerful forces, this expansion offers even more variety and replayability for *Mage Knight* fans.\n\n*The Lost Legion Expansion* enhances the strategic depth of *Mage Knight*, making the game even more immersive and engaging with new content and exciting challenges.",
+    "type": ["Strategy", "Thematic"],
     "minPlayers": 1,
     "maxPlayers": 5,
     "playingTime": 240,
     "isExpansion": true,
     "yearPublished": 2012,
-    "averageRating": 8.78223
+    "averageRating": 8.78223,
+    "designers": ["Vlaada Chvátil"],
+    "publishers": ["WizKids"],
+    "artists": ["J. Lonnee", "Chris Raimo", "Milan Vavroň"]
   },
   {
     "gameId": 95613,
@@ -3774,23 +4027,39 @@
     "gameId": 164928,
     "name": "Orléans",
     "image": "https://cf.geekdo-images.com/nagl1li6kYt9elV9jbfVQw__original/img/Qn6vlBaTUaHNFsqohIUjd0EA4z0=/0x0/filters:format(jpeg)/pic6228507.jpg",
+    "description": "*Orléans* is a medieval-themed strategy board game where players build their own guilds and work to expand their influence in the city of Orléans and beyond. Set in 15th century France, the game features a unique combination of bag-building and resource management mechanics, where players gather followers to help them complete various tasks such as trade, construction, and development.\n\nThrough careful planning and strategic use of their followers, players aim to grow their wealth, improve their standing, and achieve victory points. The game offers multiple paths to success, from accumulating wealth to achieving objectives related to buildings, trade, and military presence. Each action requires balancing the needs of the guild, with new opportunities arising as the game progresses.\n\nWith its deep strategic choices, beautiful artwork, and replayability, *Orléans* offers a rich and immersive experience for players who enjoy tactical decision-making and historical themes.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 5,
     "playingTime": 90,
     "isExpansion": false,
     "yearPublished": 2014,
-    "averageRating": 8.05822
+    "averageRating": 8.05822,
+    "designers": ["Reiner Stockhausen"],
+    "publishers": ["dlp games"],
+    "artists": ["Klemens Franz"],
+    "expansions": [
+      {
+        "name": "Orléans: Invasion",
+        "gameId": 183682
+      }
+    ]
   },
   {
     "gameId": 183682,
     "name": "Orléans: Invasion",
+    "description": "*Orléans: Invasion* is an expansion for *Orléans*, introducing new mechanics, challenges, and objectives that enhance the base game. Set during the invasions of France in the 15th century, this expansion adds new factions, including invading forces that threaten the stability of the region. Players must defend the city while continuing to grow their guilds, making strategic decisions to balance defense and expansion.\n\nThe expansion introduces new modules, such as the siege mechanism, new buildings, and military actions, which add depth and complexity to the game. Players now have to contend with the added pressure of managing invasions, which can affect their resources and plans. New objectives and strategies emerge as the game evolves, offering fresh opportunities for players to explore.\n\nWith *Orléans: Invasion*, the game becomes even more dynamic and challenging, offering new ways to experience the historical theme and strategic gameplay of *Orléans*.",
+    "type": ["Strategy"],
     "image": "https://cf.geekdo-images.com/-O8aknZBX_3iod1HTAH4uw__original/img/xr8azD8f8GzfrZLegbcFlG-ei24=/0x0/filters:format(jpeg)/pic6228512.jpg",
     "minPlayers": 1,
     "maxPlayers": 5,
     "playingTime": 120,
     "isExpansion": true,
     "yearPublished": 2015,
-    "averageRating": 8.26073
+    "averageRating": 8.26073,
+    "designers": ["Reiner Stockhausen"],
+    "publishers": ["dlp games"],
+    "artists": ["Klemens Franz"]
   },
   {
     "gameId": 23953,
@@ -3818,23 +4087,58 @@
     "gameId": 161936,
     "name": "Pandemic Legacy: Season 1",
     "image": "https://cf.geekdo-images.com/-Qer2BBPG7qGGDu6KcVDIw__original/img/PlzAH7swN1nsFxOXbfUvE3TkE5w=/0x0/filters:format(png)/pic2452831.png",
+    "description": "*Pandemic Legacy: Season 1* is a cooperative campaign game that takes place over a series of 12 to 24 sessions, with each session representing a month in the story. Players work together as members of a disease control team, tasked with stopping the spread of four deadly diseases around the globe. What sets *Pandemic Legacy* apart from the base game is its evolving story, where choices made in earlier sessions have permanent effects on the game’s rules, components, and narrative.\n\nThe game introduces new mechanics as the story progresses, including new characters, events, and ways to interact with the world. Each month brings new challenges, and the players’ actions are recorded, leading to changes that persist through the campaign. The game’s legacy system also includes the addition of stickers, cards, and sealed components that are revealed as players advance.\n\n*Pandemic Legacy: Season 1* offers a unique and deeply immersive experience, with a gripping story and challenging decisions that will keep players engaged and invested in the outcome. The sense of progression and the ever-changing nature of the game make it a memorable, highly replayable experience for fans of cooperative gameplay.",
+    "type": ["Strategy", "Thematic"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 60,
     "isExpansion": false,
     "yearPublished": 2015,
-    "averageRating": 8.52379
+    "averageRating": 8.52379,
+    "designers": ["Rob Daviau", "Matt Leacock"],
+    "publishers": ["Z-Man Games"],
+    "artists": ["Chris Quilliams"]
   },
   {
     "gameId": 157789,
     "name": "Pandemic: Contagion",
     "image": "https://cf.geekdo-images.com/xzvsFlkgqol2UPF_qxKBFQ__original/img/2ejpxK3-W8MBJoWYcaMavw0_9Zs=/0x0/filters:format(png)/pic2037506.png",
+    "description": "*Pandemic: Contagion* is a fast-paced, competitive card game set in the *Pandemic* universe. Unlike the cooperative nature of the original *Pandemic*, this game flips the concept, with players competing to spread diseases rather than cure them. Each player controls a disease, aiming to infect as many cities as possible while hindering their opponents' progress.\n\nThe game uses similar mechanics to *Pandemic*, with players drawing cards to spread their diseases, while also using action points to evolve and mutate their diseases in various ways. Players must decide when to aggressively expand their infection network or when to hold back to sabotage others. Strategic decisions, careful timing, and efficient management of resources are key to winning.\n\n*Pandemic: Contagion* offers a unique twist on the *Pandemic* series, providing a different gameplay experience with a competitive edge, making it ideal for fans of the original game looking for a faster, more cutthroat version.",
+    "type": ["Family"],
     "minPlayers": 2,
     "maxPlayers": 5,
     "playingTime": 30,
     "isExpansion": false,
     "yearPublished": 2014,
-    "averageRating": 6.40364
+    "averageRating": 6.40364,
+    "designers": ["Carey Grayson"],
+    "publishers": ["Z-Man Games"],
+    "artists": [
+      "Marie-Elaine Bérubé",
+      "Josh Cappel",
+      "Philippe Guérin",
+      "Marie-Eve Joly",
+      "Olivier Lamontagne",
+      "Chris Quilliams"
+    ],
+    "expansions": [
+      {
+        "name": "Pandemic: In the Lab",
+        "gameId": 137136
+      },
+      {
+        "name": "Pandemic: On the Brink",
+        "gameId": 40849
+      },
+      {
+        "name": "Pandemic: State of Emergency",
+        "gameId": 168703
+      },
+      {
+        "name": "Pandemic: The Cure",
+        "gameId": 150658
+      }
+    ]
   },
   {
     "gameId": 137136,
@@ -3851,6 +4155,7 @@
     "gameId": 40849,
     "name": "Pandemic: On the Brink",
     "image": "https://cf.geekdo-images.com/MOsfIJrEqkGMUlo09TL3rw__original/img/cJ2kOhpNeVakyUn4SfzD8kwO6n8=/0x0/filters:format(jpeg)/pic7014070.jpg",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 5,
     "playingTime": 45,
@@ -4216,12 +4521,35 @@
     "gameId": 28143,
     "name": "Race for the Galaxy",
     "image": "https://cf.geekdo-images.com/-DOqixs8uwKUvvWPKI4f9w__original/img/Vh-DCkTPa8OU45LaJdUywwhiYqE=/0x0/filters:format(jpeg)/pic5261714.jpg",
+    "description": "*Race for the Galaxy* is a fast-paced card game where players compete to build the most powerful space empire. The game revolves around exploring new planets, developing advanced technologies, and engaging in trade, all while managing resources and expanding your influence in the galaxy.\n\nIn *Race for the Galaxy*, each player starts with a small empire and works to grow it by playing cards representing planets, developments, and various actions. The game’s unique action system allows players to choose from a set of available actions, but only the player who selects the action will fully benefit from it. This creates a dynamic and interactive experience as players must adapt to the actions of their opponents.\n\nThe game offers numerous strategies, from military conquests to economic dominance, and the large variety of cards ensures no two games are the same. *Race for the Galaxy* is a deep and engaging game with a lot of replay value, ideal for fans of space-themed strategy games.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 60,
     "isExpansion": false,
     "yearPublished": 2007,
-    "averageRating": 7.74352
+    "averageRating": 7.74352,
+    "designers": ["Thomas Lehmann"],
+    "publishers": ["Rio Grande Games"],
+    "artists": ["Martin Hoffmann", "Claus Stephan"],
+    "expansions": [
+      {
+        "name": "Race for the Galaxy: Alien Artifacts",
+        "gameId": 92932
+      },
+      {
+        "name": "Race for the Galaxy: Rebel vs Imperium",
+        "gameId": 40210
+      },
+      {
+        "name": "Race for the Galaxy: The Gathering Storm",
+        "gameId": 34499
+      },
+      {
+        "name": "Race for the Galaxy: Xeno Invasion",
+        "gameId": 161599
+      }
+    ]
   },
   {
     "gameId": 92932,
@@ -4232,7 +4560,10 @@
     "playingTime": 45,
     "isExpansion": true,
     "yearPublished": 2013,
-    "averageRating": 7.52598
+    "averageRating": 7.52598,
+    "designers": ["Thomas Lehmann"],
+    "publishers": ["Rio Grande Games"],
+    "artists": ["Martin Hoffmann", "Claus Stephan"]
   },
   {
     "gameId": 40210,
@@ -4243,18 +4574,26 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2009,
-    "averageRating": 7.92785
+    "averageRating": 7.92785,
+    "designers": ["Thomas Lehmann"],
+    "publishers": ["Rio Grande Games"],
+    "artists": ["Martin Hoffmann", "Claus Stephan"]
   },
   {
     "gameId": 34499,
     "name": "Race for the Galaxy: The Gathering Storm",
+    "description": "*Race for the Galaxy: The Gathering Storm* is an expansion for the popular card game *Race for the Galaxy*, introducing new cards, strategies, and mechanics to enhance the base game. This expansion adds new developments, worlds, and game-changing abilities that create more complex and exciting interactions between players.\n\nOne of the key features of *The Gathering Storm* is the introduction of two new types of cards: the 'Gathering Storm' cards and the 'Trade' cards. These bring new ways to earn victory points, manage resources, and manipulate the game’s economy. Additionally, the expansion introduces new victory conditions, such as different types of objectives and scoring strategies, adding even more replayability to the game.\n\n*Race for the Galaxy: The Gathering Storm* expands the strategic depth of the base game, making it a must-have for fans of the *Race for the Galaxy* series who are looking for new challenges, synergies, and tactical options.",
+    "type": ["Strategy"],
     "image": "https://cf.geekdo-images.com/UHK2ry5-IhSr2cv4DP3JkQ__original/img/93zCo6TI4WrXkj3qB2kQLFOlfDA=/0x0/filters:format(jpeg)/pic376993.jpg",
     "minPlayers": 1,
     "maxPlayers": 5,
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2008,
-    "averageRating": 8.08899
+    "averageRating": 8.08899,
+    "designers": ["Thomas Lehmann"],
+    "publishers": ["Rio Grande Games"],
+    "artists": ["Martin Hoffmann", "Claus Stephan"]
   },
   {
     "gameId": 161599,
@@ -4265,18 +4604,36 @@
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2015,
-    "averageRating": 7.91823
+    "averageRating": 7.91823,
+    "designers": ["Thomas Lehmann"],
+    "publishers": ["Rio Grande Games"],
+    "artists": ["Martin Hoffmann", "Claus Stephan"]
   },
   {
     "gameId": 30450,
     "name": "Railways of Europe",
+    "description": "*Railways of Europe* is a strategic railroad-building game set in Europe, where players compete to construct and operate rail networks across various countries. The goal is to build efficient railways, connect cities, and complete lucrative routes while managing resources and optimizing train operations.\n\nIn *Railways of Europe*, players start by developing their own railway companies, bidding for routes, and expanding their networks. The game introduces elements such as geographical obstacles, economic challenges, and competition between players for control of the most profitable routes. Players must carefully plan their rail lines, invest in new technologies, and build stations in key locations to maximize their income and outmaneuver their rivals.\n\nThe game offers a rich combination of strategy and tactics, with multiple paths to victory. The variety of possible routes and strategies, combined with the evolving market conditions, provides a dynamic and replayable experience for fans of railway-themed board games.",
+    "type": ["Strategy"],
     "image": "https://cf.geekdo-images.com/GL8JmWPtdecxVPi2V_zhpw__original/img/KMFscm7QyadbHmzs76BTRWkLBxc=/0x0/filters:format(jpeg)/pic787500.jpg",
     "minPlayers": 2,
     "maxPlayers": 5,
     "playingTime": 120,
     "isExpansion": true,
     "yearPublished": 2008,
-    "averageRating": 8.05923
+    "averageRating": 8.05923,
+    "designers": ["Glenn Drover"],
+    "publishers": ["Eagle-Gryphon Games"],
+    "artists": ["Paul Niemeyer", "David Oram", "James Provenzale"],
+    "expansions": [
+      {
+        "name": "Railways of the World",
+        "gameId": 17133
+      },
+      {
+        "name": "Railways of the World: Event Deck",
+        "gameId": 99692
+      }
+    ]
   },
   {
     "gameId": 17133,
@@ -4389,17 +4746,6 @@
     "averageRating": 7.73993
   },
   {
-    "gameId": 144722,
-    "name": "Robinson Crusoe: Adventures on the Cursed Island – Voyage of the Beagle (Vol. 1)",
-    "image": "https://cf.geekdo-images.com/GLkwL-B_7m636HXmiIrHVw__original/img/dhQPqwbY7NnEcl2m1zRNuwF8bsc=/0x0/filters:format(jpeg)/pic1997048.jpg",
-    "minPlayers": 1,
-    "maxPlayers": 4,
-    "playingTime": 120,
-    "isExpansion": true,
-    "yearPublished": 2013,
-    "averageRating": 8.09531
-  },
-  {
     "gameId": 129090,
     "name": "Roll For It!",
     "image": "https://cf.geekdo-images.com/_XIEf19iGAkd1RKrZhvgPA__original/img/yVLkvG10tyxBD-iO5ip84eVFT8s=/0x0/filters:format(png)/pic1638562.png",
@@ -4409,28 +4755,6 @@
     "isExpansion": false,
     "yearPublished": 2011,
     "averageRating": 6.1485
-  },
-  {
-    "gameId": 132531,
-    "name": "Roll for the Galaxy",
-    "image": "https://cf.geekdo-images.com/nhoyoLpYPC2b3UiJ5kJ0yg__original/img/LoETJCbq1HpSlhPLdci3qJekpwA=/0x0/filters:format(jpeg)/pic1473629.jpg",
-    "minPlayers": 2,
-    "maxPlayers": 5,
-    "playingTime": 45,
-    "isExpansion": false,
-    "yearPublished": 2014,
-    "averageRating": 7.58644
-  },
-  {
-    "gameId": 175754,
-    "name": "Roll for the Galaxy: Ambition",
-    "image": "https://cf.geekdo-images.com/aHlQu0R-VahdlrAAJQs8hw__original/img/0g-w-dPNbxFR-OJexqompho0O5M=/0x0/filters:format(jpeg)/pic2700805.jpg",
-    "minPlayers": 2,
-    "maxPlayers": 5,
-    "playingTime": 60,
-    "isExpansion": true,
-    "yearPublished": 2015,
-    "averageRating": 8.08455
   },
   {
     "gameId": 37380,
@@ -4564,7 +4888,10 @@
     "playingTime": 115,
     "isExpansion": false,
     "yearPublished": 2016,
-    "averageRating": 8.13389
+    "averageRating": 8.13389,
+    "designers": ["Jamey Stegmaier"],
+    "publishers": ["Stonemaier Games"],
+    "artists": ["Jakub Rozalski"]
   },
   {
     "gameId": 108745,
@@ -5098,12 +5425,43 @@
     "gameId": 158889,
     "name": "Summoner Wars: Alliances Master Set",
     "image": "https://cf.geekdo-images.com/tMbeTW1gPc6ueamut0pGNQ__original/img/6Zn32u17ursDAkFVsBD_9lJ9s9c=/0x0/filters:format(jpeg)/pic2045253.jpg",
+    "description": "*Summoner Wars: Alliances Master Set* is a tactical, card-driven battle game where players control powerful summoners and their respective factions in strategic duels. This master set introduces new alliances between the game's original factions, expanding the possibilities for tactical gameplay and introducing new combinations of abilities, units, and strategies.\n\nIn *Summoner Wars: Alliances Master Set*, players summon units, cast spells, and move their forces across a battlefield, seeking to defeat their opponent's summoner. The set includes two new factions, the 'Vanguards' and the 'Tundra Orcs', along with updated rules for playing multiple factions together, creating fresh challenges and exciting tactical options.\n\nThe game features highly customizable decks and allows for various playstyles, from aggressive attacks to defensive strategies. The *Alliances Master Set* expands the game's depth, offering even more ways for players to create unique strategies and combinations. With its tactical complexity and easy-to-learn mechanics, *Summoner Wars* is perfect for players looking for a deep, engaging experience with every match.",
+    "type": ["Customizable"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 45,
     "isExpansion": false,
     "yearPublished": 2014,
-    "averageRating": 8.03521
+    "averageRating": 8.03521,
+    "designers": ["Colby Dauch"],
+    "publishers": ["Cube Factory of Ideas"],
+    "artists": ["David Richards"],
+    "expansions": [
+      {
+        "name": "Summoner Wars: Fallen Kingdom Faction Deck",
+        "gameId": 82423
+      },
+      {
+        "name": "Summoner Wars: Guild Dwarves vs Cave Goblins",
+        "gameId": 82420
+      },
+      {
+        "name": "Summoner Wars: Master Set",
+        "gameId": 93260
+      },
+      {
+        "name": "Summoner Wars: Mercenaries Faction Deck",
+        "gameId": 113227
+      },
+      {
+        "name": "Summoner Wars: Phoenix Elves vs Tundra Orcs",
+        "gameId": 82421
+      },
+      {
+        "name": "Summoner Wars: Vanguards Faction Deck",
+        "gameId": 82422
+      }
+    ]
   },
   {
     "gameId": 82423,
@@ -5395,12 +5753,17 @@
     "gameId": 167791,
     "name": "Terraforming Mars",
     "image": "https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__original/img/thIqWDnH9utKuoKVEUqveDixprI=/0x0/filters:format(jpeg)/pic3536616.jpg",
+    "description": "*Terraforming Mars* is a strategy board game set in the 2400s, where players take on the role of corporations working together to terraform Mars by raising the temperature, increasing the oxygen level, and creating ocean areas. The goal is to make the planet habitable while competing for the most victory points.\n\nPlayers achieve this by managing resources, building infrastructure, and executing projects to improve the planet's conditions. Each turn, players will choose from a set of action cards representing various technologies, buildings, and other actions that help them progress in their mission. The game features a variety of strategies, allowing players to focus on areas like energy production, ecology, or large-scale constructions.\n\n*Terraforming Mars* offers a dynamic and evolving game experience with plenty of room for strategic planning. The game is played over multiple rounds, with the state of the planet continuously improving. The interaction between the different corporations and their varying abilities makes every game unique, providing a deep and immersive experience for fans of resource management and engine-building games.",
+    "type": ["Strategy"],
     "minPlayers": 1,
     "maxPlayers": 5,
     "playingTime": 120,
     "isExpansion": false,
     "yearPublished": 2016,
-    "averageRating": 8.35452
+    "averageRating": 8.35452,
+    "designers": ["Jacob Fryxelius"],
+    "publishers": ["FryxGames"],
+    "artists": ["Isaac Fryxelius", "Daniel Fryxelius"]
   },
   {
     "gameId": 147242,
@@ -5424,7 +5787,16 @@
     "playingTime": 150,
     "isExpansion": false,
     "yearPublished": 2012,
-    "averageRating": 8.05547
+    "averageRating": 8.05547,
+    "designers": ["Jens Drögemüller", "Helge Ostertag"],
+    "publishers": ["Feuerland Spiele"],
+    "artists": ["Dennis Lohausen"],
+    "expansions": [
+      {
+        "name": "Terra Mystica: Fire & Ice",
+        "gameId": 161317
+      }
+    ]
   },
   {
     "gameId": 161317,
@@ -5441,12 +5813,23 @@
     "gameId": 182028,
     "name": "Through the Ages: A New Story of Civilization",
     "image": "https://cf.geekdo-images.com/fVwPntkJKgaEo0rIC0RwpA__original/img/1jawNpljTXwnT4km_2CjGwoUPR8=/0x0/filters:format(jpeg)/pic2663291.jpg",
+    "description": "*Through the Ages: A New Story of Civilization* is a civilization-building strategy game where players guide their nations through the ages, from ancient times to the modern era. The game focuses on managing resources, developing technologies, advancing culture, and leading military conquests, all while striving for dominance in various aspects of civilization.\n\nThroughout the game, players take turns to build wonders, recruit leaders, develop technologies, and engage in military actions. The game features a unique card-based system that represents different stages of civilization, with players having to choose wisely which advancements to pursue in order to gain victory points. Diplomacy and strategic planning play a key role as players compete for control over limited resources and territories.\n\n*Through the Ages: A New Story of Civilization* offers deep strategy and replayability, as the dynamic card system and the variety of possible paths to victory create a constantly evolving experience. The game provides a challenging, immersive experience for players who enjoy long-term strategic planning and the development of complex civilizations.",
+    "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 120,
     "isExpansion": false,
     "yearPublished": 2015,
-    "averageRating": 8.27841
+    "averageRating": 8.27841,
+    "designers": ["Vlaada Chvátil"],
+    "publishers": ["Czech Games Edition"],
+    "artists": ["Filip Murmak", "Radim Pech", "Jakub Politzer", "Milan Vavroň"],
+    "expansions": [
+      {
+        "name": "Through the Ages: A Story of Civilization",
+        "gameId": 25613
+      }
+    ]
   },
   {
     "gameId": 25613,
@@ -5562,12 +5945,17 @@
     "gameId": 106645,
     "name": "Ticket to Ride: India & Switzerland",
     "image": "https://cf.geekdo-images.com/GK452fK2engzjhHIhP_r-Q__original/img/M_tADvIRijxoaIaypOEqQCXkNIA=/0x0/filters:format(jpeg)/pic1077595.jpg",
+    "description": "*Ticket to Ride: 10th Anniversary* is a special edition of the beloved *Ticket to Ride* game, celebrating a decade of train-building fun. In this anniversary edition, players compete to complete train routes across North America by collecting matching colored cards and claiming railway routes on the map.\n\nThe game features all the core mechanics of the original *Ticket to Ride* while offering enhanced components, including a custom board, upgraded trains, and special cards to commemorate the 10th anniversary. Players must complete destination tickets, connect cities, and strategize to block their opponents, all while managing their hand of cards and limited actions.\n\n*Ticket to Ride: 10th Anniversary* retains the accessible, family-friendly gameplay of the original but adds a premium feel and collectible elements. It’s perfect for both newcomers and seasoned players, offering the same engaging and competitive train-building experience that has made the game a modern classic.",
+    "type": ["Family"],
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 60,
     "isExpansion": true,
     "yearPublished": 2011,
-    "averageRating": 7.76744
+    "averageRating": 7.76744,
+    "designers": ["Alan R. Moon"],
+    "publishers": ["Days of Wonder"],
+    "artists": ["Cyrille Daujean", "Julien Delval"]
   },
   {
     "gameId": 21348,
@@ -5837,12 +6225,23 @@
     "gameId": 12333,
     "name": "Twilight Struggle",
     "image": "https://cf.geekdo-images.com/pNCiUUphnoeWOYfsWq0kng__original/img/Iae47UtAd_RXVd5tJ3YzbDHOv4E=/0x0/filters:format(jpeg)/pic3530661.jpg",
+    "description": "*Twilight Struggle* is a two-player, card-driven strategy game set during the Cold War, where players take on the roles of the United States and the Soviet Union, competing for global influence. The game spans the entire Cold War period, with players using cards to conduct military operations, spread ideology, and engage in diplomacy to dominate various regions of the world.\n\nEach turn, players choose cards representing historical events and use them to perform actions such as placing influence in countries, staging coups, or advancing their own political agenda. The game features a unique blend of strategic depth, historical themes, and tense decision-making as players try to outmaneuver each other to gain dominance without triggering nuclear war.\n\n*Twilight Struggle* offers a deep and immersive experience, with a perfect balance of tension, history, and strategy. The game’s card-driven mechanics and asymmetrical nature create a constantly evolving narrative, making each session feel fresh and challenging. It’s a must-play for fans of history, strategy, and geopolitical games.",
+    "type": ["Strategy", "Wargames"],
     "minPlayers": 2,
     "maxPlayers": 2,
     "playingTime": 180,
     "isExpansion": false,
     "yearPublished": 2005,
-    "averageRating": 8.24325
+    "averageRating": 8.24325,
+    "designers": ["Ananda Gupta", "Jason Matthews"],
+    "publishers": ["GMT Games"],
+    "artists": [
+      "Viktor Csete",
+      "Rodger B. MacGowan",
+      "Chechu Nieto",
+      "Guillaume Ries",
+      "Mark Simonitch"
+    ]
   },
   {
     "gameId": 134352,
@@ -5858,24 +6257,40 @@
   {
     "gameId": 126163,
     "name": "Tzolk'in: The Mayan Calendar",
+    "description": "*Tzolk'in: The Mayan Calendar* is a worker placement strategy game set in the ancient Mayan civilization. Players manage a group of workers and take actions to advance their civilization by collecting resources, building structures, and gaining favor with the gods. The game is centered around the famous Mayan calendar, with players using a unique gear mechanism to control the placement and movement of their workers over time.\n\nIn *Tzolk'in*, each turn, players place their workers on rotating gears, each representing a different action. The gears rotate on every turn, and as time passes, workers move to more powerful positions, allowing players to take increasingly valuable actions. Strategic planning is essential, as the timing of when to place and retrieve workers is crucial for maximizing efficiency and achieving victory.\n\nThe game offers a deep and engaging experience with intricate decision-making and a strong thematic connection to the Mayan calendar. *Tzolk'in* is ideal for players who enjoy complex strategy games with a unique mechanic and a rich, historical theme.",
+    "type": ["Strategy"],
     "image": "https://cf.geekdo-images.com/kXf7mDyDYuHg6oe8yTUIEA__original/img/f6-Au0KTnNR4nugSu2U-wPNbZCU=/0x0/filters:format(jpeg)/pic4604439.jpg",
     "minPlayers": 2,
     "maxPlayers": 4,
     "playingTime": 90,
     "isExpansion": false,
     "yearPublished": 2012,
-    "averageRating": 7.85545
+    "averageRating": 7.85545,
+    "designers": ["Simone Luciani", "Daniele Tascini"],
+    "publishers": ["Czech Games Edition"],
+    "artists": ["Milan Vavroň"],
+    "expansions": [
+      {
+        "name": "Tzolk'in: The Mayan Calendar – Tribes & Prophecies",
+        "gameId": 143065
+      }
+    ]
   },
   {
     "gameId": 143065,
     "name": "Tzolk'in: The Mayan Calendar – Tribes & Prophecies",
+    "description": "*Tribes & Prophecies* is an expansion for *Tzolk'in: The Mayan Calendar*, adding new layers of strategy and complexity to the base game. The expansion introduces new tribes, each with unique abilities, and new prophecy cards that provide additional objectives and challenges for players to pursue during the game.\n\nWith the addition of tribes, each player can now select a tribe at the start of the game, granting them a special ability that can influence their strategy throughout the game. The prophecy cards add an extra level of planning and foresight, as players must work to fulfill the prophecies before the end of the game to earn victory points.\n\n*Tribes & Prophecies* enhances the gameplay of *Tzolk'in*, offering more varied and strategic choices. The new components add depth and replayability to the original game, making it even more challenging and rewarding for fans of the base game.",
+    "type": ["Strategy"],
     "image": "https://cf.geekdo-images.com/MoFm3Gwr2gN4MqtZBGkn1A__original/img/23nzJYRCVGbfTsNQwVVAD8RV_7I=/0x0/filters:format(png)/pic1758469.png",
     "minPlayers": 2,
     "maxPlayers": 5,
     "playingTime": 90,
     "isExpansion": true,
     "yearPublished": 2013,
-    "averageRating": 8.11327
+    "averageRating": 8.11327,
+    "designers": ["Simone Luciani", "Daniele Tascini"],
+    "publishers": ["Czech Games Edition"],
+    "artists": ["Milan Vavroň"]
   },
   {
     "gameId": 170561,
@@ -5957,18 +6372,29 @@
     "averageRating": 7.48837,
     "designers": ["Jamey Stegmaier", "Alan Stone"],
     "publishers": ["Stonemaier Games"],
-    "artists": ["Jacqui Davis", "David Montgomery", "Beth Sobel"]
+    "artists": ["Jacqui Davis", "David Montgomery", "Beth Sobel"],
+    "expansions": [
+      {
+        "name": "Viticulture: Tuscany",
+        "gameId": 147101
+      }
+    ]
   },
   {
     "gameId": 147101,
     "name": "Viticulture: Tuscany",
     "image": "https://cf.geekdo-images.com/SKH7ZP658DE0DELIgK0QQw__original/img/2EAyeRtWy_FB6CChv61jRG9F02I=/0x0/filters:format(jpeg)/pic1886437.jpg",
+    "description": "*Viticulture: Tuscany* is an expansion for the popular wine-making board game *Viticulture*, adding new mechanics, strategies, and components to enhance the base game. Tuscany introduces new game elements such as the *Grande* workers, the *Tuscany* tiles that modify actions, and new ways to score points with the *Vineyard* cards and *Wine Orders*.\n\nThe expansion introduces the *Tuscany* board, which offers different actions and strategies compared to the base game, allowing players to specialize their vineyards further. It also adds new structures to build and additional worker placement options, creating more paths to victory and greater replayability.\n\n*Viticulture: Tuscany* elevates the gameplay experience with its added depth and strategic variety. With new ways to develop your vineyard, customize your game, and compete for victory points, this expansion is perfect for players seeking a more complex and rewarding wine-making experience.",
+    "type": ["Strategy"],
     "minPlayers": 1,
     "maxPlayers": 6,
     "playingTime": 120,
     "isExpansion": true,
     "yearPublished": 2014,
-    "averageRating": 8.3955
+    "averageRating": 8.3955,
+    "designers": ["Jamey Stegmaier", "Alan Stone"],
+    "publishers": ["Stonemaier Games"],
+    "artists": ["Jacqui Davis", "David Montgomery", "Beth Sobel"]
   },
   {
     "gameId": 171623,
