@@ -84,8 +84,9 @@
   animation-name: card-slide-side;
   position: absolute;
   animation-duration: 0.5s;
-  width: 5rem;
-  height: 80%;
+  min-width: 5rem;
+  max-width: 5rem;
+  height: 90%;
   transition-duration: 0.5s;
   @media screen and (min-width: 500px) {
     transform: scale(1.5);
@@ -94,7 +95,7 @@
   }
   @media screen and (min-width: 1000px) {
     animation-name: card-slide-center-big;
-    height: 45%;
+    height: 52%;
     transform: scale(1.8);
   }
 }
