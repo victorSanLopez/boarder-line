@@ -66,6 +66,19 @@ import router from "./router";
 app.use(router);
 
 /* ************************************************************************* */
+import games from "../data/samplegame.json";
+
+app.get("/api/games", (req, res) => {
+  res.send(games);
+});
+
+function oneGame(id: string) {
+  return games.find((p) => p.gameId === +id);
+}
+
+app.get("/api/:id", (req, res) => {
+  res.send(oneGame(req.params.id));
+});
 
 // Production-ready setup: What is it for?
 
