@@ -23,67 +23,10 @@
   }
 }
 
-/* animation de la carte centrale */
-
-@keyframes card-slide-middle {
-  0% {
-    display: none;
-    transform: scale(1.2);
-  }
-  1% {
-    display: block;
-    transform: scale(1.2);
-  }
-  100% {
-    display: block;
-    transform: scale(1.5);
-  }
-}
-
-/* animations cartes adjacentes */
-
-@keyframes card-slide-side {
-  0% {
-    display: none;
-    transform: scale(0.8);
-  }
-
-  1% {
-    display: block;
-    transform: scale(0.8);
-  }
-
-  100% {
-    display: block;
-    transform: scale(1);
-  }
-}
-
-/* animations cartes adjacentes */
-
-@keyframes card-slide-center-big {
-  0% {
-    display: none;
-    transform: scale(1.5);
-  }
-
-  1% {
-    display: block;
-    transform: scale(1.5);
-  }
-
-  100% {
-    display: block;
-    transform: scale(1.8);
-  }
-}
-
 /* carte centrale */
 
 .cardSlider {
-  animation-name: card-slide-side;
   position: absolute;
-  animation-duration: 0.5s;
   min-width: 5rem;
   max-width: 5rem;
   height: 90%;
@@ -91,10 +34,8 @@
   @media screen and (min-width: 500px) {
     transform: scale(1.5);
     height: 50%;
-    animation-name: card-slide-middle;
   }
   @media screen and (min-width: 1000px) {
-    animation-name: card-slide-center-big;
     height: 52%;
     transform: scale(1.8);
   }
@@ -112,10 +53,6 @@
   @media screen and (max-width: 500px) {
     display: none;
   }
-  @media screen and (min-width: 500px) {
-    animation-name: card-slide-side;
-    animation-duration: 0.5s;
-  }
 }
 
 /* carte de droite */
@@ -130,16 +67,6 @@
   @media screen and (max-width: 500px) {
     display: none;
   }
-  @media screen and (min-width: 500px) {
-    animation-name: card-slide-side;
-    animation-duration: 0.5s;
-  }
-}
-
-/* cartes non affiché a l'écran */
-
-.cardSliderHidden {
-  display: none;
 }
 
 /* bouttons */

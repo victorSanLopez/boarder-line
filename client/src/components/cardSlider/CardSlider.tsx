@@ -14,78 +14,51 @@ export default function CardSlider({
   return (
     <>
       <section className={style.sliderFolder}>
-        {boardGamesList.map((element, index) => (
-          <article
-            key={element.gameId}
-            className={
-              slider === index
-                ? `${style.cardSliderLeft}`
-                : `${style.cardSliderHidden}`
+        <article className={`${style.cardSliderLeft}`}>
+          <CardGame
+            name={
+              slider !== 0
+                ? boardGamesList[slider - 1].name
+                : boardGamesList[boardGamesList.length - 1].name
             }
-          >
-            <CardGame
-              name={
-                slider !== 0
-                  ? boardGamesList[slider - 1].name
-                  : boardGamesList[boardGamesList.length - 1].name
-              }
-              rating={
-                slider !== 0
-                  ? boardGamesList[slider - 1].averageRating
-                  : boardGamesList[boardGamesList.length - 1].averageRating
-              }
-              image={
-                slider !== 0
-                  ? boardGamesList[slider - 1].image
-                  : boardGamesList[boardGamesList.length - 1].image
-              }
-            />
-          </article>
-        ))}
-        {boardGamesList.map((element, index) => (
-          <article
-            key={element.gameId}
-            className={
-              slider === index
-                ? `${style.cardSliderRight}`
-                : `${style.cardSliderHidden}`
+            rating={
+              slider !== 0
+                ? boardGamesList[slider - 1].averageRating
+                : boardGamesList[boardGamesList.length - 1].averageRating
             }
-          >
-            <CardGame
-              name={
-                slider !== boardGamesList.length - 1
-                  ? boardGamesList[slider + 1].name
-                  : boardGamesList[0].name
-              }
-              rating={
-                slider !== boardGamesList.length - 1
-                  ? boardGamesList[slider + 1].averageRating
-                  : boardGamesList[0].averageRating
-              }
-              image={
-                slider !== boardGamesList.length - 1
-                  ? boardGamesList[slider + 1].image
-                  : boardGamesList[0].image
-              }
-            />
-          </article>
-        ))}
-        {boardGamesList.map((element, index) => (
-          <article
-            key={element.gameId}
-            className={
-              slider === index
-                ? `${style.cardSlider}`
-                : `${style.cardSliderHidden}`
+            image={
+              slider !== 0
+                ? boardGamesList[slider - 1].image
+                : boardGamesList[boardGamesList.length - 1].image
             }
-          >
-            <CardGame
-              name={element.name}
-              rating={element.averageRating}
-              image={element.image}
-            />
-          </article>
-        ))}
+          />
+        </article>
+        <article className={`${style.cardSliderRight}`}>
+          <CardGame
+            name={
+              slider !== boardGamesList.length - 1
+                ? boardGamesList[slider + 1].name
+                : boardGamesList[0].name
+            }
+            rating={
+              slider !== boardGamesList.length - 1
+                ? boardGamesList[slider + 1].averageRating
+                : boardGamesList[0].averageRating
+            }
+            image={
+              slider !== boardGamesList.length - 1
+                ? boardGamesList[slider + 1].image
+                : boardGamesList[0].image
+            }
+          />
+        </article>
+        <article className={`${style.cardSlider}`}>
+          <CardGame
+            name={boardGamesList[slider].name}
+            rating={boardGamesList[slider].averageRating}
+            image={boardGamesList[slider].image}
+          />
+        </article>
         <button
           type="button"
           onClick={previousSlide}

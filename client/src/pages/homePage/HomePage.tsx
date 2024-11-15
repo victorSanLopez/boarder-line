@@ -13,7 +13,6 @@ export default function HomePage() {
       .then((result) => result.json())
       .then((result) => setBoardGames(result));
   }, []);
-
   // logique du slider: top jeu
 
   const boardGamesTop = boardGames
