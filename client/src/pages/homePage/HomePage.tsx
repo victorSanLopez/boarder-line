@@ -14,18 +14,32 @@ export default function HomePage() {
       .then((result) => setBoardGames(result));
   }, []);
 
-  // logique du slider du top jeu
+  // logique du slider: top jeu
 
   const boardGamesTop = boardGames
     ? boardGames.filter((games) => games.rating > 8)
     : [];
 
+  // logique du slider: liste des découvertes de l'équipe
+
+  const boardGamesDiscovery = boardGames
+    ? boardGames.filter(
+        (games) =>
+          games.name === "7 Wonders" ||
+          games.name === "Carcassonne" ||
+          games.name === "Dixit" ||
+          games.name === "Jamaica" ||
+          games.name === "Myrmes" ||
+          games.name === "Pandemic" ||
+          games.name === "Scythe",
+      )
+    : [];
   return (
     <section className={style.backgroundPage}>
       <h1 className={style.titleSlide}>Top Games</h1>
       <CardSlider boardGamesList={boardGamesTop} />
       <h1 className={style.titleSlide}>Discovery</h1>
-      <CardSlider boardGamesList={boardGamesTop} />
+      <CardSlider boardGamesList={boardGamesDiscovery} />
     </section>
   );
 }
