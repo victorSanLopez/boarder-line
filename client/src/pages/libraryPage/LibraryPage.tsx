@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-
+//import { useLoaderData } from "react-router-dom";
+import type { boardGameListType } from "../../assets/lib/definition";
 import CardGame from "../../components/cardGame/CardGame";
 import FilterPanel from "../../components/filterPanel/FilterPanel";
 import style from "./libraryPage.module.css";
-import { useLoaderData } from "react-router-dom";
-import type { dataGamesProps } from "../../assets/lib/definition";
 
 // page library pour lister les jeux et les filtrer
 
@@ -12,10 +11,10 @@ export default function libraryPage() {
   const [filterGame, setFilterGame] = useState("");
   const [data, setData] = useState([]);
 
-  const fullGame: dataGamesProps[] = data;
+  const fullGame: boardGameListType[] = data;
 
   useEffect(() => {
-    fetch("https://bgg-json.azurewebsites.net/collection/edwalter")
+    fetch("http://localhost:3310/api/games")
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);

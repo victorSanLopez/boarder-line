@@ -7,33 +7,19 @@ export type filterPanelProps = {
   filterGame: string;
   setFilterGame: (f: string) => void;
 };
-export type dataGamesProps = {
-  gameId: number;
-  name: string;
-  image: string;
-  thumbnail: string;
-  minPlayers: number;
-  maxPlayers: number;
-  playingTime: number;
-  isExpansion: boolean;
-  yearPublished: number;
-  bggRating: number;
+export type boardGameListType = {
   averageRating: number;
-  rank: number;
-  numPlays: number;
-  rating: number;
-  owned: boolean;
-  preOrdered: boolean;
-  forTrade: boolean;
-  previousOwned: boolean;
-  want: boolean;
-  wantToPlay: boolean;
-  wantToBuy: boolean;
-  wishList: boolean;
-  userComment: string;
+  gameId: number;
+  image: string;
+  isExpansion: boolean;
+  maxPlayers: number;
+  minPlayers: number;
+  name: string;
+  playingTime: number;
+  yearPublished: number;
 };
 export type cardProps = {
   name: string;
   image: string;
-  rating: number;
+  averageRating: number;
 };
