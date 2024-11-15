@@ -15,13 +15,13 @@ export default function HomePage() {
   }, []);
   // logique du slider: top jeu
 
-  const boardGamesTop = boardGames
+  const boardGamesTop: boardGameListType[] | null = boardGames
     ? boardGames.filter((games) => games.averageRating > 8)
     : [];
 
   // logique du slider: liste des découvertes de l'équipe
 
-  const boardGamesDiscovery = boardGames
+  const boardGamesDiscovery: boardGameListType[] | null = boardGames
     ? boardGames.filter(
         (games) =>
           games.name === "7 Wonders" ||
@@ -35,10 +35,10 @@ export default function HomePage() {
     : [];
   return (
     <section className={style.backgroundPage}>
-      <h1 className={style.titleSlide}>Top Games</h1>
-      <CardSlider boardGamesList={boardGamesTop} />
       <h1 className={style.titleSlide}>Discovery</h1>
-      <CardSlider boardGamesList={boardGamesDiscovery} />
+      {boardGames && <CardSlider boardGamesList={boardGamesDiscovery} />}
+      <h1 className={style.titleSlide}>Discovery</h1>
+      {boardGames && <CardSlider boardGamesList={boardGamesTop} />}
     </section>
   );
 }

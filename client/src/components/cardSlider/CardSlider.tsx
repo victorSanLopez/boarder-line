@@ -11,6 +11,7 @@ export default function CardSlider({
     slider > 0 ? setSlider(slider - 1) : setSlider(boardGamesList.length - 1);
   const nextSlide = () =>
     slider < boardGamesList.length - 1 ? setSlider(slider + 1) : setSlider(0);
+
   return (
     <>
       <section className={style.sliderFolder}>
