@@ -12,7 +12,7 @@ function CardGame({
           <img src={image} alt={`Jeu ${name}`} className={style.image} />
         </a>
         <h2 className={style.title}>Name : {name}</h2>
-        <h2 className={style.title}>Rating : {rating}</h2>
+        <h2 className={style.title}>Rating : {Math.trunc(rating)}</h2>
         <button type="button" className={style.button}>
           Like
         </button>

@@ -31,8 +31,8 @@ export default function CardSlider({
               }
               rating={
                 slider !== 0
-                  ? boardGamesList[slider - 1].rating
-                  : boardGamesList[boardGamesList.length - 1].rating
+                  ? boardGamesList[slider - 1].averageRating
+                  : boardGamesList[boardGamesList.length - 1].averageRating
               }
               image={
                 slider !== 0
@@ -59,8 +59,8 @@ export default function CardSlider({
               }
               rating={
                 slider !== boardGamesList.length - 1
-                  ? boardGamesList[slider + 1].rating
-                  : boardGamesList[0].rating
+                  ? boardGamesList[slider + 1].averageRating
+                  : boardGamesList[0].averageRating
               }
               image={
                 slider !== boardGamesList.length - 1
@@ -81,7 +81,7 @@ export default function CardSlider({
           >
             <CardGame
               name={element.name}
-              rating={element.rating}
+              rating={element.averageRating}
               image={element.image}
             />
           </article>

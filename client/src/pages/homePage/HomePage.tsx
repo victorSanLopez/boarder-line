@@ -9,7 +9,7 @@ export default function HomePage() {
     null,
   );
   useEffect(() => {
-    fetch("https://bgg-json.azurewebsites.net/collection/edwalter")
+    fetch(`${import.meta.env.VITE_API_URL}`)
       .then((result) => result.json())
       .then((result) => setBoardGames(result));
   }, []);
@@ -17,7 +17,7 @@ export default function HomePage() {
   // logique du slider: top jeu
 
   const boardGamesTop = boardGames
-    ? boardGames.filter((games) => games.rating > 8)
+    ? boardGames.filter((games) => games.averageRating > 8)
     : [];
 
   // logique du slider: liste des découvertes de l'équipe
