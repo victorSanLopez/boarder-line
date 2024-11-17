@@ -1,18 +1,13 @@
-import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import type { boardGameListType } from "../../assets/lib/definition";
 import CardSlider from "../../components/cardSlider/CardSlider";
 import style from "./homePage.module.css";
 
 export default function HomePage() {
-  // recupération de l'api
-  const [boardGames, setBoardGames] = useState<boardGameListType[] | null>(
-    null,
-  );
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}`)
-      .then((result) => result.json())
-      .then((result) => setBoardGames(result));
-  }, []);
+  // loader
+  const boardGames: boardGameListType[] =
+    useLoaderData() as boardGameListType[];
+
   // logique du slider: top jeu
 
   const boardGamesTop: boardGameListType[] | null = boardGames
