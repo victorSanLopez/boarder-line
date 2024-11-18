@@ -1,9 +1,9 @@
-import { useLoaderData } from "react-router-dom";
-import style from "./libraryPage.module.css";
-import type { boardGameListType } from "../../assets/lib/definition";
-import FilterType from "../../components/filterType/FilterType";
 import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import type { boardGameListType } from "../../assets/lib/definition";
 import CardGame from "../../components/cardGame/CardGame";
+import FilterType from "../../components/filterType/FilterType";
+import style from "./libraryPage.module.css";
 
 // page library pour lister les jeux et les filtrer
 
