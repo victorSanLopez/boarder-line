@@ -13,7 +13,9 @@ function CardGame({ card }: { card: cardProps }) {
           />
         </a>
         <h2 className={style.title}>Name : {card.name}</h2>
-        <h2 className={style.title}>Rating : {card.averageRating}</h2>
+        <h2 className={style.title}>
+          Rating : {Math.trunc(card.averageRating)}
+        </h2>
         <button type="button" className={style.button}>
           Like
         </button>

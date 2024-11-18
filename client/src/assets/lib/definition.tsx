@@ -3,10 +3,7 @@ export type headerInfoProps = {
   subtitle: string;
   description: string;
 };
-export type filterPanelProps = {
-  filterGame: string;
-  setFilterGame: (f: string) => void;
-};
+
 export type boardGameListType = {
   averageRating: number;
   gameId: number;
@@ -17,6 +14,7 @@ export type boardGameListType = {
   name: string;
   playingTime: number;
   yearPublished: number;
+  type: string;
 };
 export type cardProps = {
   name: string;
