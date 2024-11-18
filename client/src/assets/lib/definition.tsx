@@ -11,7 +11,9 @@ export type cardProps = {
 };
 
 export type gameDetailsType = {
+  gameId: number;
   name: string;
+  type?: string[];
   image?: string;
   minPlayers?: number;
   maxPlayers?: number;
@@ -20,4 +22,6 @@ export type gameDetailsType = {
   designers?: string[];
   averageRating?: number;
   description?: string;
+  artists?: string[];
+  expansions?: [];
 };

@@ -5,19 +5,18 @@ import type { gameDetailsType } from "../../assets/lib/definition";
 import style from "./gameDetails.module.css";
 
 export default function GameDetails() {
-  const id = 124742;
-
+  const gameId = 124742;
   const [gameDetails, setGameDetails] = useState<gameDetailsType | null>(null);
 
   useEffect(() => {
-    fetch(`https://bgg-json.azurewebsites.net/thing/${id}`)
+    fetch(`http://localhost:3310/api/${gameId}`)
       .then((response) => response.json())
       .then((result) => setGameDetails(result))
       .catch((error) => console.error("Error while fetching data :", error));
   }, []);
 
   if (!gameDetails) {
-    // Animation en cas de perte de l'API
+    // Loading animation of API
     return (
       <section className={style.loadingSection}>
         <img
@@ -37,8 +36,9 @@ export default function GameDetails() {
     return `${list.join(", ")} and ${lastItem}`;
   };
 
-  const publishers = arrayToListFormatter(gameDetails.publishers);
+  const artists = arrayToListFormatter(gameDetails.artists);
   const designers = arrayToListFormatter(gameDetails.designers);
+  const publishers = arrayToListFormatter(gameDetails.publishers);
 
   return (
     <div className={style.componentSpace}>
@@ -54,7 +54,7 @@ export default function GameDetails() {
           />
           <figcaption>
             <ul className={style.ul}>
-              <li className={style.h3}>Type : Unknown</li>
+              <li className={style.h3}>Type : {gameDetails.type}</li>
               <li className={style.h3}>
                 Number of players : {gameDetails.minPlayers || "?"}-
                 {gameDetails.maxPlayers || "?"} players
@@ -72,8 +72,13 @@ export default function GameDetails() {
         </figure>
         <h3 className={style.h3}>Description :</h3>
         <p>{gameDetails.description}</p>
+        <h3 className={style.h3}>Artists :</h3>
+        <p>{artists}</p>
         <h3 className={style.h3}>Expansions :</h3>
-        <div className={style.extensions}>Work in progress...</div>
+        <p>
+          {gameDetails.expansions[0]?.name ||
+            "This game currently has no expansions"}
+        </p>
         <h3 className={style.h3}>Coms :</h3>
         <div className={style.coms}>Work in progress...</div>
       </section>
