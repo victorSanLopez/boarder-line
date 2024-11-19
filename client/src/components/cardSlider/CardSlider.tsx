@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { boardGameListType } from "../../assets/lib/definition";
+import type { cardType } from "../../assets/lib/definition";
 import CardGame from "../cardGame/CardGame";
 import style from "./cardSlider.module.css";
 
@@ -19,12 +20,7 @@ export default function CardSlider({
 
   //gestion de l'affichage de la carte de gauche
 
-  const cardLeft: {
-    gameName: string;
-    gameRating: number;
-    gameImage: string;
-    styleCard: string;
-  } = {
+  const cardLeft: cardType = {
     gameName:
       slider !== 0
         ? boardGamesList[slider - 1].name
@@ -42,12 +38,7 @@ export default function CardSlider({
 
   //gestion de l'affichage de la carde du milieu
 
-  const cardMiddle: {
-    gameName: string;
-    gameRating: number;
-    gameImage: string;
-    styleCard: string;
-  } = {
+  const cardMiddle: cardType = {
     gameName: boardGamesList[slider].name,
     gameRating: boardGamesList[slider].averageRating,
     gameImage: boardGamesList[slider].image,
@@ -56,12 +47,7 @@ export default function CardSlider({
 
   //gestion de l'affichage de la carte de droite
 
-  const cardRight: {
-    gameName: string;
-    gameRating: number;
-    gameImage: string;
-    styleCard: string;
-  } = {
+  const cardRight: cardType = {
     gameName:
       slider !== boardGamesList.length - 1
         ? boardGamesList[slider + 1].name
