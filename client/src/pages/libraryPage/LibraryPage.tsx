@@ -18,7 +18,12 @@ export default function libraryPage() {
 
   return (
     <section className={style.backgroundPage}>
-      <FilterType setFilterType={setFilterType} category={onlyOneCategories} />
+      <div>
+        <FilterType
+          setFilterType={setFilterType}
+          category={onlyOneCategories}
+        />
+      </div>
       <div className={style.cards}>
         {filterType !== ""
           ? fullGame

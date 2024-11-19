@@ -12,14 +12,17 @@
   @media screen and (max-width: 768px) {
     font-size: 1.9vw;
     font-weight: bold;
+    width: 12vw;
   }
 }
 .filter {
   display: flex;
   justify-content: center;
   gap: 1em;
+
   @media screen and (max-width: 768px) {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
   }
 }
