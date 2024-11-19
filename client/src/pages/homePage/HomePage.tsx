@@ -14,18 +14,28 @@ export default function HomePage() {
     ? boardGames.filter((games) => games.averageRating > 8)
     : [];
 
-  // logique du slider: liste des découvertes de l'équipe
+  // liste des découvertes de l'équipe
+  const FAVOURITES_GAMES = [
+    "7 Wonders",
+    "Carcassonne",
+    "Dixit",
+    "Jamaica",
+    "Myrmes",
+    "Pandemic",
+    "Scythe",
+  ];
 
+  // logique du slider des découvertes:
   const boardGamesDiscovery: boardGameListType[] | null = boardGames
     ? boardGames.filter(
         (games) =>
-          games.name === "7 Wonders" ||
-          games.name === "Carcassonne" ||
-          games.name === "Dixit" ||
-          games.name === "Jamaica" ||
-          games.name === "Myrmes" ||
-          games.name === "Pandemic" ||
-          games.name === "Scythe",
+          games.name === FAVOURITES_GAMES[0] ||
+          games.name === FAVOURITES_GAMES[1] ||
+          games.name === FAVOURITES_GAMES[2] ||
+          games.name === FAVOURITES_GAMES[3] ||
+          games.name === FAVOURITES_GAMES[4] ||
+          games.name === FAVOURITES_GAMES[5] ||
+          games.name === FAVOURITES_GAMES[6],
       )
     : [];
   return (

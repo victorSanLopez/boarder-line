@@ -6,58 +6,98 @@ import style from "./cardSlider.module.css";
 export default function CardSlider({
   boardGamesList,
 }: { boardGamesList: boardGameListType[] }) {
+  //gestion de l'état
+
   const [slider, setSlider] = useState(0);
+
+  //logique des boutton
+
   const previousSlide = () =>
     slider > 0 ? setSlider(slider - 1) : setSlider(boardGamesList.length - 1);
   const nextSlide = () =>
     slider < boardGamesList.length - 1 ? setSlider(slider + 1) : setSlider(0);
 
+  //gestion de l'affichage de la carte de gauche
+
+  const cardLeft: {
+    gameName: string;
+    gameRating: number;
+    gameImage: string;
+    styleCard: string;
+  } = {
+    gameName:
+      slider !== 0
+        ? boardGamesList[slider - 1].name
+        : boardGamesList[boardGamesList.length - 1].name,
+    gameRating:
+      slider !== 0
+        ? boardGamesList[slider - 1].averageRating
+        : boardGamesList[boardGamesList.length - 1].averageRating,
+    gameImage:
+      slider !== 0
+        ? boardGamesList[slider - 1].image
+        : boardGamesList[boardGamesList.length - 1].image,
+    styleCard: style.cardSliderLeft,
+  };
+
+  //gestion de l'affichage de la carde du milieu
+
+  const cardMiddle: {
+    gameName: string;
+    gameRating: number;
+    gameImage: string;
+    styleCard: string;
+  } = {
+    gameName: boardGamesList[slider].name,
+    gameRating: boardGamesList[slider].averageRating,
+    gameImage: boardGamesList[slider].image,
+    styleCard: style.cardSlider,
+  };
+
+  //gestion de l'affichage de la carte de droite
+
+  const cardRight: {
+    gameName: string;
+    gameRating: number;
+    gameImage: string;
+    styleCard: string;
+  } = {
+    gameName:
+      slider !== boardGamesList.length - 1
+        ? boardGamesList[slider + 1].name
+        : boardGamesList[0].name,
+    gameRating:
+      slider !== boardGamesList.length - 1
+        ? boardGamesList[slider + 1].averageRating
+        : boardGamesList[0].averageRating,
+    gameImage:
+      slider !== boardGamesList.length - 1
+        ? boardGamesList[slider + 1].image
+        : boardGamesList[0].image,
+    styleCard: style.cardSliderRight,
+  };
   return (
     <>
       <section className={style.sliderFolder}>
-        <article className={`${style.cardSliderLeft}`}>
+        <article className={cardLeft.styleCard}>
           <CardGame
-            name={
-              slider !== 0
-                ? boardGamesList[slider - 1].name
-                : boardGamesList[boardGamesList.length - 1].name
-            }
-            rating={
-              slider !== 0
-                ? boardGamesList[slider - 1].averageRating
-                : boardGamesList[boardGamesList.length - 1].averageRating
-            }
-            image={
-              slider !== 0
-                ? boardGamesList[slider - 1].image
-                : boardGamesList[boardGamesList.length - 1].image
-            }
+            name={cardLeft.gameName}
+            rating={cardLeft.gameRating}
+            image={cardLeft.gameImage}
           />
         </article>
-        <article className={`${style.cardSliderRight}`}>
+        <article className={cardRight.styleCard}>
           <CardGame
-            name={
-              slider !== boardGamesList.length - 1
-                ? boardGamesList[slider + 1].name
-                : boardGamesList[0].name
-            }
-            rating={
-              slider !== boardGamesList.length - 1
-                ? boardGamesList[slider + 1].averageRating
-                : boardGamesList[0].averageRating
-            }
-            image={
-              slider !== boardGamesList.length - 1
-                ? boardGamesList[slider + 1].image
-                : boardGamesList[0].image
-            }
+            name={cardRight.gameName}
+            rating={cardRight.gameRating}
+            image={cardRight.gameImage}
           />
         </article>
-        <article className={`${style.cardSlider}`}>
+        <article className={cardMiddle.styleCard}>
           <CardGame
-            name={boardGamesList[slider].name}
-            rating={boardGamesList[slider].averageRating}
-            image={boardGamesList[slider].image}
+            name={cardMiddle.gameName}
+            rating={cardMiddle.gameRating}
+            image={cardMiddle.gameImage}
           />
         </article>
         <button
