@@ -4,7 +4,7 @@ import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
 import style from "./gameDetails.module.css";
 
-export default function GameDetails({ gameId }: { gameId: number }) {
+export default function GameDetailsPage({ gameId }: { gameId: number }) {
   const [gameDetails, setGameDetails] = useState<gameDetailsType | null>(null);
 
   useEffect(() => {
