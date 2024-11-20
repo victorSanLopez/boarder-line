@@ -7,12 +7,8 @@ import style from "./gameDetailsPage.module.css";
 export default function GameDetailsPage() {
   const gameDetails: gameDetailsType = useLoaderData() as gameDetailsType;
 
-  // const { id } = useParams();
-  // const idNumber ; number = Number.parseInt(id as string);
-  // const boardGameDetails = boardGames.find((b) => b.gameId === idNumber);
-
+  // Animation de chargement de l'API
   if (!gameDetails) {
-    // Animation de chargement de l'API
     return (
       <section className={style.loadingSection}>
         <img
@@ -25,17 +21,13 @@ export default function GameDetailsPage() {
     );
   }
 
+  // Transforme les tableaux de l'API en string avec des "," et un "and" à la fin
   const arrayToListFormatter = (list: string[] | undefined) => {
-    // Transforme les tableaux de l'API en string avec des "," et un "and" à la fin
     if (!list) return "Unknown";
     if (list.length === 1) return list[0];
     const lastItem = list.pop();
     return `${list.join(", ")} and ${lastItem}`;
   };
-
-  const artists = arrayToListFormatter(gameDetails.artists);
-  const designers = arrayToListFormatter(gameDetails.designers);
-  const publishers = arrayToListFormatter(gameDetails.publishers);
 
   return (
     <div className={style.componentSpace}>
@@ -59,8 +51,12 @@ export default function GameDetailsPage() {
               <li className={style.h3}>
                 Playing time : {gameDetails.playingTime || "???"} minutes
               </li>
-              <li className={style.h3}>Editor : {publishers}</li>
-              <li className={style.h3}>Author : {designers}</li>
+              <li className={style.h3}>
+                Editor : {arrayToListFormatter(gameDetails.publishers)}
+              </li>
+              <li className={style.h3}>
+                Author : {arrayToListFormatter(gameDetails.designers)}
+              </li>
               <li className={style.h3}>
                 Rating : {gameDetails.averageRating?.toFixed(0)}/10
               </li>
@@ -70,15 +66,13 @@ export default function GameDetailsPage() {
         <h3 className={style.h3}>Description :</h3>
         <p>{gameDetails.description}</p>
         <h3 className={style.h3}>Artists :</h3>
-        <p>{artists}</p>
+        <p>{arrayToListFormatter(gameDetails.artists)}</p>
         <h3 className={style.h3}>Expansions :</h3>
         <ul>
           {gameDetails.expansions?.map((exp) => (
             <li key={exp.gameId}>{exp.name}</li>
           )) || "This game currently has no expansions"}
         </ul>
-        <h3 className={style.h3}>Coms :</h3>
-        <div className={style.coms}>Work in progress...</div>
       </section>
     </div>
   );

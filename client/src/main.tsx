@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <GameDetailsPage />,
         loader: ({ params }) =>
-          fetch(`${import.meta.env.VITE_API_URL}/${params.id}`),
+          fetch(`${import.meta.env.VITE_API_URL_DETAILS}/${params.id}`),
       },
     ],
   },
