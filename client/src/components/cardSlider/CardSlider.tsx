@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { boardGameListType } from "../../assets/lib/definition";
-import type { cardType } from "../../assets/lib/definition";
 import CardGame from "../cardGame/CardGame";
 import style from "./cardSlider.module.css";
 
@@ -11,79 +10,46 @@ export default function CardSlider({
 
   const [slider, setSlider] = useState(0);
 
-  //logique des boutton
+  //logique du bouton précedent
 
   const previousSlide = () =>
     slider > 0 ? setSlider(slider - 1) : setSlider(boardGamesList.length - 1);
+
+  //logique du bouton suivant
+
   const nextSlide = () =>
     slider < boardGamesList.length - 1 ? setSlider(slider + 1) : setSlider(0);
 
-  //gestion de l'affichage de la carte de gauche
+  // carte de gauche
 
-  const cardLeft: cardType = {
-    gameName:
-      slider !== 0
-        ? boardGamesList[slider - 1].name
-        : boardGamesList[boardGamesList.length - 1].name,
-    gameRating:
-      slider !== 0
-        ? boardGamesList[slider - 1].averageRating
-        : boardGamesList[boardGamesList.length - 1].averageRating,
-    gameImage:
-      slider !== 0
-        ? boardGamesList[slider - 1].image
-        : boardGamesList[boardGamesList.length - 1].image,
-    styleCard: style.cardSliderLeft,
-  };
+  const previous = slider === 0 ? boardGamesList.length - 1 : slider - 1;
 
-  //gestion de l'affichage de la carde du milieu
+  // carte droite
 
-  const cardMiddle: cardType = {
-    gameName: boardGamesList[slider].name,
-    gameRating: boardGamesList[slider].averageRating,
-    gameImage: boardGamesList[slider].image,
-    styleCard: style.cardSlider,
-  };
+  const next = slider === boardGamesList.length - 1 ? 0 : slider + 1;
 
-  //gestion de l'affichage de la carte de droite
-
-  const cardRight: cardType = {
-    gameName:
-      slider !== boardGamesList.length - 1
-        ? boardGamesList[slider + 1].name
-        : boardGamesList[0].name,
-    gameRating:
-      slider !== boardGamesList.length - 1
-        ? boardGamesList[slider + 1].averageRating
-        : boardGamesList[0].averageRating,
-    gameImage:
-      slider !== boardGamesList.length - 1
-        ? boardGamesList[slider + 1].image
-        : boardGamesList[0].image,
-    styleCard: style.cardSliderRight,
-  };
   return (
     <>
       <section className={style.sliderFolder}>
-        <article className={cardLeft.styleCard}>
+        <article className={style.cardSliderLeft}>
           <CardGame
-            name={cardLeft.gameName}
-            rating={cardLeft.gameRating}
-            image={cardLeft.gameImage}
+            name={boardGamesList[previous].name}
+            rating={boardGamesList[previous].averageRating}
+            image={boardGamesList[previous].image}
           />
         </article>
-        <article className={cardRight.styleCard}>
+        <article className={style.cardSliderRight}>
           <CardGame
-            name={cardRight.gameName}
-            rating={cardRight.gameRating}
-            image={cardRight.gameImage}
+            name={boardGamesList[next].name}
+            rating={boardGamesList[next].averageRating}
+            image={boardGamesList[next].image}
           />
         </article>
-        <article className={cardMiddle.styleCard}>
+        <article className={style.cardSlider}>
           <CardGame
-            name={cardMiddle.gameName}
-            rating={cardMiddle.gameRating}
-            image={cardMiddle.gameImage}
+            name={boardGamesList[slider].name}
+            rating={boardGamesList[slider].averageRating}
+            image={boardGamesList[slider].image}
           />
         </article>
         <button

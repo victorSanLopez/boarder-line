@@ -15,6 +15,7 @@ export default function HomePage() {
     : [];
 
   // liste des découvertes de l'équipe
+
   const FAVOURITES_GAMES = [
     "7 Wonders",
     "Carcassonne",
@@ -26,18 +27,13 @@ export default function HomePage() {
   ];
 
   // logique du slider des découvertes:
+
   const boardGamesDiscovery: boardGameListType[] | null = boardGames
-    ? boardGames.filter(
-        (games) =>
-          games.name === FAVOURITES_GAMES[0] ||
-          games.name === FAVOURITES_GAMES[1] ||
-          games.name === FAVOURITES_GAMES[2] ||
-          games.name === FAVOURITES_GAMES[3] ||
-          games.name === FAVOURITES_GAMES[4] ||
-          games.name === FAVOURITES_GAMES[5] ||
-          games.name === FAVOURITES_GAMES[6],
-      )
+    ? boardGames
+        .map((g) => (FAVOURITES_GAMES.includes(g.name) ? g : false))
+        .filter((g) => g !== false)
     : [];
+
   return (
     <section className={style.backgroundPage}>
       <h1 className={style.titleSlide}>Discovery</h1>

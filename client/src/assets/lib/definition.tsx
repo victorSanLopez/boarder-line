@@ -14,12 +14,6 @@ export type boardGameListType = {
   playingTime: number;
   yearPublished: number;
 };
-export type cardType = {
-  gameName: string;
-  gameRating: number;
-  gameImage: string;
-  styleCard: string;
-};
 export type cardProps = {
   name: string;
   image: string;
