@@ -25,7 +25,7 @@ export default function libraryPage() {
         />
       </div>
       <div className={style.cards}>
-        {filterType !== ""
+        {filterType
           ? fullGame
               .filter((f) => f.type?.includes(filterType))
               .map((f) => <CardGame key={f.gameId} card={f} />)
