@@ -1,8 +1,8 @@
+import { useLoaderData } from "react-router-dom";
 import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
 import style from "./gameDetailsPage.module.css";
-import { useLoaderData } from "react-router-dom";
 
 export default function GameDetailsPage() {
   const gameDetails: gameDetailsType = useLoaderData() as gameDetailsType;
