@@ -23,7 +23,7 @@ export default function GameDetailsPage() {
 
   // Transforme les tableaux de l'API en string avec des "," et un "and" à la fin
   const arrayToListFormatter = (list: string[] | undefined) => {
-    if (!list) return "Unknown";
+    if (!list) return "Information unavailable";
     if (list.length === 1) return list[0];
     const lastItem = list.pop();
     return `${list.join(", ")} and ${lastItem}`;
@@ -45,11 +45,11 @@ export default function GameDetailsPage() {
             <ul className={style.ul}>
               <li className={style.h3}>Type : {gameDetails.type}</li>
               <li className={style.h3}>
-                Number of players : {gameDetails.minPlayers || "?"}-
-                {gameDetails.maxPlayers || "?"} players
+                Number of players : {gameDetails.minPlayers || " ? "}-
+                {gameDetails.maxPlayers || " ? "} players
               </li>
               <li className={style.h3}>
-                Playing time : {gameDetails.playingTime || "???"} minutes
+                Playing time : {gameDetails.playingTime || " ? "} minutes
               </li>
               <li className={style.h3}>
                 Editor : {arrayToListFormatter(gameDetails.publishers)}
@@ -71,7 +71,7 @@ export default function GameDetailsPage() {
         <ul>
           {gameDetails.expansions?.map((exp) => (
             <li key={exp.gameId}>{exp.name}</li>
-          )) || "This game currently has no expansions"}
+          )) || "There are currently no expansions available for this game..."}
         </ul>
       </section>
     </div>
