@@ -33,6 +33,7 @@ const router = createBrowserRouter([
       {
         path: "/library",
         element: <LibraryPage />,
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
       },
       {
         path: "/details/:id",

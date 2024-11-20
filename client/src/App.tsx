@@ -9,6 +9,7 @@ function App() {
     <>
       <Navbar />
       <HeroHeader />
+
       <main>
         <Outlet />
       </main>

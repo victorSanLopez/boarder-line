@@ -17,3 +17,12 @@
     box-shadow: inset #241715 0 0 34vh 34vh;
   }
 }
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10vh auto;
+  width: 60vw;
+}
