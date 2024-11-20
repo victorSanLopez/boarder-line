@@ -10,6 +10,11 @@ export type cardProps = {
   rating: number;
 };
 
+export type expansionType = {
+  gameId: number;
+  name: string;
+};
+
 export type gameDetailsType = {
   gameId: number;
   name: string;
@@ -23,5 +28,5 @@ export type gameDetailsType = {
   averageRating?: number;
   description?: string;
   artists?: string[];
-  expansions?: [];
+  expansions?: expansionType[];
 };
