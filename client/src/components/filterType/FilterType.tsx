@@ -17,6 +17,7 @@ function FilterType({
             {o}
           </button>
         ))}
+
         <button
           className={style.button}
           type="button"
