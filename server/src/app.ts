@@ -67,9 +67,9 @@ app.use(router);
 
 /* ************************************************************************* */
 import games from "../data/samplegame.json";
-
+const gameType = games.filter((g) => g.type);
 app.get("/api/games", (req, res) => {
-  res.send(games);
+  res.send(gameType);
 });
 
 function oneGame(id: string) {

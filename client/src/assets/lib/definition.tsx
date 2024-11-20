@@ -13,9 +13,10 @@ export type boardGameListType = {
   name: string;
   playingTime: number;
   yearPublished: number;
+  type: string;
 };
 export type cardProps = {
   name: string;
   image: string;
-  rating: number;
+  averageRating: number;
 };
