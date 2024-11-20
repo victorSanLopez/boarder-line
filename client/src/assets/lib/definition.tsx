@@ -3,7 +3,6 @@ export type headerInfoProps = {
   subtitle: string;
   description: string;
 };
-
 export type boardGameListType = {
   averageRating: number;
   gameId: number;

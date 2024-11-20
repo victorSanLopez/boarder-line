@@ -15,7 +15,6 @@ export default function libraryPage() {
     .split(",")
     .splice(1);
   const onlyOneCategories: string[] = [...new Set(categories.map((s) => s))];
-
   return (
     <section className={style.backgroundPage}>
       <div>
@@ -28,8 +27,22 @@ export default function libraryPage() {
         {filterType
           ? fullGame
               .filter((f) => f.type?.includes(filterType))
-              .map((f) => <CardGame key={f.gameId} card={f} />)
-          : fullGame.map((f) => <CardGame key={f.gameId} card={f} />)}
+              .map((f) => (
+                <CardGame
+                  key={f.gameId}
+                  name={f.name}
+                  rating={f.averageRating}
+                  image={f.image}
+                />
+              ))
+          : fullGame.map((f) => (
+              <CardGame
+                key={f.gameId}
+                name={f.name}
+                rating={f.averageRating}
+                image={f.image}
+              />
+            ))}
       </div>
     </section>
   );
