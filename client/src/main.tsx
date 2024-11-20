@@ -11,6 +11,7 @@ import App from "./App";
 // Import additional components for new routes
 import HomePage from "./pages/homePage/HomePage";
 import LibraryPage from "./pages/libraryPage/LibraryPage";
+import GameDetailsPage from "./pages/gameDetailsPage/GameDetailsPage";
 // Try creating these components in the "pages" folder
 
 // import About from "./pages/About";
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
       {
         path: "/library",
         element: <LibraryPage />,
+      },
+      {
+        path: "/details/:id",
+        element: <GameDetailsPage />,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API_URL}/${params.id}`),
       },
     ],
   },

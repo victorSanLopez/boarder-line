@@ -1,18 +1,15 @@
-import { useEffect, useState } from "react";
 import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
-import style from "./gameDetails.module.css";
+import style from "./gameDetailsPage.module.css";
+import { useLoaderData } from "react-router-dom";
 
-export default function GameDetailsPage({ gameId }: { gameId: number }) {
-  const [gameDetails, setGameDetails] = useState<gameDetailsType | null>(null);
+export default function GameDetailsPage() {
+  const gameDetails: gameDetailsType = useLoaderData() as gameDetailsType;
 
-  useEffect(() => {
-    fetch(`http://localhost:3310/api/${gameId}`)
-      .then((response) => response.json())
-      .then((result) => setGameDetails(result))
-      .catch((error) => console.error("Error while fetching data :", error));
-  }, [gameId]); // Ajout de gameId comme dépendance afin que la page se recharge à chaque fois que l'on change la props
+  // const { id } = useParams();
+  // const idNumber ; number = Number.parseInt(id as string);
+  // const boardGameDetails = boardGames.find((b) => b.gameId === idNumber);
 
   if (!gameDetails) {
     // Animation de chargement de l'API
