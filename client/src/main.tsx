@@ -23,6 +23,7 @@ import LibraryPage from "./pages/libraryPage/LibraryPage";
 const router = createBrowserRouter([
   {
     element: <App />,
+    loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
     children: [
       {
         path: "/",

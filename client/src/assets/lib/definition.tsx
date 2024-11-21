@@ -5,6 +5,7 @@ export type headerInfoProps = {
 };
 export type boardGameListType = {
   averageRating: number;
+  description: string;
   gameId: number;
   image: string;
   isExpansion: boolean;
@@ -12,8 +13,27 @@ export type boardGameListType = {
   minPlayers: number;
   name: string;
   playingTime: number;
+  type: [string, string];
   yearPublished: number;
-  type: string;
+};
+export type expansionType = {
+  gameId: number;
+  name: string;
+};
+export type gameDetailsType = {
+  gameId: number;
+  name: string;
+  type?: string[];
+  image?: string;
+  minPlayers?: number;
+  maxPlayers?: number;
+  playingTime?: number;
+  publishers?: string[];
+  designers?: string[];
+  averageRating?: number;
+  description?: string;
+  artists?: string[];
+  expansions?: expansionType[];
 };
 export type cardProps = {
   name: string;
