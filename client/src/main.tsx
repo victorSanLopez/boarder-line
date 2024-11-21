@@ -9,7 +9,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 
 // Import additional components for new routes
-
+import GameDetailsPage from "./pages/gameDetailsPage/GameDetailsPage";
 import HomePage from "./pages/homePage/HomePage";
 import LibraryPage from "./pages/libraryPage/LibraryPage";
 
@@ -35,6 +35,12 @@ const router = createBrowserRouter([
         path: "/library",
         element: <LibraryPage />,
         loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
+      },
+      {
+        path: "/details/:id",
+        element: <GameDetailsPage />,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API_URL_DETAILS}/${params.id}`),
       },
     ],
   },

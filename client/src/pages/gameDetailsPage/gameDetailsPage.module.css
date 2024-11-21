@@ -1,0 +1,103 @@
+.componentSpace {
+  background-color: none;
+  padding: 3vw;
+}
+.detailsBigCard {
+  background-color: var(--light);
+  background-image: url(../../assets/images/parchment-bg-big.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  padding: 5vw;
+  font-family: var(--text-font);
+  font-size: 1em;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+  }
+}
+
+.figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 3vw;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+}
+
+.img {
+  width: 300px;
+  height: fit-content;
+  margin-bottom: 1vw;
+  box-shadow: -5px 5px 7px 0px #241715b1;
+}
+
+.ul {
+  list-style-type: none;
+}
+
+.h2 {
+  font-family: var(--title-font);
+  font-size: 4em;
+  padding-bottom: 1.5vw;
+  font-weight: normal;
+  @media screen and (max-width: 768px) {
+    font-size: 3em;
+    padding-bottom: 2vw;
+  }
+}
+
+.h3 {
+  font-family: var(--title-font);
+  font-size: 2em;
+  font-weight: normal;
+  padding-bottom: 1vw;
+  @media screen and (max-width: 768px) {
+    font-size: 1.5em;
+    padding-bottom: 2vw;
+  }
+}
+
+.coms {
+  height: 100px;
+  width: 100%;
+  background-color: antiquewhite;
+  margin: 1vw;
+  text-align: center;
+  color: grey;
+}
+
+.loadingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+  font-family: var(--text-font);
+  height: 50vw;
+  gap: 5vw;
+  background-color: var(--light);
+}
+
+.loadingAnimation {
+  width: 200px;
+  animation: rotation 5s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
