@@ -1,18 +1,24 @@
+import { NavLink } from "react-router-dom";
 import style from "./cardGame.module.css";
 
 function CardGame({
+  gameId,
   name,
   rating,
   image,
-}: { name: string; rating: number; image: string }) {
+}: { gameId: number; name: string; rating: number; image: string }) {
   return (
     <section className={style.card}>
       <article className={style.article}>
-        <a href="https://bgg-json.azurewebsites.net/collection/edwalter">
-          <img src={image} alt={`Jeu ${name}`} className={style.image} />
-        </a>
+        <NavLink to={`/details/${gameId}`}>
+          <img
+            src={image}
+            alt={`Box cover of ${name}`}
+            className={style.image}
+          />
+        </NavLink>
         <h2 className={style.title}>Name : {name}</h2>
-        <h2 className={style.title}>Rating : {Math.trunc(rating)}</h2>
+        <h2 className={style.title}>Rating : {rating.toFixed(0)}/10</h2>
         <button type="button" className={style.button}>
           Like
         </button>

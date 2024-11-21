@@ -36,7 +36,7 @@ export default function HomePage() {
 
   return (
     <section className={style.backgroundPage}>
-      <h1 className={style.titleSlide}>Discovery</h1>
+      <h1 className={style.titleSlide}>Discoveries</h1>
       {boardGames && <CardSlider boardGamesList={boardGamesDiscovery} />}
       <h1 className={style.titleSlide}>Top Games</h1>
       {boardGames && <CardSlider boardGamesList={boardGamesTop} />}
