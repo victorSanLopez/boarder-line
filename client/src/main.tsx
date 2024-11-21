@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 
+import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
 // Import additional components for new routes
 import GameDetailsPage from "./pages/gameDetailsPage/GameDetailsPage";
 import HomePage from "./pages/homePage/HomePage";
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
         element: <GameDetailsPage />,
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_API_URL_DETAILS}/${params.id}`),
+      },
+      {
+        path: "/favorites",
+        element: <FavoritesPage />,
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
       },
     ],
   },
