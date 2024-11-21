@@ -101,24 +101,3 @@
     transform: rotate(360deg);
   }
 }
-
-.loadingText {
-  display: flex;
-  gap: 2px;
-}
-
-.loadingText span {
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-  animation-iteration-count: infinite;
-}
-
-@keyframes fadeIn {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
