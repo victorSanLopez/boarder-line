@@ -3865,9 +3865,9 @@
     "isExpansion": false,
     "yearPublished": 2012,
     "averageRating": 7.36886,
-    "designers": "Yoann Levet",
-    "publishers": "Ystari Games",
-    "artists": "Arnaud Demaegd"
+    "designers": ["Yoann Levet"],
+    "publishers": ["Ystari Games"],
+    "artists": ["Arnaud Demaegd"]
   },
   {
     "gameId": 194607,
