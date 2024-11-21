@@ -30,6 +30,7 @@ export default function libraryPage() {
               .map((f) => (
                 <CardGame
                   key={f.gameId}
+                  gameId={f.gameId}
                   name={f.name}
                   rating={f.averageRating}
                   image={f.image}
@@ -38,6 +39,7 @@ export default function libraryPage() {
           : fullGame.map((f) => (
               <CardGame
                 key={f.gameId}
+                gameId={f.gameId}
                 name={f.name}
                 rating={f.averageRating}
                 image={f.image}
