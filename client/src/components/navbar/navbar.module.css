@@ -65,7 +65,7 @@
   display: inline;
   top: 8rem;
   font-family: var(--text-font);
-  color: orangered;
+  color: rgb(255, 68, 0);
   font-size: 1.3rem;
 }
 
