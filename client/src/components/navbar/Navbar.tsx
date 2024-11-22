@@ -47,8 +47,8 @@ function Navbar() {
           className={style.imgLogo}
         />
       </NavLink>
-      <div className={style.rightNavbar} onSubmit={handleSubmit(onSubmit)}>
-        <form className={style.searchBar}>
+      <div className={style.rightNavbar}>
+        <form className={style.searchBar} onSubmit={handleSubmit(onSubmit)}>
           <input
             {...register("search", {
               required: "Input is require.",
