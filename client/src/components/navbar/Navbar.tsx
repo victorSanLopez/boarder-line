@@ -20,7 +20,7 @@ function Navbar() {
       search: "",
     },
   });
-  // comparaison de la saisis de l'utilisateur avec l'api
+  // comparaison de la saisis de l'utilisateur
   const navigate = useNavigate();
   const onSubmit = (data: { search: string }) => {
     const boardGameSearchCase = data.search.toLowerCase().replace(/\s/g, "");
@@ -30,7 +30,7 @@ function Navbar() {
     );
     // redirection
     if (foundBoardGame) {
-      navigate(`${foundBoardGame.gameId}`);
+      navigate(`details/${foundBoardGame.gameId}`);
     } else {
       alert("Game not found!");
     }
@@ -51,7 +51,7 @@ function Navbar() {
             {...register("search", {
               required: "Input is require.",
               minLength: {
-                value: 5,
+                value: 4,
                 message: "Mininum length is 5 characters.",
               },
               maxLength: {

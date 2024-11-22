@@ -20,30 +20,11 @@ export type expansionType = {
   gameId: number;
   name: string;
 };
-export type gameDetailsType = {
-  gameId: number;
-  name: string;
-  type?: string[];
-  image?: string;
-  minPlayers?: number;
-  maxPlayers?: number;
-  playingTime?: number;
-  publishers?: string[];
-  designers?: string[];
-  averageRating?: number;
-  description?: string;
-  artists?: string[];
-  expansions?: expansionType[];
-};
+
 export type cardProps = {
   name: string;
   image: string;
   averageRating: number;
-};
-
-export type expansionType = {
-  gameId: number;
-  name: string;
 };
 
 export type gameDetailsType = {
