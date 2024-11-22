@@ -10,7 +10,7 @@ function Navbar() {
   // loader
   const boardGames: boardGameListType[] =
     useLoaderData() as boardGameListType[];
-  // controle de la saisis
+  // controle de la saisie
   const {
     register,
     handleSubmit,
@@ -20,7 +20,7 @@ function Navbar() {
       search: "",
     },
   });
-  // comparaison de la saisis de l'utilisateur
+  // comparaison de la saisie de l'utilisateur
   const navigate = useNavigate();
   const onSubmit = (data: { search: string }) => {
     const boardGameSearchCase = data.search

@@ -74,6 +74,7 @@
     height: 1.8rem;
   }
 }
+
 .inputError {
   position: absolute;
   display: inline;
@@ -81,14 +82,12 @@
   font-family: var(--text-font);
   color: rgb(255, 72, 5);
   font-size: 1.3rem;
-}
-.inputError {
-  position: absolute;
-  display: inline;
-  top: 8rem;
-  font-family: var(--text-font);
-  color: rgb(255, 72, 5);
-  font-size: 1.3rem;
+
+  @media screen and (max-width: 768px) {
+    top: 2.8rem;
+    font-size: 0.8rem;
+    right: 9rem;
+  }
 }
 
 .searchBar {
@@ -99,38 +98,4 @@
 .imgProfil {
   width: 6.5vw;
   display: flex;
-}
-
-/* responsive */
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    padding: 0.5em;
-  }
-  .imgLogo {
-    width: 3em;
-  }
-
-  .rightNavbar {
-    gap: 0.5em;
-  }
-  .inputSearch {
-    width: 7.5em;
-    height: 1.5em;
-  }
-  .inputButton {
-    width: 2em;
-    height: 1.5em;
-  }
-  .buttonGames {
-    border-radius: 1.5em;
-    color: rgb(240, 229, 184);
-    padding: 0.5em;
-    width: 5em;
-    height: 2.5em;
-    font-size: 1em;
-  }
-  .imgProfil {
-    width: 2em;
-  }
 }
