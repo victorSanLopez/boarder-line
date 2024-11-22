@@ -15,6 +15,7 @@ export default function libraryPage() {
     .split(",")
     .splice(1);
   const onlyOneCategories: string[] = [...new Set(categories.map((s) => s))];
+
   return (
     <section className={style.backgroundPage}>
       <div>
