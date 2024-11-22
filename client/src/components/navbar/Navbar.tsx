@@ -23,7 +23,9 @@ function Navbar() {
   // comparaison de la saisis de l'utilisateur
   const navigate = useNavigate();
   const onSubmit = (data: { search: string }) => {
-    const boardGameSearchCase = data.search.toLowerCase().replace(/\s/g, "");
+    const boardGameSearchCase = data.search
+      .toLowerCase()
+      .replace(/[^\.a-zA-Z0-9]/g, "");
     // recherche dans la base de donnée
     const foundBoardGame = boardGames.find(
       (g) => g.name.toLowerCase().replace(/\s/g, "") === boardGameSearchCase,
