@@ -60,6 +60,14 @@
   width: 3em;
   background-color: rgb(240, 229, 184);
 }
+.inputError {
+  position: absolute;
+  display: inline;
+  top: 8rem;
+  font-family: var(--text-font);
+  color: rgb(255, 72, 5);
+  font-size: 1.3rem;
+}
 
 .searchBar {
   padding: 0.5em;
@@ -104,5 +112,10 @@
   }
   .imgProfil {
     width: 2em;
+  }
+  .inputError {
+    top: 2.8rem;
+    font-size: 0.8rem;
+    right: 9rem;
   }
 }
