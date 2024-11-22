@@ -25,7 +25,7 @@ function Navbar() {
   const onSubmit = (data: { search: string }) => {
     const boardGameSearchCase = data.search
       .toLowerCase()
-      .replace(/[^\.a-zA-Z0-9]/g, "");
+      .replace(/[^\.a-zA-Z0-9-:&()']/g, "");
     // recherche dans la base de donnée
     const foundBoardGame = boardGames.find(
       (g) => g.name.toLowerCase().replace(/\s/g, "") === boardGameSearchCase,
