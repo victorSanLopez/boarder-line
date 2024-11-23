@@ -1,8 +1,7 @@
 import { useForm } from "react-hook-form";
 import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
-import profil from "../../assets/images/login-icon.png";
 import logo from "../../assets/images/logo-boarder-line-big-transparent.png";
-import loupe from "../../assets/images/search-loupe.png";
+import searchIcon from "../../assets/images/search-icon.png";
 import type { boardGameListType } from "../../assets/lib/definition";
 import style from "./navbar.module.css";
 
@@ -65,29 +64,19 @@ function Navbar() {
             placeholder="Search a game"
             className={style.inputSearch}
           />
-
           <button type="submit" className={style.inputButton}>
-            <img
-              src={loupe}
-              alt="bouton de la barre de recherche"
-              width="20px"
-            />
+            <img src={searchIcon} alt="search button icon" width="20px" />
           </button>
           <p className={style.inputError}>{errors.search?.message}</p>
         </form>
-
         <NavLink to={"/library"}>
-          <button type="button" className={style.buttonGames}>
+          <button type="button" className={style.buttons}>
             GAMES
           </button>
         </NavLink>
-        <a href="https://bgg-json.azurewebsites.net/collection/edwalter">
-          <img
-            src={profil}
-            alt="Bouton d'accès au profil"
-            className={style.imgProfil}
-          />
-        </a>
+        <button type="button" className={style.buttons}>
+          FAVORITES
+        </button>
       </div>
     </nav>
   );
