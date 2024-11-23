@@ -52,26 +52,32 @@
   width: 2rem;
   transition: all 0.2s ease-out;
   &:hover {
-    animation: pulse 1s ease infinite;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
+    transform: translateY(-0.25rem);
   }
 }
 
 .heartOff {
   fill: var(--cold-color);
+  opacity: 25%;
+  &:hover {
+    opacity: 100%;
+    fill: var(--warm-color);
+  }
+  &:active {
+    fill: red;
+    opacity: 100%;
+    transform: scale(1.5);
+  }
 }
 
 .heartOn {
   fill: var(--warm-color);
+  &:hover {
+    opacity: 25%;
+  }
+  &:active {
+    fill: var(--cold-color);
+    opacity: 100%;
+    transform: scale(1.5);
+  }
 }
