@@ -1,0 +1,19 @@
+.comment {
+  border: solid 1px black;
+  width: 40vw;
+  margin: 1vh auto;
+  padding: 2vw;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.userInfo {
+  display: flex;
+  gap: 3em;
+}
+.h2 {
+  font-size: 0.9em;
+  font-style: italic;
+}

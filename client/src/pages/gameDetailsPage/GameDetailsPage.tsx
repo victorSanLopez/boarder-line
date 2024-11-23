@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
+import Comment from "../../components/comment/Comment";
 import style from "./gameDetailsPage.module.css";
 
 export default function GameDetailsPage() {
@@ -73,6 +74,7 @@ export default function GameDetailsPage() {
             <li key={exp.gameId}>{exp.name}</li>
           )) || "There are currently no expansions available for this game..."}
         </ul>
+        <Comment />
       </section>
     </div>
   );

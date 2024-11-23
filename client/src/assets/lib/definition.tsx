@@ -41,3 +41,10 @@ export type gameDetailsType = {
   artists?: string[];
   expansions?: expansionType[];
 };
+
+export type commentProps = {
+  id: number;
+  firstname: string;
+  lastname: string;
+  comment: string;
+};

@@ -1,0 +1,38 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  margin-top: 2vh;
+}
+.button {
+  padding: 1vw;
+  font-size: var(--title-font);
+  display: flex;
+  justify-content: center;
+  margin: 2vh auto;
+}
+.input {
+  padding: 1vw;
+  font-size: var(--title-font);
+  display: flex;
+  justify-content: center;
+  margin: 2vh auto;
+  font-family: var(--text-font);
+  width: 30vw;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  align-items: center;
+  font-family: var(--title-font);
+}
+.divInfo {
+  display: flex;
+  justify-content: center;
+}
+.inputUserInfo {
+  height: 3vh;
+  font-family: var(--text-font);
+}
