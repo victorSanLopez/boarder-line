@@ -1,0 +1,23 @@
+.loadingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+  font-family: var(--text-font);
+  height: 50vw;
+  gap: 5vw;
+  background-color: var(--light);
+}
+.loadingAnimation {
+  width: 200px;
+  animation: rotation 5s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -11,6 +11,8 @@ import App from "./App";
 // Import additional components for new routes
 import GameDetailsPage from "./pages/gameDetailsPage/GameDetailsPage";
 import HomePage from "./pages/homePage/HomePage";
+
+import Error404Page from "./pages/error404Page/Error404Page.tsx";
 import LibraryPage from "./pages/libraryPage/LibraryPage";
 // Try creating these components in the "pages" folder
 
@@ -42,8 +44,13 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_API_URL_DETAILS}/${params.id}`),
       },
+      {
+        path: "*",
+        element: <Error404Page />,
+      },
     ],
   },
+
   // Try adding a new route! For example, "/about" with an About component
 ]);
 
