@@ -1,20 +1,31 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
+import type { commentProps } from "../../assets/lib/definition";
 import DisplayComment from "../displayComment/DisplayComment";
 import style from "./comment.module.css";
-import type { commentProps } from "../../assets/lib/definition";
 
 export default function Comment() {
   const [displayForm, setDisplayForm] = useState(false);
   const { register, handleSubmit } = useForm<commentProps>();
-  const [userInput, setUserInput] = useState<commentProps[]>([]);
+  const [userInput, setUserInput] = useState<commentProps[]>(() => {
+    const saved = localStorage.getItem("userComment");
+    const initialValue: commentProps[] = JSON.parse(saved || "");
+    return initialValue;
+  });
 
-  const userSubmit = (data: commentProps) => setUserInput([...userInput, data]);
+  //Affichage du formulaire
   const handleClick = () =>
     displayForm ? setDisplayForm(false) : setDisplayForm(true);
+
+  //Recupération des données formulaire
+  const userSubmit = (data: commentProps) => {
+    setUserInput([...userInput, data]);
+  };
+
+  //Stockage des données dans le localStorage
   useEffect(() => {
-    localStorage.setItem("comment", JSON.stringify(userInput));
+    localStorage.setItem("userComment", JSON.stringify(userInput));
   }, [userInput]);
 
   return (
@@ -55,6 +66,7 @@ export default function Comment() {
             id="comment"
             placeholder="add your comment..."
           />
+
           <button className={style.button} type="submit">
             Submit
           </button>
