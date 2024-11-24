@@ -2,7 +2,7 @@ import headerInfo from "../../assets/data/headerInfo.json";
 import type { headerInfoProps } from "../../assets/lib/definition";
 import style from "./heroHeader.module.css";
 
-function HeroImage() {
+export default function HeroHeader() {
   const [{ title, subtitle, description }]: headerInfoProps[] = headerInfo;
   return (
     <>
@@ -18,5 +18,3 @@ function HeroImage() {
     </>
   );
 }
-
-export default HeroImage;
