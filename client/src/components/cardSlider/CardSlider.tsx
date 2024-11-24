@@ -33,6 +33,7 @@ export default function CardSlider({
       <section className={style.sliderFolder}>
         <article className={style.cardSliderLeft}>
           <CardGame
+            gameId={boardGamesList[previous].gameId}
             name={boardGamesList[previous].name}
             rating={boardGamesList[previous].averageRating}
             image={boardGamesList[previous].image}
@@ -40,6 +41,7 @@ export default function CardSlider({
         </article>
         <article className={style.cardSliderRight}>
           <CardGame
+            gameId={boardGamesList[next].gameId}
             name={boardGamesList[next].name}
             rating={boardGamesList[next].averageRating}
             image={boardGamesList[next].image}
@@ -47,6 +49,7 @@ export default function CardSlider({
         </article>
         <article className={style.cardSlider}>
           <CardGame
+            gameId={boardGamesList[slider].gameId}
             name={boardGamesList[slider].name}
             rating={boardGamesList[slider].averageRating}
             image={boardGamesList[slider].image}

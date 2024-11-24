@@ -3,6 +3,7 @@ import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
 import Comment from "../../components/comment/Comment";
+import SmallHeader from "../../components/smallHeader/SmallHeader";
 import style from "./gameDetailsPage.module.css";
 
 export default function GameDetailsPage() {
@@ -11,14 +12,19 @@ export default function GameDetailsPage() {
   // Animation de chargement de l'API
   if (!gameDetails) {
     return (
-      <section className={style.loadingSection}>
-        <img
-          className={style.loadingAnimation}
-          src={searchIcon}
-          alt="Loading animation"
-        />
-        <p>Loading data...</p>
-      </section>
+      <>
+        <header>
+          <SmallHeader />
+        </header>
+        <section className={style.loadingSection}>
+          <img
+            className={style.loadingAnimation}
+            src={searchIcon}
+            alt="Loading animation"
+          />
+          <p>Loading data...</p>
+        </section>
+      </>
     );
   }
 
@@ -74,8 +80,8 @@ export default function GameDetailsPage() {
             <li key={exp.gameId}>{exp.name}</li>
           )) || "There are currently no expansions available for this game..."}
         </ul>
-        <Comment />
       </section>
+      <Comment />
     </div>
   );
 }

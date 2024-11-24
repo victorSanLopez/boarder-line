@@ -224,9 +224,9 @@
     "isExpansion": false,
     "yearPublished": 2007,
     "averageRating": 7.87156,
-    "designers": "Uwe Rosenberg",
-    "publishers": "HomoLudicus",
-    "artists": "Klemens Franz",
+    "designers": ["Uwe Rosenberg"],
+    "publishers": ["HomoLudicus"],
+    "artists": ["Klemens Franz"],
     "expansions": [
       {
         "name": "Agricola: All Creatures Big and Small",
