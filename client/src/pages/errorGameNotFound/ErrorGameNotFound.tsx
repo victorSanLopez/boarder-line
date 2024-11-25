@@ -22,7 +22,7 @@ export default function ErrorGameNotFound() {
               {" "}
               homepage{" "}
             </a>
-            and continue exploring our games. 🎲
+            and continue exploring our games.🎲
           </h1>
         </section>
       </article>
