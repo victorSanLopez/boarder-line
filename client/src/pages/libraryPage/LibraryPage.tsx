@@ -16,6 +16,14 @@ export default function libraryPage() {
     .splice(1);
   const onlyOneCategories: string[] = [...new Set(categories.map((s) => s))];
 
+  // ajouter un nouveau favoris au click
+  const [favorite, setFavorite] = useState<string[]>([]);
+  const handleClickFavorite = (id: string) => {
+    const newFavorite = [...favorite, id];
+    setFavorite(newFavorite);
+    localStorage.setItem("favorites", JSON.stringify(newFavorite));
+  };
+
   return (
     <section className={style.backgroundPage}>
       <div>
@@ -35,6 +43,7 @@ export default function libraryPage() {
                   name={f.name}
                   rating={f.averageRating}
                   image={f.image}
+                  handleClickFavorite={handleClickFavorite}
                 />
               ))
           : fullGame.map((f) => (
@@ -44,6 +53,7 @@ export default function libraryPage() {
                 name={f.name}
                 rating={f.averageRating}
                 image={f.image}
+                handleClickFavorite={handleClickFavorite}
               />
             ))}
       </div>

@@ -1,11 +1,11 @@
-// import style from "./favoritesPage.module.css";
+import style from "./favoritesPage.module.css";
 
 import CardFavorite from "../../components/cardFavorite/CardFavorite";
 
 export default function FavoritesPage() {
   return (
-    <section>
+    <main className={style.backgroundPage}>
       <CardFavorite />
-    </section>
+    </main>
   );
 }

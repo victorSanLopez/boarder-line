@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import type { boardGameListType } from "../../assets/lib/definition";
 import CardSlider from "../../components/cardSlider/CardSlider";
@@ -26,6 +27,14 @@ export default function HomePage() {
     "Scythe",
   ];
 
+  // ajouter un nouveau favoris au click
+  const [favorite, setFavorite] = useState<string[]>([]);
+  const handleClickFavorite = (id: string) => {
+    const newFavorite = [...favorite, id];
+    setFavorite(newFavorite);
+    localStorage.setItem("favoritesSlider", JSON.stringify(newFavorite));
+  };
+
   // logique du slider des découvertes:
 
   const boardGamesDiscovery: boardGameListType[] | null = boardGames
@@ -37,9 +46,19 @@ export default function HomePage() {
   return (
     <section className={style.backgroundPage}>
       <h1 className={style.titleSlide}>Discoveries</h1>
-      {boardGames && <CardSlider boardGamesList={boardGamesDiscovery} />}
+      {boardGames && (
+        <CardSlider
+          boardGamesList={boardGamesDiscovery}
+          handleClickFavorite={handleClickFavorite}
+        />
+      )}
       <h1 className={style.titleSlide}>Top Games</h1>
-      {boardGames && <CardSlider boardGamesList={boardGamesTop} />}
+      {boardGames && (
+        <CardSlider
+          boardGamesList={boardGamesTop}
+          handleClickFavorite={handleClickFavorite}
+        />
+      )}
     </section>
   );
 }

@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import style from "./cardGame.module.css";
 
@@ -7,16 +6,14 @@ function CardGame({
   name,
   rating,
   image,
-}: { gameId: number; name: string; rating: number; image: string }) {
-  // const [like, setLike] = useState([]);
-
-  // ajouter un nouveau favoris au click
-  // const handleClick = (id: string) => {
-  //   const newLike = [...like, id];
-  //   setLike(newLike);
-  //   localStorage.setItem("favorites", JSON.stringify(newLike));
-  // };
-
+  handleClickFavorite,
+}: {
+  gameId: number;
+  name: string;
+  rating: number;
+  image: string;
+  handleClickFavorite(id: string): void;
+}) {
   return (
     <section className={style.card}>
       <article className={style.article}>
@@ -32,7 +29,7 @@ function CardGame({
         <button
           type="button"
           className={style.button}
-          // onClick={() => handleClick(gameId)}
+          onClick={() => handleClickFavorite(gameId.toString())}
         >
           Like
         </button>
