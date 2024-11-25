@@ -1,6 +1,6 @@
 .footerMain {
   background: linear-gradient(to bottom, var(--light) 2px, var(--dark) 7px);
-  color: #f0e5b8;
+  color: var(--light);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,7 +96,7 @@
 }
 
 .logoClass:hover {
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
 }
 
 .footerBottom {

@@ -39,7 +39,7 @@
   width: 300px;
   height: fit-content;
   margin-bottom: 1vw;
-  box-shadow: -5px 5px 7px 0px #241715b1;
+  box-shadow: -5px 5px 7px 0px var(--dark);
 }
 
 .ul {
@@ -66,15 +66,6 @@
     font-size: 1.5em;
     padding-bottom: 2vw;
   }
-}
-
-.coms {
-  height: 100px;
-  width: 100%;
-  background-color: antiquewhite;
-  margin: 1vw;
-  text-align: center;
-  color: grey;
 }
 
 .loadingSection {
