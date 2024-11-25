@@ -31,10 +31,9 @@ function Navbar() {
     );
     // redirection
     if (foundBoardGame) {
-      navigate(`details/${foundBoardGame.gameId}`);
-    } else {
-      navigate("/notfound");
+      return navigate(`details/${foundBoardGame.gameId}`);
     }
+    return navigate("/notfound");
   };
 
   return (
