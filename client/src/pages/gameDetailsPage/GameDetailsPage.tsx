@@ -40,7 +40,7 @@ export default function GameDetailsPage() {
       <header>
         <SmallHeader />
       </header>
-      <div className={style.componentSpace}>
+      <div className={style.backgroundPage}>
         <section className={style.detailsBigCard}>
           <h2 className={style.h2}>
             {gameDetails.name || "Title not available"}

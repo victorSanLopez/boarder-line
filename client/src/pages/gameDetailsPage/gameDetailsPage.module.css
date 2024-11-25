@@ -1,6 +1,13 @@
-.componentSpace {
-  background-color: none;
-  padding: 3vw;
+.backgroundPage {
+  background-image: url(https://image.freepik.com/free-photo/natural-dark-oak-texture-macro-extremely-high-resolution-photo_463999-970.jpg);
+  box-shadow: inset var(--dark) 0 0 15vh 15vh;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding: 3vh;
+  width: auto;
+  height: 100%;
 }
 .detailsBigCard {
   background-color: var(--light);
