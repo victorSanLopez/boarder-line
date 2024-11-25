@@ -48,4 +48,5 @@ export type commentProps = {
   firstname: string;
   lastname: string;
   comment: string;
+  gameDetail: gameDetailsType[];
 };

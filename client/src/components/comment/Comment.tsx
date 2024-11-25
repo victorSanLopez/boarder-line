@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-
+// import { useLocation } from "react-router-dom";
 import type { commentProps } from "../../assets/lib/definition";
 import DisplayComment from "../displayComment/DisplayComment";
 import style from "./comment.module.css";
+import type { gameDetailsType } from "../../assets/lib/definition";
 
-export default function Comment() {
+export default function Comment({
+  gameDetails,
+}: { gameDetails: gameDetailsType }) {
   const [displayForm, setDisplayForm] = useState(false);
   const { register, handleSubmit } = useForm<commentProps>();
-  const [userInput, setUserInput] = useState<commentProps[]>([]);
+  const [userInput, setUserInput] = useState<commentProps[] | []>(
+    JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
+  );
 
-  const getStorage = () => {
-    const saved = localStorage.getItem("userComment");
-    const initialValue: commentProps[] = JSON.parse(saved || "");
-    return initialValue;
-  };
-  getStorage;
   //Affichage du formulaire
   const handleClick = () =>
     displayForm ? setDisplayForm(false) : setDisplayForm(true);
@@ -27,14 +26,21 @@ export default function Comment() {
 
   //Stockage des données dans le localStorage
   useEffect(() => {
-    localStorage.setItem("userComment", JSON.stringify(userInput));
-  }, [userInput]);
+    localStorage.setItem(
+      gameDetails.gameId.toString(),
+      JSON.stringify(userInput),
+    );
+  });
+
+  // const loc = useLocation();
+
+  // const urlId = Number(loc.pathname.replace("/details/", ""));
 
   return (
     <>
       <section className={style.comment}>
-        {userInput.map((m) => (
-          <DisplayComment item={m} key={m.comment} />
+        {userInput.map((u) => (
+          <DisplayComment item={u} key={u.id} />
         ))}
       </section>
       <button className={style.button} type="button" onClick={handleClick}>
