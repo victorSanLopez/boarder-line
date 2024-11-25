@@ -74,9 +74,11 @@ function Navbar() {
             GAMES
           </button>
         </NavLink>
-        <button type="button" className={style.buttons}>
-          FAVORITES
-        </button>
+        <NavLink to={"/favorites"}>
+          <button type="button" className={style.buttons}>
+            FAVORITES
+          </button>
+        </NavLink>
       </div>
     </nav>
   );

@@ -1,6 +1,5 @@
 // import { useLoaderData } from "react-router-dom";
-// import { boardGameListType } from "../../assets/lib/definition";
-
+// import type { boardGameListType } from "../../assets/lib/definition";
 // import CardGame from "../cardGame/CardGame";
 
 export default function CardFavorite() {
@@ -12,7 +11,7 @@ export default function CardFavorite() {
   return (
     <>
       <section>
-        {/*  je dois chercher le gameId dans la liste de jeu avec un map */}
+        {/* je dois chercher le gameId dans la liste de jeu avec un map */}
         {/* {console.log(
           fullGame.find(
             ({ gameId }) =>
