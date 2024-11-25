@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import type { boardGameListType } from "../../assets/lib/definition";
 import CardGame from "../../components/cardGame/CardGame";
 import FilterType from "../../components/filterType/FilterType";
+import SmallHeader from "../../components/smallHeader/SmallHeader";
 import style from "./libraryPage.module.css";
 
 // page library pour lister les jeux et les filtrer
@@ -25,18 +26,32 @@ export default function libraryPage() {
   };
 
   return (
-    <section className={style.backgroundPage}>
-      <div>
-        <FilterType
-          setFilterType={setFilterType}
-          category={onlyOneCategories}
-        />
-      </div>
-      <div className={style.cards}>
-        {filterType
-          ? fullGame
-              .filter((f) => f.type?.includes(filterType))
-              .map((f) => (
+    <>
+      <header>
+        <SmallHeader />
+      </header>
+      <section className={style.backgroundPage}>
+        <div>
+          <FilterType
+            setFilterType={setFilterType}
+            category={onlyOneCategories}
+          />
+        </div>
+        <div className={style.cards}>
+          {filterType
+            ? fullGame
+                .filter((f) => f.type?.includes(filterType))
+                .map((f) => (
+                  <CardGame
+                    key={f.gameId}
+                    gameId={f.gameId}
+                    name={f.name}
+                    rating={f.averageRating}
+                    image={f.image}
+                    handleClickFavorite={handleClickFavorite}
+                  />
+                ))
+            : fullGame.map((f) => (
                 <CardGame
                   key={f.gameId}
                   gameId={f.gameId}
@@ -45,18 +60,9 @@ export default function libraryPage() {
                   image={f.image}
                   handleClickFavorite={handleClickFavorite}
                 />
-              ))
-          : fullGame.map((f) => (
-              <CardGame
-                key={f.gameId}
-                gameId={f.gameId}
-                name={f.name}
-                rating={f.averageRating}
-                image={f.image}
-                handleClickFavorite={handleClickFavorite}
-              />
-            ))}
-      </div>
-    </section>
+              ))}
+        </div>
+      </section>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import type { boardGameListType } from "../../assets/lib/definition";
 import CardSlider from "../../components/cardSlider/CardSlider";
+import HeroHeader from "../../components/heroHeader/HeroHeader";
 import style from "./homePage.module.css";
 
 export default function HomePage() {
@@ -44,21 +45,26 @@ export default function HomePage() {
     : [];
 
   return (
-    <section className={style.backgroundPage}>
-      <h1 className={style.titleSlide}>Discoveries</h1>
-      {boardGames && (
-        <CardSlider
-          boardGamesList={boardGamesDiscovery}
-          handleClickFavorite={handleClickFavorite}
-        />
-      )}
-      <h1 className={style.titleSlide}>Top Games</h1>
-      {boardGames && (
-        <CardSlider
-          boardGamesList={boardGamesTop}
-          handleClickFavorite={handleClickFavorite}
-        />
-      )}
-    </section>
+    <>
+      <header>
+        <HeroHeader />
+      </header>
+      <section className={style.backgroundPage}>
+        <h1 className={style.titleSlide}>Discoveries</h1>
+        {boardGames && (
+          <CardSlider
+            boardGamesList={boardGamesDiscovery}
+            handleClickFavorite={handleClickFavorite}
+          />
+        )}
+        <h1 className={style.titleSlide}>Top Games</h1>
+        {boardGames && (
+          <CardSlider
+            boardGamesList={boardGamesTop}
+            handleClickFavorite={handleClickFavorite}
+          />
+        )}
+      </section>
+    </>
   );
 }
