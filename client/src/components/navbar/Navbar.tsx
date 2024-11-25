@@ -34,7 +34,7 @@ function Navbar() {
     if (foundBoardGame) {
       navigate(`details/${foundBoardGame.gameId}`);
     } else {
-      alert("Game not found!");
+      navigate("/notfound");
     }
   };
 

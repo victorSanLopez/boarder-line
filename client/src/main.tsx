@@ -9,11 +9,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 
 // Import additional components for new routes
+import Error404Page from "./pages/error404Page/Error404Page.tsx";
+import ErrorGameNotFound from "./pages/errorGameNotFound/ErrorGameNotFound.tsx";
 import GameDetailsPage from "./pages/gameDetailsPage/GameDetailsPage";
 import HomePage from "./pages/homePage/HomePage";
-
-import Error404Page from "./pages/error404Page/Error404Page.tsx";
 import LibraryPage from "./pages/libraryPage/LibraryPage";
+
 // Try creating these components in the "pages" folder
 
 // import About from "./pages/About";
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <Error404Page />,
+      },
+      {
+        path: "/notfound",
+        element: <ErrorGameNotFound />,
       },
     ],
   },

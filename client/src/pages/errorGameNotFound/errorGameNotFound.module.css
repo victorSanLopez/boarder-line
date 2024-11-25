@@ -1,0 +1,41 @@
+.backGroundPage {
+  background-image: url(https://image.freepik.com/free-photo/natural-dark-oak-texture-macro-extremely-high-resolution-photo_463999-970.jpg);
+  box-shadow: inset #241715 0 0 15vh 15vh;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin: 0;
+  padding: 5vh 0;
+  width: auto;
+  height: auto;
+}
+.loadingSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+  font-family: var(--text-font);
+  gap: 5vw;
+  background-color: var(--light);
+  margin: 5%;
+  padding: 5%;
+  border-radius: 1rem;
+}
+.link {
+  text-decoration: none;
+  color: rgb(255, 72, 5);
+}
+.loadingAnimation {
+  width: 200px;
+  animation: rotation 5s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
