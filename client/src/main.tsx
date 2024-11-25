@@ -7,9 +7,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-
-import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
 // Import additional components for new routes
+import Error404Page from "./pages/error404Page/Error404Page.tsx";
+import ErrorGameNotFound from "./pages/errorGameNotFound/ErrorGameNotFound.tsx";
+import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
 import GameDetailsPage from "./pages/gameDetailsPage/GameDetailsPage";
 import HomePage from "./pages/homePage/HomePage";
 import LibraryPage from "./pages/libraryPage/LibraryPage";
@@ -45,12 +46,21 @@ const router = createBrowserRouter([
           fetch(`${import.meta.env.VITE_API_URL_DETAILS}/${params.id}`),
       },
       {
+        path: "*",
+        element: <Error404Page />,
+      },
+      {
+        path: "/notfound",
+        element: <ErrorGameNotFound />,
+      },
+      {
         path: "/favorites",
         element: <FavoritesPage />,
         loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
       },
     ],
   },
+
   // Try adding a new route! For example, "/about" with an About component
 ]);
 
