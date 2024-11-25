@@ -8,12 +8,14 @@ import style from "./comment.module.css";
 export default function Comment() {
   const [displayForm, setDisplayForm] = useState(false);
   const { register, handleSubmit } = useForm<commentProps>();
-  const [userInput, setUserInput] = useState<commentProps[]>(() => {
+  const [userInput, setUserInput] = useState<commentProps[]>([]);
+
+  const getStorage = () => {
     const saved = localStorage.getItem("userComment");
     const initialValue: commentProps[] = JSON.parse(saved || "");
     return initialValue;
-  });
-
+  };
+  getStorage;
   //Affichage du formulaire
   const handleClick = () =>
     displayForm ? setDisplayForm(false) : setDisplayForm(true);
