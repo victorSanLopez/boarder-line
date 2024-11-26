@@ -29,14 +29,14 @@
   position: absolute;
   min-width: 5rem;
   max-width: 5rem;
-  height: 90%;
+  height: 100%;
   transition-duration: 0.5s;
   @media screen and (min-width: 500px) {
     transform: scale(1.5);
-    height: 50%;
+    height: 55%;
   }
   @media screen and (min-width: 1000px) {
-    height: 52%;
+    height: 58%;
     transform: scale(1.8);
   }
 }
