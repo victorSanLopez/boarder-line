@@ -16,6 +16,17 @@ export default function libraryPage() {
     .split(",")
     .splice(1);
   const onlyOneCategories: string[] = [...new Set(categories.map((s) => s))];
+
+  // ajouter un nouveau favoris au click
+  const [favorites, setFavorites] = useState<string[] | []>(
+    JSON.parse(localStorage.getItem("favorites") || "[]"),
+  );
+  const handleClickFavorite = (id: string) => {
+    const newFavorite = [...favorites, id];
+    setFavorites(newFavorite);
+    localStorage.setItem("favorites", JSON.stringify(newFavorite));
+  };
+
   return (
     <>
       <header>
@@ -40,6 +51,7 @@ export default function libraryPage() {
                       name={f.name}
                       rating={f.averageRating}
                       image={f.image}
+                      handleClickFavorite={handleClickFavorite}
                     />
                   </article>
                 ))
@@ -51,6 +63,7 @@ export default function libraryPage() {
                     name={f.name}
                     rating={f.averageRating}
                     image={f.image}
+                    handleClickFavorite={handleClickFavorite}
                   />
                 </article>
               ))}
