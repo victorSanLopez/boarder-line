@@ -129,6 +129,9 @@
     transform: rotate(360deg);
   }
 }
+.comment {
+  margin-top: 10vh;
+}
 
 .expansions {
   text-decoration: none;
