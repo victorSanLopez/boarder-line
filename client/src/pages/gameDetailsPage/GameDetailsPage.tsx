@@ -1,4 +1,5 @@
-import { useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useLoaderData } from "react-router-dom";
 import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
@@ -7,6 +8,11 @@ import style from "./gameDetailsPage.module.css";
 
 export default function GameDetailsPage() {
   const gameDetails: gameDetailsType = useLoaderData() as gameDetailsType;
+
+  // Repositionne la page
+  useEffect(() => {
+    window.scrollTo(0, 250);
+  });
 
   // Animation de chargement de l'API
   if (!gameDetails) {
@@ -80,7 +86,9 @@ export default function GameDetailsPage() {
           <h3 className={style.h3}>Expansions :</h3>
           <ul>
             {gameDetails.expansions?.map((exp) => (
-              <li key={exp.gameId}>{exp.name}</li>
+              <li key={exp.gameId}>
+                <NavLink to={`/details/${exp.gameId}`}>{exp.name}</NavLink>
+              </li>
             )) ||
               "There are currently no expansions available for this game..."}
           </ul>
