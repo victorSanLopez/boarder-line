@@ -1,4 +1,5 @@
-import { useLoaderData } from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
 import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
@@ -8,6 +9,13 @@ import style from "./gameDetailsPage.module.css";
 
 export default function GameDetailsPage() {
   const gameDetails: gameDetailsType = useLoaderData() as gameDetailsType;
+  const navigate = useNavigate();
+  const handleClick = () => navigate(-1);
+
+  // Repositionne la page au niveau du header
+  useEffect(() => {
+    window.scrollTo(0, 250);
+  });
 
   // Animation de chargement de l'API
   if (!gameDetails) {
@@ -32,6 +40,7 @@ export default function GameDetailsPage() {
   const arrayToListFormatter = (list: string[] | undefined) => {
     if (!list) return "Information unavailable";
     if (list.length === 1) return list[0];
+    if (list.length === 2) return list.join(" and ");
     const lastItem = list.pop();
     return `${list.join(", ")} and ${lastItem}`;
   };
@@ -43,6 +52,15 @@ export default function GameDetailsPage() {
       </header>
       <div className={style.backgroundPage}>
         <section className={style.detailsBigCard}>
+          <div className={style.alignedButton}>
+            <button
+              type="button"
+              className={style.returnButton}
+              onClick={handleClick}
+            >
+              🔙
+            </button>
+          </div>
           <h2 className={style.h2}>
             {gameDetails.name || "Title not available"}
           </h2>
@@ -54,7 +72,9 @@ export default function GameDetailsPage() {
             />
             <figcaption>
               <ul className={style.ul}>
-                <li className={style.h3}>Type : {gameDetails.type}</li>
+                <li className={style.h3}>
+                  Type : {arrayToListFormatter(gameDetails.type)}
+                </li>
                 <li className={style.h3}>
                   Number of players : {gameDetails.minPlayers || " ? "}-
                   {gameDetails.maxPlayers || " ? "} players
@@ -81,7 +101,14 @@ export default function GameDetailsPage() {
           <h3 className={style.h3}>Expansions :</h3>
           <ul>
             {gameDetails.expansions?.map((exp) => (
-              <li key={exp.gameId}>{exp.name}</li>
+              <li key={exp.gameId}>
+                <NavLink
+                  to={`/details/${exp.gameId}`}
+                  className={style.expansions}
+                >
+                  {exp.name}
+                </NavLink>
+              </li>
             )) ||
               "There are currently no expansions available for this game..."}
           </ul>
