@@ -45,7 +45,7 @@ function Navbar() {
     }
     return navigate("/notfound");
   };
-
+  const dropDownStyle = value !== "" ? style.dropDown : style.dropDownNone;
   return (
     <nav className={style.navbar}>
       <NavLink to={"/"}>
@@ -69,7 +69,7 @@ function Navbar() {
               <img src={searchIcon} alt="search button icon" width="20px" />
             </button>
           </div>
-          <section className={style.dropDown}>
+          <section className={dropDownStyle}>
             {boardGames
               .filter((g) => {
                 const searchTerm = value.toLowerCase().replace(/\s/g, "");

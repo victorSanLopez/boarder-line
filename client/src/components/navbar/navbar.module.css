@@ -2,9 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 20vh;
   max-height: 20vh;
   background-color: var(--dark);
   padding: 1vw 2vw;
+  transition: all 0.5s ease-in-out;
+  @media screen and (max-width: 768px) {
+    min-height: 10vh;
+    max-height: 10vh;
+  }
 }
 
 .imgLogo {
@@ -88,32 +94,20 @@
     height: 2rem;
   }
 }
-
-.inputError {
-  position: absolute;
-  display: inline;
-  top: 8rem;
-  font-family: var(--text-font);
-  color: rgb(255, 72, 5);
-  font-size: 1.3rem;
-
-  @media screen and (max-width: 768px) {
-    top: 2.8rem;
-    font-size: 0.8rem;
-    right: 9rem;
-  }
+.dropDownNone {
+  display: none;
 }
-
 .dropDown {
   position: absolute;
-  top: 10.6vh;
+  top: 12.5vh;
   background-color: white;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--dark);
   width: 35vw;
   @media screen and (max-width: 768px) {
-    top: 7.3vh;
+    width: 18vw;
+    top: 6.7vh;
     font-size: 0.8rem;
   }
 }
@@ -127,6 +121,7 @@
 .formSearchBar {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .searchBar {
   display: flex;
