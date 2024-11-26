@@ -6366,6 +6366,7 @@
     "type": ["Strategy"],
     "minPlayers": 2,
     "maxPlayers": 6,
+
     "playingTime": 90,
     "isExpansion": false,
     "yearPublished": 2013,

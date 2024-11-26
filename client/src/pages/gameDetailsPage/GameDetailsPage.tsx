@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
+import Comment from "../../components/comment/Comment";
 import SmallHeader from "../../components/smallHeader/SmallHeader";
 import style from "./gameDetailsPage.module.css";
 
@@ -84,6 +85,9 @@ export default function GameDetailsPage() {
             )) ||
               "There are currently no expansions available for this game..."}
           </ul>
+          <article className={style.comment}>
+            <Comment gameDetails={gameDetails} />
+          </article>
         </section>
       </div>
     </>
