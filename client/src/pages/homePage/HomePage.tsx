@@ -29,11 +29,13 @@ export default function HomePage() {
   ];
 
   // ajouter un nouveau favoris au click
-  const [favorite, setFavorite] = useState<string[]>([]);
+  const [favorites, setFavorites] = useState<string[] | []>(
+    JSON.parse(localStorage.getItem("favorites") || "[]"),
+  );
   const handleClickFavorite = (id: string) => {
-    const newFavorite = [...favorite, id];
-    setFavorite(newFavorite);
-    localStorage.setItem("favoritesSlider", JSON.stringify(newFavorite));
+    const newFavorite = [...favorites, id];
+    setFavorites(newFavorite);
+    localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
 
   // logique du slider des découvertes:

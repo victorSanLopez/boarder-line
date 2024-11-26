@@ -9,26 +9,22 @@ export default function FavoritesPage() {
   const fullGame: boardGameListType[] = useLoaderData() as boardGameListType[];
 
   // ajouter un nouveau favoris au click
-  const [favorite, setFavorite] = useState<string[]>([]);
+  const [favorites, setFavorites] = useState<string[] | []>(
+    JSON.parse(localStorage.getItem("favorites") || "[]"),
+  );
   const handleClickFavorite = (id: string) => {
-    const newFavorite = [...favorite, id];
-    setFavorite(newFavorite);
+    const newFavorite = [...favorites, id];
+    setFavorites(newFavorite);
     localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
 
-  // je récupère les favoris de la homePage
-  const favoritesSlider = JSON.parse(
-    localStorage.getItem("favoritesSlider") || "[]",
-  );
-  const listedFavoritesSlider = favoritesSlider.map((a: string) =>
-    Number.parseInt(a),
-  );
-  const favoritesGamesSlider = fullGame.filter((game) =>
-    listedFavoritesSlider.includes(game.gameId),
-  );
+  // button reset
+  const handleResetFavorites = () => {
+    localStorage.clear();
+    setFavorites([]);
+  };
 
-  // je récupère les favoris de la libraryPage
-  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+  // je récupère les favoris des jeux sur toutes les pages
   const listedFavorites = favorites.map((a: string) => Number.parseInt(a));
   const favoritesGames = fullGame.filter((game) =>
     listedFavorites.includes(game.gameId),
@@ -39,39 +35,31 @@ export default function FavoritesPage() {
       <header>
         <SmallHeader />
       </header>
-      <main>
-        <section className={style.backgroundPage}>
-          <article className={style.cards}>
-            {favoritesGames.map((a) => (
-              <CardGame
-                key={a.gameId}
-                gameId={a.gameId}
-                name={a.name}
-                rating={a.averageRating}
-                image={a.image}
-                handleClickFavorite={handleClickFavorite}
-              />
-            ))}
-            {favoritesGamesSlider.map((a) => (
-              <CardGame
-                key={a.gameId}
-                gameId={a.gameId}
-                name={a.name}
-                rating={a.averageRating}
-                image={a.image}
-                handleClickFavorite={handleClickFavorite}
-              />
-            ))}
-          </article>
+
+      <section className={style.backgroundPage}>
+        <h2 className={style.title}>My Favorites Games</h2>
+        <article className={style.cards}>
+          {favoritesGames.map((a) => (
+            <CardGame
+              key={a.gameId}
+              gameId={a.gameId}
+              name={a.name}
+              rating={a.averageRating}
+              image={a.image}
+              handleClickFavorite={handleClickFavorite}
+            />
+          ))}
+        </article>
+        <div className={style.divButton}>
           <button
             type="submit"
-            onClick={() => localStorage.clear()}
+            onClick={handleResetFavorites}
             className={style.button}
           >
-            Effacer vos favoris
+            Reset favorites
           </button>
-        </section>
-      </main>
+        </div>
+      </section>
     </>
   );
 }

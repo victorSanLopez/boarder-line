@@ -18,12 +18,23 @@
   }
 }
 
+.title {
+  font-family: var(--title-font);
+  color: var(--light);
+  font-size: 3rem;
+  text-align: center;
+  margin: 2% 0;
+  @media screen and (min-width: 500px) {
+    font-size: 5rem;
+  }
+}
+
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10vh auto;
+  margin: 3vh auto;
   width: 60vw;
 }
 
@@ -43,10 +54,16 @@
   transition: all 0.1s ease-out;
 
   @media screen and (max-width: 768px) {
-    font-size: 1.9vw;
+    font-size: 3vw;
     font-weight: bold;
-    width: 12vw;
+    width: 12em;
+    height: 3em;
   }
+}
+
+.divButton {
+  display: flex;
+  justify-content: center;
 }
 
 .button:hover {
