@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import type { commentProps } from "../../assets/lib/definition";
 import type { gameDetailsType } from "../../assets/lib/definition";
 import DisplayComment from "../displayComment/DisplayComment";
 import style from "./comment.module.css";
+// import { useLocation } from "react-router-dom";
 
 export default function Comment({
   gameDetails,
@@ -13,6 +14,7 @@ export default function Comment({
   const [userInput, setUserInput] = useState<commentProps[] | []>(
     JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
   );
+  // const reset = useRef(userInput.reset());
 
   //Affichage du formulaire
   const handleClick = () => setDisplayForm(!displayForm);
@@ -20,15 +22,19 @@ export default function Comment({
   //Recupération des données formulaire
   const userSubmit = (data: commentProps) => {
     setUserInput([...userInput, data]);
-  };
 
-  //Stockage des données dans le localStorage
-  useEffect(() => {
     localStorage.setItem(
       gameDetails.gameId.toString(),
-      JSON.stringify(userInput),
+      JSON.stringify([...userInput, data]),
     );
-  }, [gameDetails, userInput]);
+  };
+  // const location = useLocation();
+  //Stockage des données dans le localStorage
+  // useEffect(() => {
+  //   setUserInput(
+  //     JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
+  //   );
+  // }, [location, gameDetails]);
 
   return (
     <>
