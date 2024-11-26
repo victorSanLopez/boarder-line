@@ -1,19 +1,43 @@
 .comment {
-  border: solid 1px black;
   width: 40vw;
   margin: 1vh auto;
   padding: 2vw;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
   gap: 2em;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 375px) {
+    width: 80vw;
+    gap: 0;
+  }
 }
 .userInfo {
   display: flex;
   gap: 3em;
+  @media screen and (max-width: 375px) {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+  }
 }
 .h2 {
-  font-size: 0.9em;
-  font-style: italic;
+  font-size: 1em;
+  font-family: var(--title-font);
+  text-align: center;
+  @media screen and (max-width: 375px) {
+    margin-top: 0.2em;
+  }
+}
+.userComment {
+  font-family: var(--text-font);
+  font-size: 1.2em;
+  width: 35vw;
+  word-wrap: break-word;
+  @media screen and (max-width: 375px) {
+    width: 80vw;
+    padding: 1em 1em;
+  }
 }

@@ -80,7 +80,9 @@ export default function GameDetailsPage() {
             <li key={exp.gameId}>{exp.name}</li>
           )) || "There are currently no expansions available for this game..."}
         </ul>
-        <Comment gameDetails={gameDetails} />
+        <article className={style.comment}>
+          <Comment gameDetails={gameDetails} />
+        </article>
       </section>
     </div>
   );

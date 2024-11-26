@@ -72,10 +72,10 @@ export default function Comment({
             className={style.input}
             {...register("comment", { required: true, minLength: 3 })}
             id="comment"
-            placeholder="add your comment..."
+            placeholder="Add your comment..."
           />
 
-          <button className={style.button} type="submit">
+          <button className={style.buttonSubmit} type="submit">
             Submit
           </button>
         </form>

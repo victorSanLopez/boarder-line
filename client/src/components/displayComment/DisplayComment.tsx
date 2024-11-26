@@ -9,7 +9,7 @@ export default function DisplayComment({ item }: { item: commentProps }) {
           <h2 className={style.h2}>{item.firstname}</h2>
           <h2 className={style.h2}>{item.lastname}</h2>
         </div>
-        <p>{item.comment}</p>
+        <p className={style.userComment}>{item.comment}</p>
       </article>
     </>
   );
