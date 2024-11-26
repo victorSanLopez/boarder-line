@@ -32,10 +32,6 @@ export default function Comment({
     );
   });
 
-  // const loc = useLocation();
-
-  // const urlId = Number(loc.pathname.replace("/details/", ""));
-
   return (
     <>
       <section className={style.comment}>
