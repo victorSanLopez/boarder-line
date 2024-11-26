@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-// import { useLocation } from "react-router-dom";
 import type { commentProps } from "../../assets/lib/definition";
 import type { gameDetailsType } from "../../assets/lib/definition";
 import DisplayComment from "../displayComment/DisplayComment";
