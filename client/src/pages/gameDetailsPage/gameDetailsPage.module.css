@@ -29,6 +29,36 @@
   }
 }
 
+.alignedButton {
+  display: flex;
+  justify-content: end;
+}
+
+.returnButton {
+  text-align: center;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  background-color: var(--cold-color);
+  border-radius: 15px;
+  border: none;
+  box-shadow: -1px 2px 5px 1px;
+  border-color: var(--light);
+  transition: all 0.1s ease-out;
+}
+
+.returnButton:hover {
+  background-color: var(--warm-color);
+  transform: scale(1.2);
+}
+
+.returnButton:active {
+  background-color: var(--cold-color);
+  transform: scale(1.5);
+}
+
 .figure {
   display: flex;
   flex-direction: row;
@@ -101,4 +131,14 @@
 }
 .comment {
   margin-top: 10vh;
+}
+
+.expansions {
+  text-decoration: none;
+  box-shadow: none;
+  color: black;
+  &:hover {
+    font-size: 1.1em;
+    background-color: var(--light);
+  }
 }
