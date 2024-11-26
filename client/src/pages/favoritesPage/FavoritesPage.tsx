@@ -16,38 +16,61 @@ export default function FavoritesPage() {
     localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
 
-  // const favoritesSlider =
-  //   JSON.parse(localStorage.getItem("favoritesSlider")) || [];
+  // je récupère les favoris de la homePage
+  const favoritesSlider = JSON.parse(
+    localStorage.getItem("favoritesSlider") || "[]",
+  );
+  const listedFavoritesSlider = favoritesSlider.map((a: string) =>
+    Number.parseInt(a),
+  );
+  const favoritesGamesSlider = fullGame.filter((game) =>
+    listedFavoritesSlider.includes(game.gameId),
+  );
 
+  // je récupère les favoris de la libraryPage
   const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-
   const listedFavorites = favorites.map((a: string) => Number.parseInt(a));
-
   const favoritesGames = fullGame.filter((game) =>
     listedFavorites.includes(game.gameId),
   );
-  // console.log(favoritesGames);
 
   return (
     <>
       <header>
         <SmallHeader />
       </header>
-      <main className={style.backgroundPage}>
-        {favoritesGames.map((a) => (
-          <CardGame
-            key={a.gameId}
-            gameId={a.gameId}
-            name={a.name}
-            rating={a.averageRating}
-            image={a.image}
-            handleClickFavorite={handleClickFavorite}
-          />
-        ))}
-
-        <button type="submit" onClick={() => localStorage.clear()}>
-          Effacer vos favoris
-        </button>
+      <main>
+        <section className={style.backgroundPage}>
+          <article className={style.cards}>
+            {favoritesGames.map((a) => (
+              <CardGame
+                key={a.gameId}
+                gameId={a.gameId}
+                name={a.name}
+                rating={a.averageRating}
+                image={a.image}
+                handleClickFavorite={handleClickFavorite}
+              />
+            ))}
+            {favoritesGamesSlider.map((a) => (
+              <CardGame
+                key={a.gameId}
+                gameId={a.gameId}
+                name={a.name}
+                rating={a.averageRating}
+                image={a.image}
+                handleClickFavorite={handleClickFavorite}
+              />
+            ))}
+          </article>
+          <button
+            type="submit"
+            onClick={() => localStorage.clear()}
+            className={style.button}
+          >
+            Effacer vos favoris
+          </button>
+        </section>
       </main>
     </>
   );
