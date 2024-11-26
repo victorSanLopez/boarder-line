@@ -7,6 +7,14 @@ function CardGame({
   rating,
   image,
 }: { gameId: number; name: string; rating: number; image: string }) {
+  // le maximum de caractères que je souhaite pour l'affichage de name
+  const NAME_MAX_LENGTH = 25;
+
+  // permet de racourcir le nom du jeu si son nom est trop long
+  const nameSlice =
+    name.length > NAME_MAX_LENGTH
+      ? `${name.slice(0, NAME_MAX_LENGTH)}...`
+      : name;
   return (
     <section className={style.card}>
       <article className={style.article}>
@@ -17,7 +25,7 @@ function CardGame({
             className={style.image}
           />
         </NavLink>
-        <h2 className={style.title}>Name : {name}</h2>
+        <h2 className={style.title}>Name : {nameSlice}</h2>
         <h2 className={style.title}>Rating : {rating.toFixed(0)}/10</h2>
         <button type="button" className={style.button}>
           <svg className={style.heartOff} viewBox="0 0 32 29.6">

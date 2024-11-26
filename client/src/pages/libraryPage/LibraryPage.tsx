@@ -33,6 +33,18 @@ export default function libraryPage() {
             ? fullGame
                 .filter((f) => f.type?.includes(filterType))
                 .map((f) => (
+                  <article key={f.gameId} className={style.card}>
+                    <CardGame
+                      key={f.gameId}
+                      gameId={f.gameId}
+                      name={f.name}
+                      rating={f.averageRating}
+                      image={f.image}
+                    />
+                  </article>
+                ))
+            : fullGame.map((f) => (
+                <article key={f.gameId} className={style.card}>
                   <CardGame
                     key={f.gameId}
                     gameId={f.gameId}
@@ -40,15 +52,7 @@ export default function libraryPage() {
                     rating={f.averageRating}
                     image={f.image}
                   />
-                ))
-            : fullGame.map((f) => (
-                <CardGame
-                  key={f.gameId}
-                  gameId={f.gameId}
-                  name={f.name}
-                  rating={f.averageRating}
-                  image={f.image}
-                />
+                </article>
               ))}
         </div>
       </section>

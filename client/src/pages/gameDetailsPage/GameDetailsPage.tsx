@@ -37,53 +37,59 @@ export default function GameDetailsPage() {
   };
 
   return (
-    <div className={style.componentSpace}>
-      <section className={style.detailsBigCard}>
-        <h2 className={style.h2}>
-          {gameDetails.name || "Title not available"}
-        </h2>
-        <figure className={style.figure}>
-          <img
-            className={style.img}
-            src={gameDetails.image || imageNotAvailable}
-            alt="Game visual"
-          />
-          <figcaption>
-            <ul className={style.ul}>
-              <li className={style.h3}>Type : {gameDetails.type}</li>
-              <li className={style.h3}>
-                Number of players : {gameDetails.minPlayers || " ? "}-
-                {gameDetails.maxPlayers || " ? "} players
-              </li>
-              <li className={style.h3}>
-                Playing time : {gameDetails.playingTime || " ? "} minutes
-              </li>
-              <li className={style.h3}>
-                Editor : {arrayToListFormatter(gameDetails.publishers)}
-              </li>
-              <li className={style.h3}>
-                Author : {arrayToListFormatter(gameDetails.designers)}
-              </li>
-              <li className={style.h3}>
-                Rating : {gameDetails.averageRating?.toFixed(0)}/10
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-        <h3 className={style.h3}>Description :</h3>
-        <p>{gameDetails.description}</p>
-        <h3 className={style.h3}>Artists :</h3>
-        <p>{arrayToListFormatter(gameDetails.artists)}</p>
-        <h3 className={style.h3}>Expansions :</h3>
-        <ul>
-          {gameDetails.expansions?.map((exp) => (
-            <li key={exp.gameId}>{exp.name}</li>
-          )) || "There are currently no expansions available for this game..."}
-        </ul>
-        <article className={style.comment}>
-          <Comment gameDetails={gameDetails} />
-        </article>
-      </section>
-    </div>
+    <>
+      <header>
+        <SmallHeader />
+      </header>
+      <div className={style.backgroundPage}>
+        <section className={style.detailsBigCard}>
+          <h2 className={style.h2}>
+            {gameDetails.name || "Title not available"}
+          </h2>
+          <figure className={style.figure}>
+            <img
+              className={style.img}
+              src={gameDetails.image || imageNotAvailable}
+              alt="Game visual"
+            />
+            <figcaption>
+              <ul className={style.ul}>
+                <li className={style.h3}>Type : {gameDetails.type}</li>
+                <li className={style.h3}>
+                  Number of players : {gameDetails.minPlayers || " ? "}-
+                  {gameDetails.maxPlayers || " ? "} players
+                </li>
+                <li className={style.h3}>
+                  Playing time : {gameDetails.playingTime || " ? "} minutes
+                </li>
+                <li className={style.h3}>
+                  Editor : {arrayToListFormatter(gameDetails.publishers)}
+                </li>
+                <li className={style.h3}>
+                  Author : {arrayToListFormatter(gameDetails.designers)}
+                </li>
+                <li className={style.h3}>
+                  Rating : {gameDetails.averageRating?.toFixed(0)}/10
+                </li>
+              </ul>
+            </figcaption>
+          </figure>
+          <h3 className={style.h3}>Description :</h3>
+          <p>{gameDetails.description}</p>
+          <h3 className={style.h3}>Artists :</h3>
+          <p>{arrayToListFormatter(gameDetails.artists)}</p>
+          <h3 className={style.h3}>Expansions :</h3>
+          <ul>
+            {gameDetails.expansions?.map((exp) => (
+              <li key={exp.gameId}>{exp.name}</li>
+            )) ||
+              "There are currently no expansions available for this game..."}
+          </ul>
+          <article className={style.comment}>
+            <Comment gameDetails={gameDetails} />
+          </article>
+        </section>
+      </div>
+    </>
   );
 }
