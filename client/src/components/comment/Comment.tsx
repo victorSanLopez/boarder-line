@@ -15,8 +15,7 @@ export default function Comment({
   );
 
   //Affichage du formulaire
-  const handleClick = () =>
-    displayForm ? setDisplayForm(false) : setDisplayForm(true);
+  const handleClick = () => setDisplayForm(!displayForm);
 
   //Recupération des données formulaire
   const userSubmit = (data: commentProps) => {
@@ -29,7 +28,7 @@ export default function Comment({
       gameDetails.gameId.toString(),
       JSON.stringify(userInput),
     );
-  });
+  }, [gameDetails, userInput]);
 
   return (
     <>
