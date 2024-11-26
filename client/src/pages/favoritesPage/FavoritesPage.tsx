@@ -38,18 +38,20 @@ export default function FavoritesPage() {
 
       <section className={style.backgroundPage}>
         <h2 className={style.title}>My Favorites Games</h2>
-        <article className={style.cards}>
+        <div className={style.cards}>
           {favoritesGames.map((a) => (
-            <CardGame
-              key={a.gameId}
-              gameId={a.gameId}
-              name={a.name}
-              rating={a.averageRating}
-              image={a.image}
-              handleClickFavorite={handleClickFavorite}
-            />
+            <article key={a.gameId} className={style.card}>
+              <CardGame
+                key={a.gameId}
+                gameId={a.gameId}
+                name={a.name}
+                rating={a.averageRating}
+                image={a.image}
+                handleClickFavorite={handleClickFavorite}
+              />
+            </article>
           ))}
-        </article>
+        </div>
         <div className={style.divButton}>
           <button
             type="submit"

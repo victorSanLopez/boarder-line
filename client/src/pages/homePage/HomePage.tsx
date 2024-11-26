@@ -29,6 +29,7 @@ export default function HomePage() {
   ];
 
   // ajouter un nouveau favoris au click
+
   const [favorites, setFavorites] = useState<string[] | []>(
     JSON.parse(localStorage.getItem("favorites") || "[]"),
   );
