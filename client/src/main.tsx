@@ -7,10 +7,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-
 // Import additional components for new routes
 import Error404Page from "./pages/error404Page/Error404Page.tsx";
 import ErrorGameNotFound from "./pages/errorGameNotFound/ErrorGameNotFound.tsx";
+import FavoritesPage from "./pages/favoritesPage/FavoritesPage";
 import GameDetailsPage from "./pages/gameDetailsPage/GameDetailsPage";
 import HomePage from "./pages/homePage/HomePage";
 import LibraryPage from "./pages/libraryPage/LibraryPage";
@@ -52,6 +52,11 @@ const router = createBrowserRouter([
       {
         path: "/notfound",
         element: <ErrorGameNotFound />,
+      },
+      {
+        path: "/favorites",
+        element: <FavoritesPage />,
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}`),
       },
     ],
   },
