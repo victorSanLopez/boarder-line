@@ -11,7 +11,7 @@ export default function GameDetailsPage() {
   const navigate = useNavigate();
   const handleClick = () => navigate(-1);
 
-  // Repositionne la page
+  // Repositionne la page au niveau du header
   useEffect(() => {
     window.scrollTo(0, 250);
   });
@@ -39,6 +39,7 @@ export default function GameDetailsPage() {
   const arrayToListFormatter = (list: string[] | undefined) => {
     if (!list) return "Information unavailable";
     if (list.length === 1) return list[0];
+    if (list.length === 2) return list.join(" and ");
     const lastItem = list.pop();
     return `${list.join(", ")} and ${lastItem}`;
   };
@@ -51,7 +52,6 @@ export default function GameDetailsPage() {
       <div className={style.backgroundPage}>
         <section className={style.detailsBigCard}>
           <div className={style.alignedButton}>
-            {" "}
             <button
               type="button"
               className={style.returnButton}
@@ -71,7 +71,9 @@ export default function GameDetailsPage() {
             />
             <figcaption>
               <ul className={style.ul}>
-                <li className={style.h3}>Type : {gameDetails.type}</li>
+                <li className={style.h3}>
+                  Type : {arrayToListFormatter(gameDetails.type)}
+                </li>
                 <li className={style.h3}>
                   Number of players : {gameDetails.minPlayers || " ? "}-
                   {gameDetails.maxPlayers || " ? "} players
