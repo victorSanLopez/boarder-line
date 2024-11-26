@@ -87,7 +87,12 @@ export default function GameDetailsPage() {
           <ul>
             {gameDetails.expansions?.map((exp) => (
               <li key={exp.gameId}>
-                <NavLink to={`/details/${exp.gameId}`}>{exp.name}</NavLink>
+                <NavLink
+                  to={`/details/${exp.gameId}`}
+                  className={style.expansions}
+                >
+                  {exp.name}
+                </NavLink>
               </li>
             )) ||
               "There are currently no expansions available for this game..."}

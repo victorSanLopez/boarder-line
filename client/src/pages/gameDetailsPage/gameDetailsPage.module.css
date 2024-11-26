@@ -99,3 +99,13 @@
     transform: rotate(360deg);
   }
 }
+
+.expansions {
+  text-decoration: none;
+  box-shadow: none;
+  color: black;
+  &:hover {
+    font-size: 1.1em;
+    background-color: var(--light);
+  }
+}
