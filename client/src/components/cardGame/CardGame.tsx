@@ -6,7 +6,14 @@ function CardGame({
   name,
   rating,
   image,
-}: { gameId: number; name: string; rating: number; image: string }) {
+  handleClickFavorite,
+}: {
+  gameId: number;
+  name: string;
+  rating: number;
+  image: string;
+  handleClickFavorite(id: string): void;
+}) {
   // le maximum de caractères que je souhaite pour l'affichage de name
   const NAME_MAX_LENGTH = 25;
 
@@ -27,7 +34,11 @@ function CardGame({
         </NavLink>
         <h2 className={style.title}>Name : {nameSlice}</h2>
         <h2 className={style.title}>Rating : {rating.toFixed(0)}/10</h2>
-        <button type="button" className={style.button}>
+        <button
+          type="button"
+          className={style.button}
+          onClick={() => handleClickFavorite(gameId.toString())}
+        >
           <svg className={style.heartOff} viewBox="0 0 32 29.6">
             <title>heart shape</title>
             <path
