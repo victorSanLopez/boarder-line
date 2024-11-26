@@ -17,12 +17,15 @@
     box-shadow: inset #241715 0 0 34vh 34vh;
   }
 }
-
+.card {
+  transform: scale(1.5);
+  margin: 5rem;
+}
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin: 10vh auto;
-  width: 60vw;
+  width: 90vw;
 }
