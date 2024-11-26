@@ -6,7 +6,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   margin: 0;
-  padding: 5vh;
+  padding: 5vh 0;
   width: auto;
   height: 100%;
 
@@ -23,7 +23,6 @@
   color: var(--light);
   font-size: 3rem;
   text-align: center;
-  margin: 2% 0;
   @media screen and (min-width: 500px) {
     font-size: 5rem;
   }
@@ -34,7 +33,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10vh auto;
+  margin: 2vh auto;
   width: 90vw;
 }
 
