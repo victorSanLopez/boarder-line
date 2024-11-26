@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { NavLink, useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
 import imageNotAvailable from "../../assets/images/image-not-available.png";
 import searchIcon from "../../assets/images/search-loupe.png";
 import type { gameDetailsType } from "../../assets/lib/definition";
@@ -8,6 +8,8 @@ import style from "./gameDetailsPage.module.css";
 
 export default function GameDetailsPage() {
   const gameDetails: gameDetailsType = useLoaderData() as gameDetailsType;
+  const navigate = useNavigate();
+  const handleClick = () => navigate(-1);
 
   // Repositionne la page
   useEffect(() => {
@@ -48,6 +50,16 @@ export default function GameDetailsPage() {
       </header>
       <div className={style.backgroundPage}>
         <section className={style.detailsBigCard}>
+          <div className={style.alignedButton}>
+            {" "}
+            <button
+              type="button"
+              className={style.returnButton}
+              onClick={handleClick}
+            >
+              🔙
+            </button>
+          </div>
           <h2 className={style.h2}>
             {gameDetails.name || "Title not available"}
           </h2>
