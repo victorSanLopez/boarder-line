@@ -3,7 +3,6 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 1em;
-  box-shadow: 10px 10px 50px 10px #241715;
 }
 
 .article {
@@ -16,6 +15,7 @@
   border-radius: 1em;
   gap: 0.25em;
   text-align: center;
+  box-shadow: -1vh 1vh 1vh #643f1b;
 }
 
 .image {
