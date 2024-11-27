@@ -59,7 +59,11 @@
   box-shadow: inset(var(--light));
   border-radius: 10px;
   box-shadow: inset 1px 1px 0.5em var(--dark);
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 450px) {
+    width: 80vw;
+    padding-left: 0.5em;
+  }
+  @media screen and (max-width: 1024px) {
     width: 80vw;
     padding-left: 0.5em;
   }
@@ -71,7 +75,11 @@
   align-items: center;
   font-family: var(--title-font);
   font-size: 1.4em;
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 450px) {
+    font-size: 1.2em;
+    width: 40vw;
+  }
+  @media screen and (max-width: 1024px) {
     font-size: 1.2em;
     width: 40vw;
   }
@@ -79,7 +87,7 @@
 .divInfo {
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 450px) {
     display: flex;
     justify-content: space-around;
   }
@@ -94,7 +102,10 @@
   padding-left: 1em;
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 450px) {
+    width: 30vw;
+  }
+  @media screen and (max-width: 1024px) {
     width: 30vw;
   }
 }
