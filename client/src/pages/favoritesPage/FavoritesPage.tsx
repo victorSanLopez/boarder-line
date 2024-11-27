@@ -35,7 +35,6 @@ export default function FavoritesPage() {
       <header>
         <SmallHeader />
       </header>
-
       <section className={style.backgroundPage}>
         <h2 className={style.title}>My Favorites Games</h2>
         <div className={style.cards}>
