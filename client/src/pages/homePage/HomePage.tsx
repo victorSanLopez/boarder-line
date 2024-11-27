@@ -28,7 +28,7 @@ export default function HomePage() {
     "Scythe",
   ];
 
-  // ajouter un nouveau favoris au click
+  // j'ajoute un nouveau favoris au click
 
   const [favorites, setFavorites] = useState<string[] | []>(
     JSON.parse(localStorage.getItem("favorites") || "[]"),

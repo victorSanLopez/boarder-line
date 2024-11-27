@@ -8,7 +8,7 @@ import style from "./favoritesPage.module.css";
 export default function FavoritesPage() {
   const fullGame: boardGameListType[] = useLoaderData() as boardGameListType[];
 
-  // ajouter un nouveau favoris au click
+  // j'ajoute un nouveau favoris au click
   const [favorites, setFavorites] = useState<string[] | []>(
     JSON.parse(localStorage.getItem("favorites") || "[]"),
   );
@@ -18,7 +18,12 @@ export default function FavoritesPage() {
     localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
 
-  // console.log(favorites);
+  // je récupère les favoris sur toutes les pages
+  const listedFavorites = favorites.map((a: string) => Number.parseInt(a));
+  // je filtre les jeux de l'api pour garder que les favoris
+  const favoritesGames = fullGame.filter((game) =>
+    listedFavorites.includes(game.gameId),
+  );
 
   // button reset
   const handleResetFavorites = () => {
@@ -26,12 +31,7 @@ export default function FavoritesPage() {
     setFavorites([]);
   };
 
-  // je récupère les favoris des jeux sur toutes les pages
-  const listedFavorites = favorites.map((a: string) => Number.parseInt(a));
-  const favoritesGames = fullGame.filter((game) =>
-    listedFavorites.includes(game.gameId),
-  );
-
+  // const function heartColor ()
   return (
     <>
       <header>

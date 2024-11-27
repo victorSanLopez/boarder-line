@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import style from "./cardGame.module.css";
 
@@ -15,8 +14,11 @@ function CardGame({
   image: string;
   handleClickFavorite(id: string): void;
 }) {
-  // changement du coeur au click
-  const [clicked, setClicked] = useState(false);
+  // je récupère les favoris des jeux sur toutes les pages
+
+  const listedFavorites = JSON.parse(
+    localStorage.getItem("favorites") || "[]",
+  ).map((a: string) => Number.parseInt(a));
 
   // le maximum de caractères que je souhaite pour l'affichage de name
   const NAME_MAX_LENGTH = 25;
@@ -43,11 +45,12 @@ function CardGame({
           className={style.button}
           onClick={() => {
             handleClickFavorite(gameId.toString());
-            setClicked(!clicked);
           }}
         >
           <svg
-            className={clicked ? style.heartOn : style.heartOff}
+            className={
+              listedFavorites.includes(gameId) ? style.heartOn : style.heartOff
+            }
             viewBox="0 0 32 29.6"
           >
             <title>heart shape</title>
