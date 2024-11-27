@@ -17,7 +17,7 @@ export default function libraryPage() {
     .splice(1);
   const onlyOneCategories: string[] = [...new Set(categories.map((s) => s))];
 
-  // ajouter un nouveau favoris au click
+  // j'ajoute un nouveau favoris au click
   const [favorites, setFavorites] = useState<string[] | []>(
     JSON.parse(localStorage.getItem("favorites") || "[]"),
   );
