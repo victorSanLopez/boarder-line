@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import type { commentProps } from "../../assets/lib/definition";
 import type { gameDetailsType } from "../../assets/lib/definition";
@@ -29,7 +29,7 @@ export default function Comment({
     );
   };
 
-  // Récupère le storage du game
+  // Récupère le storage du game après chaque changement de jeu
   useEffect(() => {
     setUserInput(
       JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
