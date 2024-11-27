@@ -58,7 +58,7 @@ export default function GameDetailsPage() {
               className={style.returnButton}
               onClick={handleClick}
             >
-              🔙
+              {"< "} Back
             </button>
           </div>
           <h2 className={style.h2}>
