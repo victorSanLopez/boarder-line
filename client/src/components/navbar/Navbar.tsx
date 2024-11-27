@@ -87,11 +87,15 @@ function Navbar() {
             {value.length > 40 && (
               <p className={style.error}>Too much characteres.</p>
             )}
-            {boardGamesFilter.map((g) => (
+            {boardGamesFilter.map((g, i) => (
               <button
                 type="button"
                 key={g.gameId}
-                className={style.dropDownRow}
+                className={
+                  i < boardGamesFilter.length - 1
+                    ? style.dropDownRow
+                    : style.dropDownRowLast
+                }
                 onClick={() => onSearch(g.name)}
               >
                 {g.name}
