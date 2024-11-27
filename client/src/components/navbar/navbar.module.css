@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 20vh;
-  max-height: 20vh;
+  min-height: 12rem;
+  max-height: 12rem;
   background-color: var(--dark);
   padding: 1vw 2vw;
   transition: all 0.5s ease-in-out;
   @media screen and (max-width: 768px) {
-    min-height: 10vh;
-    max-height: 10vh;
+    min-height: 5rem;
+    max-height: 5rem;
   }
 }
 
@@ -94,28 +94,48 @@
     height: 2rem;
   }
 }
+.error {
+  color: orangered;
+  font-family: var(--text-font);
+  text-align: center;
+  margin-top: 0.5rem;
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+}
 .dropDownNone {
   display: none;
 }
+
 .dropDown {
   position: absolute;
-  top: 12.5vh;
-  background-color: white;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  top: 7.55rem;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--dark);
   width: 35vw;
+  box-shadow: -0.5vh 0.5vh 1vh #241715;
+  z-index: 10;
   @media screen and (max-width: 768px) {
-    width: 18vw;
-    top: 6.7vh;
+    width: 30vw;
+    top: 3.5rem;
     font-size: 0.8rem;
   }
 }
 
 .dropDownRow {
-  cursor: pointer;
+  border-bottom: solid 1px var(--dark);
+  padding: 1rem 1rem;
+  background-color: var(--light);
+  color: var(--dark);
+  align-items: flex-start;
+  font-size: 1.5rem;
   text-align: start;
-  margin: 2px 0;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 .formSearchBar {

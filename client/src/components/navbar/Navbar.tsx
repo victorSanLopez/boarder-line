@@ -16,12 +16,12 @@ function Navbar() {
   // gestion de l'état
   const [value, setValue] = useState("");
 
-  // permet d'afficher la touche tapé et remplacer les caractères interdits
+  // permet d'afficher la touche entrée par l'utilisateur et remplacer les caractères interdits
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value.replace(/[^\.a-zA-Z0-9-:&()']/g, ""));
   };
 
-  // permet au click de déplacer la suggestion dans la champ de saisis au click
+  // permet au click de déplacer la suggestion dans la champ de saisis
   const onSearch = (searchTerm: string) => {
     setValue(searchTerm);
   };
@@ -41,11 +41,25 @@ function Navbar() {
 
     // redirection
     if (foundBoardGame) {
+      setValue("");
       return navigate(`details/${foundBoardGame.gameId}`);
     }
     return navigate("/notfound");
   };
+
+  // style des suggestions
   const dropDownStyle = value !== "" ? style.dropDown : style.dropDownNone;
+
+  // filtre l'api afin de comparer l'entrée utilisateur
+  const boardGamesFilter = boardGames.filter((g) => {
+    const searchTerm = value.toLowerCase().replace(/\s/g, "");
+    const gameName = g.name.toLowerCase().replace(/\s/g, "");
+
+    // renvoie la comparaison si il y a une recherche, si un jeux et selectionné la suggestion disparait
+    return (
+      searchTerm && gameName.startsWith(searchTerm) && gameName !== searchTerm
+    );
+  });
   return (
     <nav className={style.navbar}>
       <NavLink to={"/"}>
@@ -70,27 +84,19 @@ function Navbar() {
             </button>
           </div>
           <section className={dropDownStyle}>
-            {boardGames
-              .filter((g) => {
-                const searchTerm = value.toLowerCase().replace(/\s/g, "");
-                const gameName = g.name.toLowerCase().replace(/\s/g, "");
-
-                return (
-                  searchTerm &&
-                  gameName.startsWith(searchTerm) &&
-                  gameName !== searchTerm
-                );
-              })
-              .map((g) => (
-                <button
-                  type="button"
-                  key={g.gameId}
-                  className={style.dropDownRow}
-                  onClick={() => onSearch(g.name)}
-                >
-                  {g.name}
-                </button>
-              ))}
+            {value.length > 40 && (
+              <p className={style.error}>Too much characteres.</p>
+            )}
+            {boardGamesFilter.map((g) => (
+              <button
+                type="button"
+                key={g.gameId}
+                className={style.dropDownRow}
+                onClick={() => onSearch(g.name)}
+              >
+                {g.name}
+              </button>
+            ))}
           </section>
         </form>
         <NavLink to={"/library"}>
