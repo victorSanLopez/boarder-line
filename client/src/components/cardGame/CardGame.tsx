@@ -15,7 +15,6 @@ function CardGame({
   handleClickFavorite(id: string): void;
 }) {
   // je récupère les favoris des jeux sur toutes les pages
-
   const listedFavorites = JSON.parse(
     localStorage.getItem("favorites") || "[]",
   ).map((a: string) => Number.parseInt(a));

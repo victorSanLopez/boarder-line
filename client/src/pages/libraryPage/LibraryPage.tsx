@@ -18,7 +18,6 @@ export default function libraryPage() {
   const onlyOneCategories: string[] = [...new Set(categories.map((s) => s))];
 
   // j'ajoute un nouveau favoris au click
-
   const [favorites, setFavorites] = useState<string[] | []>(
     JSON.parse(localStorage.getItem("favorites") || "[]"),
   );

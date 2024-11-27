@@ -20,6 +20,7 @@ export default function FavoritesPage() {
 
   // je récupère les favoris sur toutes les pages
   const listedFavorites = favorites.map((a: string) => Number.parseInt(a));
+
   // je filtre les jeux de l'api pour garder que les favoris
   const favoritesGames = fullGame.filter((game) =>
     listedFavorites.includes(game.gameId),
