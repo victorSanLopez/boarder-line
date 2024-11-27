@@ -9,7 +9,9 @@ export default function Comment({
   gameDetails,
 }: { gameDetails: gameDetailsType }) {
   const [displayForm, setDisplayForm] = useState(false);
-  const { register, handleSubmit } = useForm<commentProps>();
+  const { register, handleSubmit, reset, formState } = useForm<commentProps>({
+    defaultValues: { firstname: "", lastname: "", comment: "" },
+  });
   const [userInput, setUserInput] = useState<commentProps[] | []>(
     JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
   );
@@ -17,18 +19,29 @@ export default function Comment({
   //Affichage du formulaire
   const handleClick = () => setDisplayForm(!displayForm);
 
-  //Recupération des données formulaire
+  //Recupération des données formulaire & stockage dans le storage
   const userSubmit = (data: commentProps) => {
     setUserInput([...userInput, data]);
-  };
 
-  //Stockage des données dans le localStorage
-  useEffect(() => {
     localStorage.setItem(
       gameDetails.gameId.toString(),
-      JSON.stringify(userInput),
+      JSON.stringify([...userInput, data]),
     );
-  }, [gameDetails, userInput]);
+  };
+
+  // Récupère le storage du game après chaque changement de jeu
+  useEffect(() => {
+    setUserInput(
+      JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
+    );
+  }, [gameDetails]);
+
+  // reset formulaire après submit
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ firstname: "", lastname: "", comment: "" });
+    }
+  }, [formState, reset]);
 
   return (
     <>
@@ -68,7 +81,6 @@ export default function Comment({
             id="comment"
             placeholder="Add your comment..."
           />
-
           <button className={style.buttonSubmit} type="submit">
             Submit
           </button>
