@@ -55,7 +55,7 @@ function Navbar() {
     const searchTerm = value.toLowerCase().replace(/\s/g, "");
     const gameName = g.name.toLowerCase().replace(/\s/g, "");
 
-    // renvoie la comparaison si il y a une recherche, si un jeux et selectionné la suggestion disparait
+    // renvoie la comparaison si il y a une recherche, si un jeux est selectionné la suggestion disparait
     return (
       searchTerm && gameName.startsWith(searchTerm) && gameName !== searchTerm
     );
@@ -85,7 +85,7 @@ function Navbar() {
           </div>
           <section className={dropDownStyle}>
             {value.length > 40 && (
-              <p className={style.error}>Too much characteres.</p>
+              <p className={style.error}>Too much characters.</p>
             )}
             {boardGamesFilter.map((g, i) => (
               <button
