@@ -15,14 +15,20 @@
   border-radius: 1em;
   gap: 0.25em;
   text-align: center;
-  box-shadow: -0.5vh 0.5vh 1vh #241715;
+  box-shadow: -0.5vh 0.5vh 1vh var(--dark);
+}
+
+.imageBox {
+  min-height: 7rem;
+  min-width: 7.5rem;
+  max-height: 7rem;
+  max-width: 7.5rem;
 }
 
 .image {
-  min-height: 7rem;
-  min-width: 5rem;
   max-height: 7rem;
-  max-width: 5rem;
+  max-width: 7.5rem;
+  object-fit: contain;
   box-shadow: -3px 3px 5px 0px var(--dark);
 
   &:hover {
@@ -51,18 +57,16 @@
   border: none;
   background-color: var(--light);
   width: 2rem;
-  transition: all 0.2s ease-out;
-  &:hover {
-    transform: translateY(-0.25rem);
-  }
 }
 
 .heartOff {
   fill: var(--cold-color);
   opacity: 25%;
+  transition: all 0.2s ease-out;
   &:hover {
     opacity: 100%;
     fill: var(--warm-color);
+    transform: translateY(-0.25rem);
   }
   &:active {
     fill: red;
@@ -73,12 +77,4 @@
 
 .heartOn {
   fill: var(--warm-color);
-  &:hover {
-    opacity: 25%;
-  }
-  &:active {
-    fill: var(--cold-color);
-    opacity: 100%;
-    transform: scale(1.5);
-  }
 }
