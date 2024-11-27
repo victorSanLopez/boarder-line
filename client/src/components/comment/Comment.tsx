@@ -1,25 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import type { commentProps } from "../../assets/lib/definition";
 import type { gameDetailsType } from "../../assets/lib/definition";
 import DisplayComment from "../displayComment/DisplayComment";
 import style from "./comment.module.css";
-// import { useLocation } from "react-router-dom";
 
 export default function Comment({
   gameDetails,
 }: { gameDetails: gameDetailsType }) {
   const [displayForm, setDisplayForm] = useState(false);
-  const { register, handleSubmit } = useForm<commentProps>();
+  const { register, handleSubmit, reset, formState } = useForm<commentProps>({
+    defaultValues: { firstname: "", lastname: "", comment: "" },
+  });
   const [userInput, setUserInput] = useState<commentProps[] | []>(
     JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
   );
-  // const reset = useRef(userInput.reset());
 
   //Affichage du formulaire
   const handleClick = () => setDisplayForm(!displayForm);
 
-  //Recupération des données formulaire
+  //Recupération des données formulaire & stockage dans le storage
   const userSubmit = (data: commentProps) => {
     setUserInput([...userInput, data]);
 
@@ -28,13 +28,20 @@ export default function Comment({
       JSON.stringify([...userInput, data]),
     );
   };
-  // const location = useLocation();
-  //Stockage des données dans le localStorage
-  // useEffect(() => {
-  //   setUserInput(
-  //     JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
-  //   );
-  // }, [location, gameDetails]);
+
+  // Récupère le storage du game
+  useEffect(() => {
+    setUserInput(
+      JSON.parse(localStorage.getItem(gameDetails.gameId.toString()) || "[]"),
+    );
+  }, [gameDetails]);
+
+  // reset formulaire après submit
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ firstname: "", lastname: "", comment: "" });
+    }
+  }, [formState, reset]);
 
   return (
     <>
@@ -74,7 +81,6 @@ export default function Comment({
             id="comment"
             placeholder="Add your comment..."
           />
-
           <button className={style.buttonSubmit} type="submit">
             Submit
           </button>
