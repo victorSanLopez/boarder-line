@@ -1,13 +1,13 @@
 /*Image de fond*/
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../../assets/images/banniere.jpg");
-  height: 100vh;
-  background-repeat: no-repeat;
+  background: var(--dark) url("../../assets/images/banniere.jpg") no-repeat left
+    center scroll;
+  max-height: 80vh;
+  min-height: 80vw;
   background-size: cover;
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     height: 100vw;
-  }
+  } */
 }
 /*Style des titres*/
 .title {
