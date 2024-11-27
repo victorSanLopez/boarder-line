@@ -14,9 +14,9 @@
   transition: all 0.1s ease-out;
 
   @media screen and (max-width: 768px) {
-    font-size: 1.9vw;
+    font-size: 1em;
     font-weight: bold;
-    width: 12vw;
+    width: 7em;
   }
 }
 
