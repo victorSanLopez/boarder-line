@@ -28,20 +28,16 @@ export default function HomePage() {
     "Scythe",
   ];
 
-  // ajouter un nouveau favoris au click
+  // ajouter un nouveau favoris et changer la couleur du coeur au click
 
   const [favorites, setFavorites] = useState<string[] | []>(
     JSON.parse(localStorage.getItem("favorites") || "[]"),
   );
-  const [clicked, setClicked] = useState(false);
   const handleClickFavorite = (id: string) => {
     const newFavorite = [...favorites, id];
     setFavorites(newFavorite);
-    setClicked(!clicked);
     localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
-
-  // changer la couleur du coeur au click
 
   // logique du slider des découvertes:
 

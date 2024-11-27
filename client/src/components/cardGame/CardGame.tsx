@@ -21,7 +21,7 @@ function CardGame({
   // le maximum de caractères que je souhaite pour l'affichage de name
   const NAME_MAX_LENGTH = 25;
 
-  // permet de racourcir le nom du jeu si son nom est trop long
+  // permet de raccourcir le nom du jeu si son nom est trop long
   const nameSlice =
     name.length > NAME_MAX_LENGTH
       ? `${name.slice(0, NAME_MAX_LENGTH)}...`
