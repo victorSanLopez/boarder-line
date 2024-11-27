@@ -20,7 +20,7 @@ export default function FavoritesPage() {
 
   // button reset
   const handleResetFavorites = () => {
-    localStorage.clear();
+    localStorage.removeItem("favorites");
     setFavorites([]);
   };
 
