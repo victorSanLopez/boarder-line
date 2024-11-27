@@ -18,6 +18,8 @@ export default function FavoritesPage() {
     localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
 
+  // console.log(favorites);
+
   // button reset
   const handleResetFavorites = () => {
     localStorage.removeItem("favorites");
