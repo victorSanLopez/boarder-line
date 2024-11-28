@@ -1,7 +1,6 @@
 /*Image de fond*/
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../../assets/images/banniere.jpg");
+  background: url("../../assets/images/banniere.jpg");
   height: 15vh;
   background-repeat: no-repeat;
   background-size: cover;

@@ -11,8 +11,8 @@ export default function HeroHeader() {
           <h1 className={style.titlePage}>{title}</h1>
           <h2 className={style.subtitle}>{subtitle}</h2>
         </section>
-        <article className={style.description}>
-          <p>{description}</p>
+        <article className={style.boxDescription}>
+          <p className={style.description}>{description}</p>
         </article>
       </header>
     </>

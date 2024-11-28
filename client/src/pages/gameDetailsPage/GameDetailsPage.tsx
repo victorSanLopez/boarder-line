@@ -14,7 +14,7 @@ export default function GameDetailsPage() {
 
   // Repositionne la page au niveau du header
   useEffect(() => {
-    window.scrollTo(0, 250);
+    window.scrollTo(0, 100);
   });
 
   // Animation de chargement de l'API
