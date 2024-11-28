@@ -38,6 +38,13 @@ export default function HomePage() {
     localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
 
+  // je retire le jeu des favoris
+  const handleClickFavoriteOff = (id: string) => {
+    const newFavorite = favorites.filter((p) => p !== id);
+    setFavorites(newFavorite);
+    localStorage.setItem("favorites", JSON.stringify(newFavorite));
+  };
+
   // logique du slider des découvertes:
 
   const boardGamesDiscovery: boardGameListType[] | null = boardGames
@@ -57,6 +64,7 @@ export default function HomePage() {
           <CardSlider
             boardGamesList={boardGamesDiscovery}
             handleClickFavorite={handleClickFavorite}
+            handleClickFavoriteOff={handleClickFavoriteOff}
           />
         )}
         <h1 className={style.titleSlide}>Top Games</h1>
@@ -64,6 +72,7 @@ export default function HomePage() {
           <CardSlider
             boardGamesList={boardGamesTop}
             handleClickFavorite={handleClickFavorite}
+            handleClickFavoriteOff={handleClickFavoriteOff}
           />
         )}
       </section>
