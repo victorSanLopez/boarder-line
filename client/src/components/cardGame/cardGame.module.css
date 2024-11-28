@@ -68,7 +68,7 @@
   transition: all 0.2s ease-out;
   &:hover {
     opacity: 100%;
-    fill: var(--warm-color);
+    fill: var(--cold-color);
     transform: translateY(-0.25rem);
   }
   &:active {
@@ -80,4 +80,15 @@
 
 .heartOn {
   fill: var(--warm-color);
+  transition: all 0.2s ease-out;
+  &:hover {
+    opacity: 100%;
+    fill: var(--warm-color);
+    transform: translateY(-0.25rem);
+  }
+  &:active {
+    fill: var(--cold-color);
+    opacity: 100%;
+    transform: scale(1.5);
+  }
 }
