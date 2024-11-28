@@ -49,23 +49,26 @@ export default function Footer() {
           <a
             className={style.link}
             href="https://unsplash.com/fr/@foxandhyde"
-            target="blank"
+            rel="noreferrer"
+            target="_blank"
           >
             Unsplash
           </a>
           &nbsp;,&nbsp;
           <a
+            target="_blank"
+            rel="noreferrer"
             className={style.link}
-            href="https://fr.freepik.com/"
-            target="blank"
+            href={"https://fr.freepik.com/"}
           >
             Freep!k
           </a>
           &nbsp;&&nbsp;
           <a
             className={style.link}
+            rel="noreferrer"
             href="https://fr.pngtree.com/"
-            target="blank"
+            target="_blank"
           >
             PNG Tree
           </a>
