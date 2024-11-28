@@ -3,7 +3,7 @@
   background-attachment: fixed;
   box-shadow: inset var(--dark) 0 0 150rem 10rem;
   background-size: cover;
-  padding: 2em;
+  padding: 2em 0;
   width: auto;
   height: 100%;
   @media screen and (max-width: 768px) {

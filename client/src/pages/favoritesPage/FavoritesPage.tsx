@@ -18,6 +18,13 @@ export default function FavoritesPage() {
     localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
 
+  // je retire le jeu des favoris
+  const handleClickFavoriteOff = (id: string) => {
+    const newFavorite = favorites.filter((p) => p !== id);
+    setFavorites(newFavorite);
+    localStorage.setItem("favorites", JSON.stringify(newFavorite));
+  };
+
   // je récupère les favoris sur toutes les pages
   const listedFavorites = favorites.map((a: string) => Number.parseInt(a));
 
@@ -50,6 +57,7 @@ export default function FavoritesPage() {
                 rating={a.averageRating}
                 image={a.image}
                 handleClickFavorite={handleClickFavorite}
+                handleClickFavoriteOff={handleClickFavoriteOff}
               />
             </article>
           ))}

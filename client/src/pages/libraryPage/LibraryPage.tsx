@@ -27,6 +27,13 @@ export default function libraryPage() {
     localStorage.setItem("favorites", JSON.stringify(newFavorite));
   };
 
+  // je retire le jeu des favoris
+  const handleClickFavoriteOff = (id: string) => {
+    const newFavorite = favorites.filter((p) => p !== id);
+    setFavorites(newFavorite);
+    localStorage.setItem("favorites", JSON.stringify(newFavorite));
+  };
+
   return (
     <>
       <header>
@@ -52,6 +59,7 @@ export default function libraryPage() {
                       rating={f.averageRating}
                       image={f.image}
                       handleClickFavorite={handleClickFavorite}
+                      handleClickFavoriteOff={handleClickFavoriteOff}
                     />
                   </article>
                 ))
@@ -64,6 +72,7 @@ export default function libraryPage() {
                     rating={f.averageRating}
                     image={f.image}
                     handleClickFavorite={handleClickFavorite}
+                    handleClickFavoriteOff={handleClickFavoriteOff}
                   />
                 </article>
               ))}

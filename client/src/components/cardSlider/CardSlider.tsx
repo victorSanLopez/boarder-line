@@ -6,9 +6,11 @@ import style from "./cardSlider.module.css";
 export default function CardSlider({
   boardGamesList,
   handleClickFavorite,
+  handleClickFavoriteOff,
 }: {
   boardGamesList: boardGameListType[];
   handleClickFavorite(id: string): void;
+  handleClickFavoriteOff(id: string): void;
 }) {
   //gestion de l'état
 
@@ -42,6 +44,7 @@ export default function CardSlider({
             rating={boardGamesList[previous].averageRating}
             image={boardGamesList[previous].image}
             handleClickFavorite={handleClickFavorite}
+            handleClickFavoriteOff={handleClickFavoriteOff}
           />
         </article>
         <article className={style.cardSliderRight}>
@@ -51,6 +54,7 @@ export default function CardSlider({
             rating={boardGamesList[next].averageRating}
             image={boardGamesList[next].image}
             handleClickFavorite={handleClickFavorite}
+            handleClickFavoriteOff={handleClickFavoriteOff}
           />
         </article>
         <article className={style.cardSlider}>
@@ -60,6 +64,7 @@ export default function CardSlider({
             rating={boardGamesList[slider].averageRating}
             image={boardGamesList[slider].image}
             handleClickFavorite={handleClickFavorite}
+            handleClickFavoriteOff={handleClickFavoriteOff}
           />
         </article>
         <button

@@ -55,6 +55,12 @@
   @media screen and (max-width: 768px) {
     padding: 0 0.5rem 0.5rem 0;
   }
+  @media screen and (max-width: 350px) {
+    justify-content: start;
+    width: 125%;
+    margin-left: 0.25rem;
+    margin-top: 0.35rem;
+  }
 }
 
 .description {
@@ -73,5 +79,8 @@
   @media screen and (max-width: 768px) {
     width: 80%;
     font-size: 0.9rem;
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 0.8rem;
   }
 }
