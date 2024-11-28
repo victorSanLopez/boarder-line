@@ -149,6 +149,11 @@
   }
 }
 
+.dropDownRow:hover {
+  color: var(--light);
+  background-color: var(--dark);
+}
+
 .dropDownRowLast {
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -166,6 +171,11 @@
     padding: 0;
     font-size: 1rem;
   }
+}
+
+.dropDownRowLast:hover {
+  color: var(--light);
+  background-color: var(--dark);
 }
 
 .formSearchBar {

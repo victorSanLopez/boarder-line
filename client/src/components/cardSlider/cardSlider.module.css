@@ -17,6 +17,7 @@
   transition-duration: 0.3s;
   @media screen and (min-width: 500px) {
     height: 30rem;
+    width: 100%;
   }
   @media screen and (min-width: 992px) {
     box-shadow: inset #daae5d 0 0 3vw 3vw;
