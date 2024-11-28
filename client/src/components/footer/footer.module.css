@@ -117,3 +117,9 @@
     text-align: center;
   }
 }
+.link {
+  color: var(--warm-color);
+}
+.link:hover {
+  text-decoration: underline;
+}

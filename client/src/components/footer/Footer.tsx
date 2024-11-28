@@ -44,6 +44,32 @@ export default function Footer() {
       </section>
       <section className={style.footerBottom}>
         <p>Mentions légales et CGU • Données personnelles et cookies</p>
+        <p>
+          Images from&nbsp;
+          <a
+            className={style.link}
+            href="https://unsplash.com/fr/@foxandhyde"
+            target="blank"
+          >
+            Unsplash
+          </a>
+          &nbsp;,&nbsp;
+          <a
+            className={style.link}
+            href="https://fr.freepik.com/"
+            target="blank"
+          >
+            Freep!k
+          </a>
+          &nbsp;&&nbsp;
+          <a
+            className={style.link}
+            href="https://fr.pngtree.com/"
+            target="blank"
+          >
+            PNG Tree
+          </a>
+        </p>
       </section>
     </footer>
   );
