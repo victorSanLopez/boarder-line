@@ -33,11 +33,13 @@ function CardGame({
     <section className={style.card}>
       <article className={style.article}>
         <NavLink to={`/details/${gameId}`}>
-          <img
-            src={image}
-            alt={`Box cover of ${name}`}
-            className={style.image}
-          />
+          <figure className={style.imageBox}>
+            <img
+              src={image}
+              alt={`Box cover of ${name}`}
+              className={style.image}
+            />
+          </figure>
         </NavLink>
         <h2 className={style.title}>Name : {nameSlice}</h2>
         <h2 className={style.title}>Rating : {rating.toFixed(0)}/10</h2>

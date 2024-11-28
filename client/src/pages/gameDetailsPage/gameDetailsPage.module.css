@@ -1,13 +1,14 @@
 .backgroundPage {
   background-image: url(https://image.freepik.com/free-photo/natural-dark-oak-texture-macro-extremely-high-resolution-photo_463999-970.jpg);
-  box-shadow: inset var(--dark) 0 0 15vh 15vh;
+  background-attachment: fixed;
+  box-shadow: inset var(--dark) 0 0 150rem 10rem;
   background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  padding: 3vh 0;
+  padding: 2em;
   width: auto;
   height: 100%;
+  @media screen and (max-width: 768px) {
+    box-shadow: inset var(--dark) 0 0 50rem 7rem;
+  }
 }
 .detailsBigCard {
   background-color: var(--light);
